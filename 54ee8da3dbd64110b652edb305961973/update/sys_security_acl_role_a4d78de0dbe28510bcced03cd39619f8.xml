@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-26 20:51:12</sys_created_on>
+        <sys_id>a4d78de0dbe28510bcced03cd39619f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_snc_airline.manager</sys_name>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_security_acl display_value="core_country.x_snc_airline_schengen">bbc7cde0dbe28510bcced03cd396190c</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_a4d78de0dbe28510bcced03cd39619f8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-26 20:51:12</sys_updated_on>
+        <sys_user_role display_value="x_snc_airline.manager" name="x_snc_airline.manager">9e837298db2a4510bcced03cd3961977</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

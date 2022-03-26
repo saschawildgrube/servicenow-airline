@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element extends="cmn_location" label="Airdrome" max_length="40" name="x_snc_airline_airdrome" type="collection">
+        <element label="Country" max_length="32" name="core_country" reference="core_country" type="reference"/>
         <element label="ICAO" max_length="4" name="icao" type="string"/>
+        <index name="index">
+            <element name="core_country"/>
+        </index>
     </element>
 </database>
