@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Aircraft" max_length="40" name="x_snc_airline_aircraft" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Base Airdrome" max_length="32" name="base_airdrome" reference="x_snc_airline_airdrome" type="reference"/>
+        <element label="Cargo Capacity (kg)" max_length="40" name="cargo_capacity" type="integer"/>
+        <element label="IFR" max_length="40" name="ifr" type="boolean"/>
         <element label="model" max_length="32" name="model" reference="x_snc_airline_aircraft_model" type="reference"/>
-        <element label="Tail Number" mandatory="true" max_length="6" name="tail_number" type="string"/>
+        <element label="Seats (including pilot)" max_length="40" name="seats" type="integer"/>
+        <element display="true" label="Tail Number" mandatory="true" max_length="6" name="tail_number" type="string"/>
         <index name="index">
             <element name="model"/>
+        </index>
+        <index name="index2">
+            <element name="base_airdrome"/>
         </index>
     </element>
 </database>

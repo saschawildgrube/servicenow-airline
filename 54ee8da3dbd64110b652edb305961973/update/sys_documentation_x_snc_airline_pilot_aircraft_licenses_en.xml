@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="aircraft_licenses" label="Aircraft Licenses" language="en" table="x_snc_airline_pilot">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>aircraft_licenses</element>
+            <help/>
+            <hint/>
+            <label>Aircraft Licenses</label>
+            <language>en</language>
+            <name>x_snc_airline_pilot</name>
+            <plural>Aircraft Licenses</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-03-27 14:13:44</sys_created_on>
+            <sys_id>ca86b83cdb66c510bcced03cd3961969</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Aircraft Licenses</sys_name>
+            <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_airline_pilot_aircraft_licenses_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-03-27 14:13:44</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
