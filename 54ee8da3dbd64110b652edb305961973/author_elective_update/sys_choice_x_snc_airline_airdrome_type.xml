@@ -61,19 +61,39 @@
             <element>type</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Air Base</label>
+            <label>Airstrip</label>
             <language>en</language>
             <name>x_snc_airline_airdrome</name>
             <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-03-27 11:46:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5ce454f0dbe2c510bcced03cd396198e</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-03-27 11:47:03</sys_updated_on>
+            <value>airstrip</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Air Base</label>
+            <language>en</language>
+            <name>x_snc_airline_airdrome</name>
+            <sequence>4</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2022-03-27 11:18:35</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>1a6eccf8dba2c510bcced03cd39619d9</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-27 11:18:43</sys_updated_on>
+            <sys_updated_on>2022-03-27 11:47:06</sys_updated_on>
             <value>airbase</value>
         </sys_choice>
     </sys_choice>

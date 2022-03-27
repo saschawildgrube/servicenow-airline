@@ -6,7 +6,8 @@
             <choice>
                 <element inactive_on_update="false" label="Airport" sequence="1" value="airport"/>
                 <element inactive_on_update="false" label="Airfield" sequence="2" value="airfield"/>
-                <element inactive_on_update="false" label="Air Base" sequence="3" value="airbase"/>
+                <element inactive_on_update="false" label="Airstrip" sequence="3" value="airstrip"/>
+                <element inactive_on_update="false" label="Air Base" sequence="4" value="airbase"/>
             </choice>
         </element>
         <index name="index">
