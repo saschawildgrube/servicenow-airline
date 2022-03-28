@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_airline.HtmlRenderMissionSheetA4</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Renders the flight mission sheet as html fitting a DIN A4 page.</description>
+        <name>HtmlRenderMissionSheetA4</name>
+        <script><![CDATA[function HtmlRenderMissionSheetA4(grFlight)
+{
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var GetRecord = x_snc_devtools.GetRecord;
+	
+	var strHtml = '';
+	
+	if (IsValidRecord(grFlight) == false)
+	{
+		strHtml += '<p style="text-color: red;">ERROR!</p>';
+		strHtml = HtmlRenderPageA4(strHtml);
+		return strHtml;
+	}
+	
+
+	//strHtml += '<div id="qrcode" style="width:100%; margin-top:15px;" url="'+strUrl+'" height="500" width="500"></div>';
+	
+	
+		
+	
+	/*
+	// PARCEL NUMBER
+	//strHtml += '<div style="font-size: '+StringLengthToFontSize(GetStringValue(grParcel.number).length)+';">' + grParcel.number + '</div>';
+	strHtml += '<div style="font-size: 400%;">' + grParcel.number + '</div>';
+	//strHtml += '<div style="position: absolute; top: 1cm; font-size: 400%;">' + grParcel.number + '</div>';
+*/
+
+	/*
+	// TEXT
+	var strText = GetStringValue(grParcel.text);
+	if (strText != '')
+	{
+		strHtml += '<div style="font-size: 100%; line-height: 120%;">';
+		strHtml += StringReplace(strText,'\n','<br/>')+' ';
+		strHtml += '</div>';
+	}
+	*/
+
+	/*
+	// QR CODE
+	var aQRCode = x_snc_devtools.CreateQRCodeRawData(GetParcelScanPageURL(grParcel.sys_id));
+	strHtml += HtmlRenderBitmap2(aQRCode);
+*/
+
+	//strHtml += '<div style="height: 13cm;"/>';
+	
+	
+	/*
+	// SHIP TO
+	var grLocation = GetRecord('cmn_location',grParcel.destination);
+	if (IsValidRecord(grLocation))
+	{
+		strHtml += '<div style="font-size: 350%;"><b>SHIP TO</b></div>'
+		strHtml += '<div style="font-size: 200%; line-height: 130%;">';
+			strHtml += '<div>'+grLocation.name+'</div>';
+			strHtml += '<div>'+StringReplace(grLocation.street,'\n','<br/>')+'</div>';
+			strHtml += '<div>'+grLocation.zip+' '+grLocation.city+' '+grLocation.state+' '+grLocation.country+'</div>';
+		strHtml += '</div>';
+		
+	}
+	*/
+
+	/*
+	// SHIP FROM
+	var grLocationSender = GetRecord('cmn_location',grParcel.sender);
+	if (IsValidRecord(grLocationSender))
+	{
+		strHtml += '<div style="font-size: 100%; margin-top: 10px; border-top: solid; border-width: thick; padding-top: 3px;">';
+		strHtml += '<b>SHIP FROM</b> ';
+		strHtml += grLocationSender.name+' ';
+		strHtml += grLocationSender.street+' ';
+		strHtml += grLocationSender.zip+' '+grLocationSender.city+' '+grLocationSender.state+' ';
+		strHtml += grLocationSender.country;		
+		strHtml += '</div>';
+	}
+	*/
+
+	
+	/*
+	// TASK/CASE
+	var grTask = GetRecord('task',grParcel.task);
+	if (IsValidRecord(grTask))
+	{
+		strHtml += '<div style="font-size: 100%; margin-top: 10px; border-top: solid; border-width: thick; padding-top: 3px;">';
+		strHtml += '<b>TASK/CASE</b> ';
+		strHtml += grTask.number+' ';
+		strHtml += '</div>';
+	}
+	*/
+
+
+	strHtml = x_snc_devtools.HtmlRenderPageA4(strHtml,1,1);
+	
+	return strHtml;
+
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-27 19:55:46</sys_created_on>
+        <sys_id>d8a48a74db2ec510bcced03cd39619cb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>HtmlRenderMissionSheetA4</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_d8a48a74db2ec510bcced03cd39619cb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-27 19:59:04</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_airline.CreateMissionSheetForFlight</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Creates the mission sheet pdf document and attaches it to the flight record.</description>
+        <name>CreateMissionSheetForFlight</name>
+        <script><![CDATA[function CreateMissionSheetForFlight(strFlightSysId)
+{
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+
+	var grFlight = GetFlightRecord(strFlightSysId);
+	if (IsValidRecord(grFlight) == false)
+	{
+		return false;
+	}
+		
+	
+	var strHtml = '<html><head></head><body>';
+	strHtml += HtmlRenderMissionSheetA4(grFlight); 
+	strHtml += '</body></html>';
+	
+	
+	
+	var vResult = x_snc_devtools.CreatePDFFromHtml(
+		'x_snc_airline_flight',
+		grFlight.sys_id,
+		grFlight.number+'.pdf',
+		strHtml,
+		'A4',
+		'PORTRAIT',
+		0,0,
+		false);
+	
+	return true;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-27 19:51:33</sys_created_on>
+        <sys_id>66924a70db2ec510bcced03cd3961917</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>CreateMissionSheetForFlight</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_66924a70db2ec510bcced03cd3961917</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-27 19:54:54</sys_updated_on>
+    </sys_script_include>
+</record_update>

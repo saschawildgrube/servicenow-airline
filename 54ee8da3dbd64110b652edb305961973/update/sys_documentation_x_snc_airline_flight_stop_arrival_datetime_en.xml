@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="arrival_datetime" label="Arrival Date/Time" language="en" table="x_snc_airline_flight_stop">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>arrival_datetime</element>
+            <help/>
+            <hint/>
+            <label>Arrival Date/Time</label>
+            <language>en</language>
+            <name>x_snc_airline_flight_stop</name>
+            <plural>Arrival Date/Times</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-03-27 19:13:12</sys_created_on>
+            <sys_id>ac1bbdf4dbeac510bcced03cd39619dc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Arrival Date/Time</sys_name>
+            <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_airline_flight_stop_arrival_datetime_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-03-27 19:13:12</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
