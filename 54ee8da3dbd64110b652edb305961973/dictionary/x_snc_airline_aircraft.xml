@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Aircraft" max_length="40" name="x_snc_airline_aircraft" type="collection">
+    <element label="Aircraft" max_length="40" name="x_snc_airline_aircraft" sizeclass="1" type="collection">
         <element label="Active" max_length="40" name="active" type="boolean"/>
         <element label="Base Airdrome" max_length="32" name="base_airdrome" reference="x_snc_airline_airdrome" type="reference"/>
         <element label="Cargo Capacity (kg)" max_length="40" name="cargo_capacity" type="integer"/>

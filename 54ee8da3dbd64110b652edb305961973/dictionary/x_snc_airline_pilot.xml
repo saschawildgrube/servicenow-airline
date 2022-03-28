@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_user" label="Pilot" max_length="40" name="x_snc_airline_pilot" type="collection">
+    <element extends="sys_user" label="Pilot" max_length="40" name="x_snc_airline_pilot" sizeclass="1" type="collection">
         <element label="Aircraft Licenses" max_length="4000" name="aircraft_licenses" reference="x_snc_airline_aircraft_model" type="glide_list"/>
         <element label="Associated Aircrafts" max_length="4000" name="associated_aircrafts" reference="x_snc_airline_aircraft" type="glide_list"/>
         <element label="Home Airdrome" max_length="32" name="base_airdrome" reference="x_snc_airline_airdrome" type="reference"/>

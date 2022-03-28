@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="cmn_location" label="Airfield" max_length="40" name="x_snc_airline_airdrome" sizeclass="1" type="collection">
+    <element extends="cmn_location" label="Airfield" max_length="40" name="x_snc_airline_airdrome" sizeclass="3" type="collection">
         <element label="Country" max_length="32" name="core_country" reference="core_country" type="reference"/>
         <element display="true" label="Display" max_length="200" name="display" type="string"/>
         <element label="ICAO" mandatory="true" max_length="4" name="icao" type="string"/>
