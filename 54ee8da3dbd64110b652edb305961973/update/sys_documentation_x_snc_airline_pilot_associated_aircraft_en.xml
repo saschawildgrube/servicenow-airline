@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="associated_aircrafts" label="Associated Aircrafts" language="en" table="x_snc_airline_pilot">
+    <sys_documentation element="associated_aircraft" label="Associated Aircraft" language="en" table="x_snc_airline_pilot">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>associated_aircrafts</element>
+            <element>associated_aircraft</element>
             <help/>
             <hint/>
-            <label>Associated Aircrafts</label>
+            <label>Associated Aircraft</label>
             <language>en</language>
             <name>x_snc_airline_pilot</name>
             <plural>Associated Aircrafts</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-27 14:18:29</sys_created_on>
-            <sys_id>e797b0bcdb66c510bcced03cd39619af</sys_id>
+            <sys_created_on>2022-03-28 11:08:20</sys_created_on>
+            <sys_id>73a51541db2e0910bcced03cd396192f</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>Associated Aircrafts</sys_name>
+            <sys_name>Associated Aircraft</sys_name>
             <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
             <sys_policy/>
             <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
-            <sys_update_name>sys_documentation_x_snc_airline_pilot_associated_aircrafts_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_snc_airline_pilot_associated_aircraft_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-27 14:18:29</sys_updated_on>
+            <sys_updated_on>2022-03-28 11:08:20</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>
