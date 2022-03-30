@@ -29,64 +29,16 @@
         <name>Schedule Flight</name>
         <onclick/>
         <order>-100</order>
-        <script><![CDATA[var GetStringValue = x_snc_devtools.GetStringValue;
+        <script><![CDATA[var strErrorMessage = CheckFlightBeforeScheduling(current);
 
-var bError = false;
-
-if (GetStringValue(current.departure) == '')
-{
-	bError = true;
-	gs.addErrorMessage('Departure airdrome has not been set.');
-}
-
-if (GetStringValue(current.arrival) == '')
-{
-	bError = true;
-	gs.addErrorMessage('Arrival airdrome has not been set.');
-}
-
-if (GetStringValue(current.departure) != '' && (GetStringValue(current.departure) == GetStringValue(current.arrival)))
-{
-	bError = true;
-	gs.addErrorMessage('Departure and arrival airdrome are identical.');
-}
-
-
-if (GetStringValue(current.departure_datetime) == '')
-{
-	bError = true;
-	gs.addErrorMessage('Departure date and time has not been set.');
-}
-
-if (GetStringValue(current.arrival_datetime) == '')
-{
-	bError = true;
-	gs.addErrorMessage('Arrival date and time has not been set.');
-}
-
-if (GetStringValue(current.departure_datetime) != '' && (GetStringValue(current.departure_datetime) == GetStringValue(current.arrival_datetime)))
-{
-	bError = true;
-	gs.addErrorMessage('Departure and arrival date and time are identical.');
-}
-
-if (GetStringValue(current.aircraft) == '')
-{
-	bError = true;
-	gs.addErrorMessage('No aircraft selected.');
-}
-
-if (GetStringValue(current.pilot) == '')
-{
-	bError = true;
-	gs.addErrorMessage('No pilot selected.');
-}
-
-
-if (bError == false)
+if (strErrorMessage == '')
 {
 	current.state = 'scheduled';
 	gs.addInfoMessage('Flight has been scheduled');
+}
+else
+{
+	gs.addErrorMessage(x_snc_devtools.HtmlEncode(strErrorMessage));
 }
 
 current.update();
@@ -101,7 +53,7 @@ x_snc_devtools.RedirectToRecord(current);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>eb4fa534dbaac510bcced03cd3961902</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Schedule Flight</sys_name>
         <sys_overrides/>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
@@ -109,7 +61,7 @@ x_snc_devtools.RedirectToRecord(current);]]></script>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_action_eb4fa534dbaac510bcced03cd3961902</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-27 18:55:00</sys_updated_on>
+        <sys_updated_on>2022-03-30 10:05:52</sys_updated_on>
         <table>global</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
