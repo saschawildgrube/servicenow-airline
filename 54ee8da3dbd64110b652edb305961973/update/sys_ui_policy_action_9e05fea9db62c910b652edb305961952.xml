@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>airdrome</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-30 07:21:52</sys_created_on>
+        <sys_id>9e05fea9db62c910b652edb305961952</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>airdrome</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_ui_policy_action_9e05fea9db62c910b652edb305961952</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-30 07:21:52</sys_updated_on>
+        <table>x_snc_airline_flight_stop</table>
+        <ui_policy display_value="Flight Stop - Set read only when flight is scheduled">89b43ea9db62c910b652edb30596191f</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>
