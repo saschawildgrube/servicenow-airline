@@ -3,6 +3,7 @@
         <element label="Country" max_length="32" name="core_country" reference="core_country" type="reference"/>
         <element display="true" label="Display" max_length="200" name="display" type="string"/>
         <element label="ICAO" mandatory="true" max_length="4" name="icao" type="string"/>
+        <element label="IFR" max_length="40" name="ifr" type="boolean"/>
         <element choice="1" label="Type" mandatory="true" max_length="40" name="type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Airport" sequence="1" value="airport"/>
