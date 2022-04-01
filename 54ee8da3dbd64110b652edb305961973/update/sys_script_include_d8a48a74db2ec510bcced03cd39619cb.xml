@@ -112,7 +112,7 @@
 			strHtml += '<tr><th>Aircraft Tail Number</th><td>'+grFlight.aircraft.tail_number+'</td></tr>';
 			strHtml += '<tr><th>Aircraft Model</th><td> '+grFlight.aircraft.model.name+'</td></tr>';
 			strHtml += '<tr><th>Pilot</th><td>'+grFlight.pilot.name+'</td></tr>';
-			strHtml += '<tr><th>Co-Pilot</th><td>'+grFlight.pilot.name+'</td></tr>';
+			strHtml += '<tr><th>Co-Pilot</th><td>'+grFlight.co_pilot.name+'</td></tr>';
 			strHtml += '</tbody></table>';
 		strHtml += '<td>';
 
@@ -138,32 +138,35 @@
 	
 	
 	// CARGO
-	strHtml += '<table style="width: 100%;"><tbody>';
-		strHtml += '<tr><th class="title2" colspan="5">Cargo Details</th></tr>';
-		strHtml += '<tr>';
-			strHtml += '<th>Categories</th><td>'+HtmlEncode(strCategories)+'</td>';
-			strHtml += '<th>Max Weight</th><td>'+RenderWeight(nMaxWeight)+'</td>';
-		strHtml += '</tr>';
-	strHtml += '</tbody></table>';
-
-	strHtml += '<table style="width: 100%;"><tbody>';
-	strHtml += '<tr>';
-		strHtml += '<th>Number</th><th>Category</th><th>Weight</th><th colspan="2">Departure</th><th colspan="2">Arrival</th>';
-	strHtml += '</tr>';
-	for (var nParcel = 0; nParcel < aParcels.length; nParcel++)
+	if (aParcels.length > 0)
 	{
+		strHtml += '<table style="width: 100%;"><tbody>';
+			strHtml += '<tr><th class="title2" colspan="5">Cargo Details</th></tr>';
+			strHtml += '<tr>';
+				strHtml += '<th>Categories</th><td>'+HtmlEncode(strCategories)+'</td>';
+				strHtml += '<th>Max Weight</th><td>'+RenderWeight(nMaxWeight)+'</td>';
+			strHtml += '</tr>';
+		strHtml += '</tbody></table>';
+
+		strHtml += '<table style="width: 100%;"><tbody>';
 		strHtml += '<tr>';
-		var parcel = aParcels[nParcel]; 
-		strHtml += '<td>'+parcel.number+'</td>';
-		strHtml += '<td>'+parcel.categories+'</td>';
-		strHtml += '<td style="text-align: right;">'+RenderWeight(parcel.total_weight)+'</td>';
-		strHtml += '<td>'+RenderTime(parcel.departure_datetime)+'</td>';
-		strHtml += '<td>'+parcel.departure_icao+'</td>';
-		strHtml += '<td>'+parcel.arrival_icao+'</td>';
-		strHtml += '<td>'+RenderTime(parcel.arrival_datetime)+'</td>';
+			strHtml += '<th>Number</th><th>Category</th><th>Weight</th><th colspan="2">Departure</th><th colspan="2">Arrival</th>';
 		strHtml += '</tr>';
+		for (var nParcel = 0; nParcel < aParcels.length; nParcel++)
+		{
+			strHtml += '<tr>';
+			var parcel = aParcels[nParcel]; 
+			strHtml += '<td>'+parcel.number+'</td>';
+			strHtml += '<td>'+parcel.categories+'</td>';
+			strHtml += '<td style="text-align: right;">'+RenderWeight(parcel.total_weight)+'</td>';
+			strHtml += '<td>'+RenderTime(parcel.departure_datetime)+'</td>';
+			strHtml += '<td>'+parcel.departure_icao+'</td>';
+			strHtml += '<td>'+parcel.arrival_icao+'</td>';
+			strHtml += '<td>'+RenderTime(parcel.arrival_datetime)+'</td>';
+			strHtml += '</tr>';
+		}
+		strHtml += '</tbody><table>';
 	}
-	strHtml += '</tbody><table>';
 	
 	
 	
@@ -215,13 +218,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-27 19:55:46</sys_created_on>
         <sys_id>d8a48a74db2ec510bcced03cd39619cb</sys_id>
-        <sys_mod_count>79</sys_mod_count>
+        <sys_mod_count>81</sys_mod_count>
         <sys_name>HtmlRenderMissionSheetA4</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_d8a48a74db2ec510bcced03cd39619cb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-01 13:45:51</sys_updated_on>
+        <sys_updated_on>2022-04-01 18:50:11</sys_updated_on>
     </sys_script_include>
 </record_update>
