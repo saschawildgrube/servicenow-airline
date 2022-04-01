@@ -6,6 +6,7 @@
         <element label="Co-Pilot" max_length="32" name="co_pilot" reference="x_snc_airline_pilot" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
         <element label="Departure" max_length="32" name="departure" reference="x_snc_airline_airdrome" type="reference"/>
         <element label="Departure Date/Time" max_length="40" name="departure_datetime" type="glide_date_time"/>
+        <element label="Notes" max_length="4000" name="notes" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Parcel Load" max_length="4000" name="parcel_load" reference="x_snc_parcel_parcel" type="glide_list"/>
         <element label="Pilot" max_length="32" name="pilot" reference="x_snc_airline_pilot" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>

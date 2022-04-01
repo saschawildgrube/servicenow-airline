@@ -13,7 +13,9 @@
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
 	var GetRecord = x_snc_devtools.GetRecord;
 	var GetIntegerValue = x_snc_devtools.GetIntegerValue;
-
+	var HtmlEncode = x_snc_devtools.HtmlEncode;
+	var ArrayPushUnique = x_snc_devtools.ArrayPushUnique;
+	var GetValue = x_snc_devtools.GetValue;
 
 	function RenderTime(strDateTime)
 	{
@@ -41,18 +43,44 @@
 
 	var aLAGs = GetLAGsFromFlight(grFlight.sys_id);
 	var aParcels = GetParcelsFromLAGs(aLAGs);
+
+	var aParcelSysIds = Array();
+	for (var nParcel = 0; nParcel < aParcels.length; nParcel++)
+	{
+		aParcelSysIds = ArrayPushUnique(aParcelSysIds,GetValue(aParcels[nParcel],'sys_id'));
+	}
 	
+	var strCategories = x_snc_parcel.GetCategoriesFromParcels(aParcelSysIds);
+	
+	var nMaxWeight = 0;
+	for (var nLAG = 0; nLAG < aLAGs.length; nLAG++)
+	{
+		nMaxWeight = Math.max(nMaxWeight,aLAGs[nLAG].cargo_weight);
+	}
+	
+	//var aContacts = Array();
+	var aContacts = x_snc_parcel.GetContactsFromParcels(aParcels);
+	
+	/*
+	var contact = {};
+	contact.name = 'John Doe';
+	contact.mobile = '+4917100011100';
+	contact.parcel_function = 'Pickup from Airfield';
+	aContacts.push(contact);
+	*/
 
 	strHtml += '<style>';
 	strHtml += 'th { background-color: lightgrey; text-align: left; padding: 5px; vertical-align: top; }';
 	strHtml += 'td { text-align: left; padding: 5px; vertical-align: top;  }';
+	strHtml += '.title1 { font-size: 200%; text-align: center; }';
+	strHtml += '.title2 { font-size: 120%; text-align: center; }';
 	strHtml += '</style>';
 	
 	strHtml += '<table style="width: 100%;"><tbody>';
 	
 		// MISSION SHEET TITLE
 		strHtml += '<tr>';
-			strHtml += '<th style="font-size: 200%; text-align: center;">';
+			strHtml += '<th class="title1">';
 			if (grFlight.state == 'planning')
 			{
 				strHtml += '<span style="color: red;">DRAFT</span> ';
@@ -64,7 +92,7 @@
 
 		// FLIGHT INFORMATION
 		strHtml += '<tr>';
-			strHtml += '<th style="font-size: 120%; text-align: center;">';
+			strHtml += '<th class="title2">';
 			strHtml += 'Flight Details';
 			strHtml += '</th>';
 		strHtml += '</tr>';
@@ -105,27 +133,22 @@
 	strHtml += '</tbody></table>';
 	
 	
-
+	// CARGO
 	strHtml += '<table style="width: 100%;"><tbody>';
-		// CARGO TITLE
-		strHtml += '<tr><th style="font-size: 120%; text-align: center;" colspan="5">Cargo Details</th></tr>';
-		// CARGO OVERVIEW
+		strHtml += '<tr><th class="title2" colspan="5">Cargo Details</th></tr>';
 		strHtml += '<tr>';
-			strHtml += '<th>Categories</th><td>TODO</td>';
-			strHtml += '<th>Total Weight</th><td>TODO</td>';
+			strHtml += '<th>Categories</th><td>'+HtmlEncode(strCategories)+'</td>';
+			strHtml += '<th>Max Weight</th><td>'+RenderWeight(nMaxWeight)+'</td>';
 		strHtml += '</tr>';
 	strHtml += '</tbody></table>';
 
 	strHtml += '<table style="width: 100%;"><tbody>';
-	
 	strHtml += '<tr>';
 		strHtml += '<th>Number</th><th>Category</th><th>Weight</th><th colspan="2">Departure</th><th colspan="2">Arrival</th>';
 	strHtml += '</tr>';
-	
 	for (var nParcel = 0; nParcel < aParcels.length; nParcel++)
 	{
 		strHtml += '<tr>';
-		
 		var parcel = aParcels[nParcel]; 
 		strHtml += '<td>'+parcel.number+'</td>';
 		strHtml += '<td>'+parcel.categories+'</td>';
@@ -134,37 +157,51 @@
 		strHtml += '<td>'+parcel.departure_icao+'</td>';
 		strHtml += '<td>'+parcel.arrival_icao+'</td>';
 		strHtml += '<td>'+RenderTime(parcel.arrival_datetime)+'</td>';
-		
 		strHtml += '</tr>';
 	}
-	
-	
-	
 	strHtml += '</tbody><table>';
-
 	
+	
+	
+	// CONTACT DETAILS
+	if (aContacts.length > 0)
+	{
+		strHtml += '<table style="width: 100%;"><tbody>';
+			strHtml += '<tr><th class="title2" colspan="5">Contact Details</th></tr>';
+			strHtml += '<tr>';
+				strHtml += '<th>Function</th><th>Name</th><th>Mobile</th>';
+			strHtml += '</tr>';
+			for (var nContact = 0; nContact < aContacts.length; nContact++)
+			{
+				var contact = aContacts[nContact];
+				strHtml += '<tr>';
+				strHtml += '<td>'+contact.parcel_function+'</td>';
+				strHtml += '<td>'+contact.name+'</td>';
+				strHtml += '<td>'+contact.mobile+'</td>';
+				strHtml += '</tr>';
+			}
+		strHtml += '</tbody><table>';	
+	}
+		
+	// NOTES
+	var strNotes = GetStringValue(grFlight.notes);
+	if (strNotes != '')
+	{
+		strHtml += '<table style="width: 100%;"><tbody>';
+			strHtml += '<tr><th class="title2" colspan="5">Notes</th></tr>';
+			strHtml += '<tr>';
+				strHtml += '<td>'+HtmlEncode(strNotes)+'</td>';
+			strHtml += '</tr>';
+		strHtml += '</tbody></table>';		
+		
+	}
+	
+
 	//strHtml += x_snc_devtools.HtmlRenderValue(aLAGs);
 	//gs.addInfoMessage(x_snc_devtools.HtmlEncode(x_snc_devtools.RenderValue(aLAGs)));
 
-	/*
-	// TEXT
-	var strText = GetStringValue(grParcel.text);
-	if (strText != '')
-	{
-		strHtml += '<div style="font-size: 100%; line-height: 120%;">';
-		strHtml += StringReplace(strText,'\n','<br/>')+' ';
-		strHtml += '</div>';
-	}
-	*/
 
-
-	
-
-
-	strHtml += '</tbody></table>';
-
-
-	strHtml = x_snc_devtools.HtmlRenderPageA4(strHtml,1,1);
+	strHtml = x_snc_devtools.HtmlRenderPageA4(strHtml,1,2);
 	
 	return strHtml;
 
@@ -173,13 +210,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-27 19:55:46</sys_created_on>
         <sys_id>d8a48a74db2ec510bcced03cd39619cb</sys_id>
-        <sys_mod_count>53</sys_mod_count>
+        <sys_mod_count>72</sys_mod_count>
         <sys_name>HtmlRenderMissionSheetA4</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_d8a48a74db2ec510bcced03cd39619cb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-31 17:59:55</sys_updated_on>
+        <sys_updated_on>2022-04-01 13:09:40</sys_updated_on>
     </sys_script_include>
 </record_update>
