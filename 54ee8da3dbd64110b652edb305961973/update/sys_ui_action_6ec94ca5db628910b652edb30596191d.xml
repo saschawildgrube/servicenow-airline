@@ -28,7 +28,7 @@
         <messages/>
         <name>Mission Sheet</name>
         <onclick/>
-        <order>10000</order>
+        <order>-100</order>
         <script><![CDATA[current.update();
 
 var vResult = CreateMissionSheetForFlight(current.sys_id);
@@ -52,7 +52,7 @@ x_snc_devtools.RedirectToRecord(current);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6ec94ca5db628910b652edb30596191d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Mission Sheet</sys_name>
         <sys_overrides/>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
@@ -60,7 +60,7 @@ x_snc_devtools.RedirectToRecord(current);]]></script>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_action_6ec94ca5db628910b652edb30596191d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-30 11:41:24</sys_updated_on>
+        <sys_updated_on>2022-04-01 18:44:21</sys_updated_on>
         <table>x_snc_airline_flight</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

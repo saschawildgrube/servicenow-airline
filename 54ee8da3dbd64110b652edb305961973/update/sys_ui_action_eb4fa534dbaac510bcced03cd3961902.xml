@@ -28,7 +28,7 @@
         <messages/>
         <name>Schedule Flight</name>
         <onclick/>
-        <order>-100</order>
+        <order>-2000</order>
         <script><![CDATA[var strErrorMessage = CheckFlightBeforeScheduling(current);
 
 if (strErrorMessage == '')
@@ -53,7 +53,7 @@ x_snc_devtools.RedirectToRecord(current);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>eb4fa534dbaac510bcced03cd3961902</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Schedule Flight</sys_name>
         <sys_overrides/>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
@@ -61,7 +61,7 @@ x_snc_devtools.RedirectToRecord(current);]]></script>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_action_eb4fa534dbaac510bcced03cd3961902</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-01 18:33:15</sys_updated_on>
+        <sys_updated_on>2022-04-01 18:44:09</sys_updated_on>
         <table>x_snc_airline_flight</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
