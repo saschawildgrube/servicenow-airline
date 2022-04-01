@@ -4,6 +4,8 @@
         <element label="Arrival Date/Time" max_length="40" name="arrival_datetime" type="glide_date_time"/>
         <element label="Departure Date/Time" max_length="40" name="departure_datetime" type="glide_date_time"/>
         <element label="Flight" max_length="32" name="flight" read_only="true" reference="x_snc_airline_flight" type="reference"/>
+        <element label="Parcel Load" max_length="4000" name="parcel_load" reference="x_snc_parcel_parcel" type="glide_list"/>
+        <element label="Parcel Unload" max_length="4000" name="parcel_unload" reference="x_snc_parcel_parcel" type="glide_list"/>
         <element label="Stop" max_length="40" name="stop" type="integer"/>
         <index name="index">
             <element name="airdrome"/>
