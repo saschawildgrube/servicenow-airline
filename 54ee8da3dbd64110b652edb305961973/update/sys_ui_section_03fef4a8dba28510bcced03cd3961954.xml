@@ -4,13 +4,13 @@
             <element>icao</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>26205d06db6e4d10b652edb30596192a</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>1dfc050bdb6a0550b652edb305961944</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>name</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>a6205d06db6e4d10b652edb30596192a</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>9dfc050bdb6a0550b652edb305961944</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>ifr</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>2a205d06db6e4d10b652edb30596192a</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>11fc050bdb6a0550b652edb305961945</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>city</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>aa205d06db6e4d10b652edb30596192a</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>91fc050bdb6a0550b652edb305961945</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>core_country</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>2e205d06db6e4d10b652edb30596192a</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>15fc050bdb6a0550b652edb305961945</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>latitude</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>ae205d06db6e4d10b652edb30596192a</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>95fc050bdb6a0550b652edb305961945</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>longitude</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>22205d06db6e4d10b652edb30596192b</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>19fc050bdb6a0550b652edb305961945</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>.split</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>a2205d06db6e4d10b652edb30596192b</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>99fc050bdb6a0550b652edb305961945</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>street</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>26205d06db6e4d10b652edb30596192b</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>1dfc050bdb6a0550b652edb305961945</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -130,13 +130,13 @@
             <element>zip</element>
             <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>a6205d06db6e4d10b652edb30596192b</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>9dfc050bdb6a0550b652edb305961945</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -144,13 +144,13 @@
             <element>contact</element>
             <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>2a205d06db6e4d10b652edb30596192b</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>11fc050bdb6a0550b652edb305961946</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -158,27 +158,41 @@
             <element>phone</element>
             <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>aa205d06db6e4d10b652edb30596192b</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>91fc050bdb6a0550b652edb305961946</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>email</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>15fc050bdb6a0550b652edb305961946</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>type</element>
-            <position>12</position>
+            <position>13</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-03-31 13:18:07</sys_created_on>
-            <sys_id>2e205d06db6e4d10b652edb30596192b</sys_id>
+            <sys_created_on>2022-04-03 15:38:02</sys_created_on>
+            <sys_id>ddfc890bdb6a0550b652edb305961971</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_airdrome" sys_domain="global" view="Default view">03fef4a8dba28510bcced03cd3961954</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-03-31 13:18:07</sys_updated_on>
+            <sys_updated_on>2022-04-03 15:38:02</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
