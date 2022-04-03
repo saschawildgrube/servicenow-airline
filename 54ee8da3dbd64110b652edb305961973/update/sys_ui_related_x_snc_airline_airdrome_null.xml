@@ -2,7 +2,7 @@
     <sys_ui_related sys_domain="global" table="x_snc_airline_airdrome" version="2" view="">
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Airfield - Default view" name="x_snc_airline_airdrome" related_list="NULL" sys_domain="global" view="Default view">1b18e138db6ac510bcced03cd396190e</list_id>
+            <list_id display_value="Airport - Default view" name="x_snc_airline_airdrome" related_list="NULL" sys_domain="global" view="Default view">1b18e138db6ac510bcced03cd396190e</list_id>
             <order_by/>
             <position>0</position>
             <related_list>x_snc_airline_aircraft.base_airdrome</related_list>
@@ -16,7 +16,7 @@
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Airfield - Default view" name="x_snc_airline_airdrome" related_list="NULL" sys_domain="global" view="Default view">1b18e138db6ac510bcced03cd396190e</list_id>
+            <list_id display_value="Airport - Default view" name="x_snc_airline_airdrome" related_list="NULL" sys_domain="global" view="Default view">1b18e138db6ac510bcced03cd396190e</list_id>
             <order_by/>
             <position>1</position>
             <related_list>x_snc_airline_pilot.base_airdrome</related_list>
@@ -29,7 +29,7 @@
             <sys_updated_on>2022-03-27 17:50:22</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
-            <calculated_name>Airfield - Default view</calculated_name>
+            <calculated_name>Airport - Default view</calculated_name>
             <filter/>
             <name>x_snc_airline_airdrome</name>
             <order_by/>
