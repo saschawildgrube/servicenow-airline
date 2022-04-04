@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices/>
+        <description/>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>sn_g_app_creator.allow_global</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-03 19:12:00</sys_created_on>
+        <sys_id>13edf90fdbee0550b652edb30596196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_g_app_creator.allow_global</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_properties_13edf90fdbee0550b652edb30596196c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-03 19:12:00</sys_updated_on>
+        <type>string</type>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=13edf90fdbee0550b652edb30596196c"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</application>
+        <file_path/>
+        <instance_id>f492329ddb5849108aea21c405961946</instance_id>
+        <instance_name>wildgrubedevquebec</instance_name>
+        <name>sys_properties_13edf90fdbee0550b652edb30596196c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description/><ignore_cache>false</ignore_cache><is_private>false</is_private><name>sn_g_app_creator.allow_global</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-04-03 19:12:00</sys_created_on><sys_id>13edf90fdbee0550b652edb30596196c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sn_g_app_creator.allow_global</sys_name><sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package><sys_policy/><sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope><sys_update_name>sys_properties_13edf90fdbee0550b652edb30596196c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-04-03 19:12:00</sys_updated_on><type>string</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=13edf90fdbee0550b652edb30596196c"/></record_update>]]></payload>
+        <payload_hash>1006770275</payload_hash>
+        <record_name>sn_g_app_creator.allow_global</record_name>
+        <reverted_from/>
+        <source>96543a98db2a4510bcced03cd396191f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-03 19:12:01</sys_created_on>
+        <sys_id>73edf90fdbee0550b652edb3059619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ff0d7621b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-03 19:12:01</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>f3edf90fc8ee0550771830d1cb1079b4</update_guid>
+        <update_guid_history>f3edf90fc8ee0550771830d1cb1079b4:1006770275</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-03 19:12:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>7aeb305a13a34898863956095d180ba1</sys_id>
+        <sys_metadata>13edf90fdbee0550b652edb30596196c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_g_app_creator.allow_global</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope_delete display_value="">c6f42fe7959e4054a7cc3eae6bd19390</sys_scope_delete>
+        <sys_update_name>sys_properties_13edf90fdbee0550b652edb30596196c</sys_update_name>
+        <sys_update_version display_value="sys_properties_13edf90fdbee0550b652edb30596196c">73edf90fdbee0550b652edb3059619b5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-03 19:12:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
