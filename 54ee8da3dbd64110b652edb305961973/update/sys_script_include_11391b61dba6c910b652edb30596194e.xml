@@ -11,6 +11,9 @@
 {
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
 	var GetStringValue = x_snc_devtools.GetStringValue;
+	var ArrayValueExists = x_snc_devtools.ArrayValueExists;
+	var GetArrayValue = x_snc_devtools.GetArrayValue;
+
 
 	if (IsValidRecord(grFlight) == false)
 	{
@@ -53,6 +56,30 @@
 	{
 		strErrorMessage += 'No pilot selected.\n';
 	}
+	else
+	{
+		if (GetStringValue(grFlight.pilot) == GetStringValue(grFlight.co_pilot))
+		{
+			strErrorMessage += 'A pilot cannot be the pilot and the co-pilot on the same flight.\n';
+		}	
+	}
+	
+	
+	if (GetStringValue(grFlight.pilot) != '' && GetStringValue(grFlight.aircraft))
+	{
+		if (ArrayValueExists(GetArrayValue(grFlight.pilot.aircraft_licenses), GetStringValue(grFlight.aircraft.model)) == false)
+		{
+			strErrorMessage += 'According to the pilot\'s profile the pilot cannot fly the selected aircraft model.\n';
+		}
+	}
+	
+	if (GetStringValue(grFlight.co_pilot) != '' && GetStringValue(grFlight.aircraft))
+	{
+		if (ArrayValueExists(GetArrayValue(grFlight.co_pilot.aircraft_licenses), GetStringValue(grFlight.aircraft.model)) == false)
+		{
+			strErrorMessage += 'According to the co-pilot\'s profile the co-pilot cannot fly the selected aircraft model.\n';
+		}
+	}	
 	
 	return strErrorMessage;
 }]]></script>
@@ -60,13 +87,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-30 10:04:19</sys_created_on>
         <sys_id>11391b61dba6c910b652edb30596194e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>CheckFlightBeforeScheduling</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_11391b61dba6c910b652edb30596194e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-30 10:04:19</sys_updated_on>
+        <sys_updated_on>2022-04-04 13:40:49</sys_updated_on>
     </sys_script_include>
 </record_update>
