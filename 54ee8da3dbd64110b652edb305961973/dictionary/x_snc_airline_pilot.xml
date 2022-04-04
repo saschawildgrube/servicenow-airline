@@ -2,11 +2,8 @@
     <element extends="sys_user" label="Pilot" max_length="40" name="x_snc_airline_pilot" sizeclass="2" type="collection">
         <element label="Aircraft Licenses" max_length="4000" name="aircraft_licenses" reference="x_snc_airline_aircraft_model" type="glide_list"/>
         <element label="Associated Aircraft" max_length="4000" name="associated_aircraft" reference="x_snc_airline_aircraft" type="glide_list"/>
-        <element label="Home Airdrome" max_length="32" name="base_airdrome" reference="x_snc_airline_airdrome" type="reference"/>
+        <element label="Associated Airports" max_length="4000" name="associated_airdromes" reference="x_snc_airline_airdrome" type="glide_list"/>
         <element label="IFR" max_length="40" name="ifr" type="boolean"/>
         <element label="Notes" max_length="4000" name="notes" type="string"/>
-        <index name="index">
-            <element name="base_airdrome"/>
-        </index>
     </element>
 </database>
