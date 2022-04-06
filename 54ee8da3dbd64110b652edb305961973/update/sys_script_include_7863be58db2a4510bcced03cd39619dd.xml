@@ -43,7 +43,12 @@
 		},
 		{
 			url: 'https://en.wikipedia.org/wiki/Flight_plan'
+		},
+		{
+			title: 'ICAO Aircraft Type Designators',
+			url: 'https://www.icao.int/publications/DOC8643/Pages/Search.aspx'
 		}
+		
 	];
 
 	return linkdirectory;
@@ -52,13 +57,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:17</sys_created_on>
         <sys_id>7863be58db2a4510bcced03cd39619dd</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>DevToolsGetLinkDirectory</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_7863be58db2a4510bcced03cd39619dd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-29 18:51:47</sys_updated_on>
+        <sys_updated_on>2022-04-06 10:09:44</sys_updated_on>
     </sys_script_include>
 </record_update>
