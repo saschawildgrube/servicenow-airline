@@ -14,10 +14,14 @@
 		docapi.RenderHeader();
 	]</g2:no_escape>
 	
-	<p>Welcome to TODO: Enter the name of the app here! - created and maintained by&#160;<a href="mailto:john.doe@example.com">TODO: Enter the name of the maintainer here</a>.</p>
+	<p>Welcome to the Airline app - created and maintained by&#160;<a href="mailto:sascha.wildgrube@servicenow.com">Sascha Wildgrube</a>.</p>
+	
+	<p>This app was built to help organizing the shipment of medical supplies to the Ukraine during the war that started in February 2022.</p>
+	<p>It is dedicated to the people of the Ukraine, their resistance and to everyone who invested their time and resources to help.</p> 
 
 	<h2>Features</h2> 
-	<p>TODO: Document the features of the app here...</p>
+	<p>Manage pilots, aircraft and airfields.</p>
+	<p>Plan and schedule flights - produce PDF mission sheets for pilots.</p>
 
 	<h2>Disclaimer</h2>
 	<g2:no_escape>$[docapi.RenderDisclaimer()]</g2:no_escape>	
@@ -26,7 +30,7 @@
 	<ul>
 		<g2:no_escape>$[
 			docapi.RenderSystemRequirements(
-				'Quebec,Rome',
+				'Quebec,Rome,San Diego',
 				true,
 				AppGetDependencies());
 		]</g2:no_escape>	
@@ -40,9 +44,14 @@
 				'https://github.com/saschawildgrube/servicenow-devtools');
 		]</g2:no_escape>
 		<g2:no_escape>$[
+			docapi.RenderInstallationInstructionsImportFromSourceControl(
+				'Parcel',
+				'https://github.com/saschawildgrube/servicenow-parcel');
+		]</g2:no_escape>		
+		<g2:no_escape>$[
 			docapi.RenderInstallationInstructionsAppInstall();
 		]</g2:no_escape>		
-		<li>TODO: Add further steps required for installation...</li>
+		<li>Add one Airline record.</li>
 	</ol>
 	
 	<h2>Reference</h2>
@@ -72,15 +81,17 @@
 	<g2:no_escape>$[docapi.RenderBusinessRules()]</g2:no_escape>	
 	
 	<h2>License</h2>
-	<g2:no_escape>$[docapi.RenderCopyright(2022,'TODO: Add name of copyright holder')]</g2:no_escape>
+	<g2:no_escape>$[docapi.RenderCopyright(2022,'Sascha Wildgrube')]</g2:no_escape>
 	<g2:no_escape>$[docapi.RenderLicense()]</g2:no_escape>
 	
 	<h2>Release Notes</h2>
 
+	<!--
 	<h3>1.1.0 - 2022-TODO</h3>
 	<ol>
 		<li>TODO: document changes here</li>
 	</ol>
+-->
 
 	<h3>1.0.0 - 2022-TODO</h3>
 	<p>First baselined version</p>
@@ -94,13 +105,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:17</sys_created_on>
         <sys_id>3063be58db2a4510bcced03cd39619e8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_page_3063be58db2a4510bcced03cd39619e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-26 10:02:17</sys_updated_on>
+        <sys_updated_on>2022-04-09 17:14:23</sys_updated_on>
     </sys_ui_page>
 </record_update>
