@@ -13,6 +13,7 @@
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
 	var GetRecord = x_snc_devtools.GetRecord;
 	var GetIntegerValue = x_snc_devtools.GetIntegerValue;
+	var GetFloatValue = x_snc_devtools.GetFloatValue;
 	var HtmlEncode = x_snc_devtools.HtmlEncode;
 	var ArrayPushUnique = x_snc_devtools.ArrayPushUnique;
 	var GetValue = x_snc_devtools.GetValue;
@@ -43,14 +44,14 @@
 		}
 		return nLength + ' cm';
 	}	
-	function RenderVolume(nVolume)
+	function RenderVolume(fVolume)
 	{
-		nVolume = GetIntegerValue(nVolume);
-		if (nVolume == 0)
+		fVolume = GetFloatValue(fVolume);
+		if (fVolume == 0)
 		{
 			return '<span style="color: red;">unspecified</span>';
 		}
-		return nVolume + ' ccm';
+		return fVolume.toFixed(2) + ' m³';
 	}	
 		
 	
@@ -254,8 +255,9 @@
 		// ROUTE
 		strHtml += '<td>';
 			strHtml += '<table width="100%"><tbody>';
-				strHtml += '<tr><th colspan="4">Route (Zulu/UTC)</th></tr>';
+				strHtml += '<tr><th colspan="5">Route (Zulu/UTC)</th></tr>';
 					strHtml += '<tr>';
+					strHtml += '<td>' + RenderDate(lag.departure_datetime) + '</td>';
 					strHtml += '<td>' + RenderTime(lag.departure_datetime) + '</td>';
 					strHtml += '<td>' + lag.departure_icao + '</td>';
 					strHtml += '<td>' + lag.arrival_icao + '</td>';
@@ -328,13 +330,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-27 19:55:46</sys_created_on>
         <sys_id>d8a48a74db2ec510bcced03cd39619cb</sys_id>
-        <sys_mod_count>109</sys_mod_count>
+        <sys_mod_count>114</sys_mod_count>
         <sys_name>HtmlRenderMissionSheetA4</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_d8a48a74db2ec510bcced03cd39619cb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-09 19:54:39</sys_updated_on>
+        <sys_updated_on>2022-04-10 18:03:31</sys_updated_on>
     </sys_script_include>
 </record_update>

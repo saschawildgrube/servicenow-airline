@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Stop" max_length="40" name="x_snc_airline_flight_stop" sizeclass="5" type="collection">
+    <element label="Stop" max_length="40" name="x_snc_airline_flight_stop" sizeclass="6" type="collection">
         <element display="true" label="Airdrome" mandatory="true" max_length="32" name="airdrome" reference="x_snc_airline_airdrome" type="reference"/>
         <element label="Arrival Date/Time" max_length="40" name="arrival_datetime" type="glide_date_time"/>
         <element label="Departure Date/Time" max_length="40" name="departure_datetime" type="glide_date_time"/>
