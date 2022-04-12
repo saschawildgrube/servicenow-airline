@@ -2,12 +2,12 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_snc_airline.GetParcelsFromLAGs</api_name>
+        <api_name>x_snc_airline.GetParcelsFromSegments</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
         <description/>
-        <name>GetParcelsFromLAGs</name>
-        <script><![CDATA[function GetParcelsFromLAGs(aLAGs)
+        <name>GetParcelsFromSegments</name>
+        <script><![CDATA[function GetParcelsFromSegments(aSegments)
 {
 	var GetArrayValue = x_snc_devtools.GetArrayValue;
 	var ArrayValueExists = x_snc_devtools.ArrayValueExists;
@@ -16,44 +16,44 @@
 	var GetStringValue = x_snc_devtools.GetStringValue;
 	var GetIntegerValue = x_snc_devtools.GetIntegerValue;
 	
-	aLAGs = GetArrayValue(aLAGs);
+	aSegments = GetArrayValue(aSegments);
 	
 	var parcels = {};
-	for (var nLAG = 0; nLAG < aLAGs.length; nLAG++)
+	for (var nSegment = 0; nSegment < aSegments.length; nSegment++)
 	{
-		var lag = aLAGs[nLAG];
-		var aParcelsInLAG = lag.parcels;
+		var segment = aSegments[nSegment];
+		var aParcelsInSegment = segment.parcels;
 		
-		for (var nParcelInLAG = 0; nParcelInLAG < aParcelsInLAG.length; nParcelInLAG++)
+		for (var nParcelInSegment = 0; nParcelInSegment < aParcelsInSegment.length; nParcelInSegment++)
 		{
-			var strParcelInLAGSysId = aParcelsInLAG[nParcelInLAG];
+			var strParcelInSegmentSysId = aParcelsInSegment[nParcelInSegment];
 			
 			// The parcel is being loaded (it does not yet exist)
-			if (ArrayValueExists(GetKeys(parcels),strParcelInLAGSysId) == false)
+			if (ArrayValueExists(GetKeys(parcels),strParcelInSegmentSysId) == false)
 			{
-				var grParcel = x_snc_parcel.GetParcelRecord(strParcelInLAGSysId);
+				var grParcel = x_snc_parcel.GetParcelRecord(strParcelInSegmentSysId);
 				if (IsValidRecord(grParcel) == true)
 				{
 					var parcel = {};
-					parcel.sys_id             = strParcelInLAGSysId;
+					parcel.sys_id             = strParcelInSegmentSysId;
 					parcel.number             = GetStringValue(grParcel.number);
 					parcel.total_weight       = GetIntegerValue(grParcel.total_weight);
 					parcel.categories         = x_snc_parcel.GetCategoriesFromParcels(grParcel.sys_id);
-					parcel.departure_icao     = lag.departure_icao;
-					parcel.departure_datetime = lag.departure_datetime;
-					parcel.arrival_icao     = lag.arrival_icao;
-					parcel.arrival_datetime = lag.arrival_datetime;
-					parcels[strParcelInLAGSysId] = parcel;
+					parcel.departure_icao     = segment.departure_icao;
+					parcel.departure_datetime = segment.departure_datetime;
+					parcel.arrival_icao     = segment.arrival_icao;
+					parcel.arrival_datetime = segment.arrival_datetime;
+					parcels[strParcelInSegmentSysId] = parcel;
 				}
 				
 			}
 			// The parcel is already on the plane (it exists)
 			else
 			{
-				var parcel = parcels[strParcelInLAGSysId];
-				parcel.arrival_icao     = lag.arrival_icao;
-				parcel.arrival_datetime = lag.arrival_datetime;
-				parcels[strParcelInLAGSysId] = parcel;
+				var parcel = parcels[strParcelInSegmentSysId];
+				parcel.arrival_icao     = segment.arrival_icao;
+				parcel.arrival_datetime = segment.arrival_datetime;
+				parcels[strParcelInSegmentSysId] = parcel;
 			}
 			
 		}
@@ -72,13 +72,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-31 13:51:44</sys_created_on>
         <sys_id>a6d5918adb6e4d10b652edb305961979</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>GetParcelsFromLAGs</sys_name>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>GetParcelsFromSegments</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_a6d5918adb6e4d10b652edb305961979</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-31 17:53:56</sys_updated_on>
+        <sys_updated_on>2022-04-12 15:35:13</sys_updated_on>
     </sys_script_include>
 </record_update>
