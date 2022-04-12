@@ -13,12 +13,12 @@
         <client_callable>false</client_callable>
         <collection>x_snc_airline_airdrome</collection>
         <condition/>
-        <description>Sets the display value to the ICAO code and the name of the airdrome.</description>
+        <description>Sets the country based on the core_country value if available.</description>
         <execute_function>false</execute_function>
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Airdrome - Set display value</name>
+        <name>Airdrome - Set country</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -29,27 +29,34 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	current.display = current.icao + ' - ' + current.name;
+	if (x_snc_devtools.IsValidSysId(current.core_country))
+	{
+		current.country = current.core_country.name;
+	}
+	else
+	{
+		current.country = '';
+	}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-03-27 17:59:28</sys_created_on>
+        <sys_created_on>2022-04-12 13:55:18</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>7af965f8db6ac510bcced03cd39619dd</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Airdrome - Set display value</sys_name>
+        <sys_id>c4cbc3f1db3ac510bcced03cd3961923</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Airdrome - Set country</sys_name>
         <sys_overrides/>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
-        <sys_update_name>sys_script_7af965f8db6ac510bcced03cd39619dd</sys_update_name>
+        <sys_update_name>sys_script_c4cbc3f1db3ac510bcced03cd3961923</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-12 13:53:52</sys_updated_on>
+        <sys_updated_on>2022-04-12 13:55:18</sys_updated_on>
         <template/>
         <when>before</when>
         <x_snc_datasilos_created>false</x_snc_datasilos_created>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=7af965f8db6ac510bcced03cd39619dd"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=c4cbc3f1db3ac510bcced03cd3961923"/>
 </record_update>
