@@ -64,7 +64,7 @@
 		return strHtml;
 	}
 
-	var aLAGs = GetLAGsFromFlight(grFlight.sys_id);
+	var aLAGs = GetSegmentsFromFlight(grFlight.sys_id);
 	var aParcels = GetParcelsFromLAGs(aLAGs);
 
 	var aParcelSysIds = Array();
@@ -99,16 +99,19 @@
 	strHtml += '.title2 { font-size: 120%; text-align: center; }';
 	strHtml += '</style>';
 	
+	
+	// FLIGHT SHEET
+	
 	strHtml += '<table style="width: 100%;"><tbody>';
 	
-		// MISSION SHEET TITLE
+		// TITLE
 		strHtml += '<tr>';
 			strHtml += '<th class="title1">';
 			if (grFlight.state == 'planning')
 			{
 				strHtml += '<span style="color: red;">DRAFT</span> ';
 			}
-			strHtml += 'Mission Sheet '+grFlight.number;
+			strHtml += ''+grFlight.number;
 			strHtml += '</th>';
 		strHtml += '</tr>';
 
@@ -191,26 +194,6 @@
 	
 	
 	
-	// CONTACT DETAILS
-	if (aContacts.length > 0)
-	{
-		strHtml += '<table style="width: 100%;"><tbody>';
-			strHtml += '<tr><th class="title2" colspan="5">Contact Details</th></tr>';
-			strHtml += '<tr>';
-				strHtml += '<th>Parcels</th><th>Function</th><th>Name</th><th>Mobile</th>';
-			strHtml += '</tr>';
-			for (var nContact = 0; nContact < aContacts.length; nContact++)
-			{
-				var contact = aContacts[nContact];
-				strHtml += '<tr>';
-				strHtml += '<td>'+StringReplace(contact.parcels,',',', ')+'</td>';
-				strHtml += '<td>'+contact.parcel_function+'</td>';
-				strHtml += '<td>'+contact.name+'</td>';
-				strHtml += '<td>'+contact.mobile_phone+'</td>';
-				strHtml += '</tr>';
-			}
-		strHtml += '</tbody></table>';	
-	}
 		
 	// NOTES
 	var strNotes = GetStringValue(grFlight.notes);
@@ -228,8 +211,51 @@
 	var strHtmlPages = HtmlRenderPageA4(strHtml,1,2);
 	
 	
-	// LEG SHEETS
 	
+	// CONTACT SHEET
+	
+	if (aContacts.length > 0)
+	{
+		var strHtml = '';
+		
+		strHtml += '<table style="width: 100%;"><tbody>';
+		
+		// TITLE
+		strHtml += '<tr>';
+			strHtml += '<th class="title1">';
+			if (grFlight.state == 'planning')
+			{
+				strHtml += '<span style="color: red;">DRAFT</span> ';
+			}
+			strHtml += ''+grFlight.number;
+			strHtml += '</th>';
+		strHtml += '</tr>';
+		
+		strHtml += '<table style="width: 100%;"><tbody>';
+
+		
+		// CONTACT DETAILS
+		strHtml += '<table style="width: 100%;"><tbody>';
+			strHtml += '<tr><th class="title2" colspan="5">Contact Details</th></tr>';
+			strHtml += '<tr>';
+				strHtml += '<th>Parcels</th><th>Function</th><th>Name</th><th>Mobile</th>';
+			strHtml += '</tr>';
+			for (var nContact = 0; nContact < aContacts.length; nContact++)
+			{
+				var contact = aContacts[nContact];
+				strHtml += '<tr>';
+				strHtml += '<td>'+StringReplace(contact.parcels,',',', ')+'</td>';
+				strHtml += '<td>'+contact.parcel_function+'</td>';
+				strHtml += '<td>'+contact.name+'</td>';
+				strHtml += '<td>'+contact.mobile_phone+'</td>';
+				strHtml += '</tr>';
+			}
+		strHtml += '</tbody></table>';
+		
+		strHtmlPages += HtmlRenderPageA4(strHtml,1,2);
+	}	
+	
+	// LEG SHEETS
 	for (var nLAG = 0; nLAG < aLAGs.length; nLAG++)
 	{
 		var lag = aLAGs[nLAG];
@@ -237,7 +263,7 @@
 		var strHtml = '';
 		
 		strHtml += '<table style="width: 100%;"><tbody>';
-		// LEG SHEET TITLE
+		// TITLE
 		strHtml += '<tr>';
 			strHtml += '<th class="title1">';
 			if (grFlight.state == 'planning')
@@ -289,18 +315,21 @@
 				strHtml += '<tr>';
 					strHtml += '<th>Total Weight</th><td>'+RenderWeight(nTotalWeight)+'</td>';
 					strHtml += '<th>Total Volume</th><td>'+RenderVolume(nTotalVolume)+'</td>';
-			strHtml += '</tr>';
+				strHtml += '</tr>';
 			strHtml += '</tbody></table>';
 
 			strHtml += '<table style="width: 100%;"><tbody>';
 			strHtml += '<tr>';
+				//strHtml += '<th>L</th>';
 				strHtml += '<th>Parcel Number</th><th>Part Number</th><th>Weight</th><th>Height</th><th>Width</th><th>Length</th><th>Volume</th>';
+				//strHtml += '<th>U</th>';
 			strHtml += '</tr>';
 			
 			for (var nPart = 0; nPart < aParcelParts.length; nPart++)
 			{
 				var part = aParcelParts[nPart];
 				strHtml += '<tr>';
+				//strHtml += '<td><div style="border-style: solid; width: 10px; height: 10px;"/></td>';
 				strHtml += '<td>'+part.parcel+'</td>';
 				strHtml += '<td>'+part.number+'</td>';
 				strHtml += '<td style="text-align: right;">'+RenderWeight(part.weight)+'</td>';
@@ -308,20 +337,15 @@
 				strHtml += '<td style="text-align: right;">'+RenderLength(part.width)+'</td>';
 				strHtml += '<td style="text-align: right;">'+RenderLength(part._length)+'</td>';
 				strHtml += '<td style="text-align: right;">'+RenderVolume(part.volume)+'</td>';
+				//strHtml += '<td><div style="border-style: solid; width: 10px; height: 10px;"/></td>';
 				strHtml += '</tr>';
 			}
 			
 			strHtml += '</tbody></table>';
 		}
 
-		//strHtmlPages += HtmlRenderPageA4('<p>Hello World</p>',1,2);
 		strHtmlPages += HtmlRenderPageA4(strHtml,1,2);
-		
-		//strHtmlPages += strHtml;	
 	}
-	
-	//strHtmlA4 += x_snc_devtools.HtmlRenderValue(aLAGs);
-	//strHtmlA4 += '<code>'+strHtmlA4+'</code>';
 	
 	return strHtmlPages;
 
@@ -330,13 +354,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-27 19:55:46</sys_created_on>
         <sys_id>d8a48a74db2ec510bcced03cd39619cb</sys_id>
-        <sys_mod_count>116</sys_mod_count>
+        <sys_mod_count>128</sys_mod_count>
         <sys_name>HtmlRenderMissionSheetA4</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_d8a48a74db2ec510bcced03cd39619cb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-11 14:10:18</sys_updated_on>
+        <sys_updated_on>2022-04-12 12:24:36</sys_updated_on>
     </sys_script_include>
 </record_update>
