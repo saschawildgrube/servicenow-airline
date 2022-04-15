@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="all_tables.text_index_translations=true" create_roles="user_admin" label="Country" max_length="40" name="core_country" sizeclass="231" text_index="true" type="collection">
-        <element label="European Union" max_length="40" name="x_snc_airline_european_union" type="boolean"/>
         <element label="Flight Operations" max_length="40" name="x_snc_airline_flight_operations" type="boolean"/>
-        <element label="Schengen" max_length="40" name="x_snc_airline_schengen" type="boolean"/>
     </element>
 </database>
