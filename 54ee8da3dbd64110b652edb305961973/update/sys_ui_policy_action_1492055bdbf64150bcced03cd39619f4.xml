@@ -17,7 +17,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-04-16 19:47:09</sys_updated_on>
         <table>x_snc_airline_airdrome</table>
-        <ui_policy display_value="Set country fields read only">3e72c15bdbf64150bcced03cd39619a1</ui_policy>
+        <ui_policy display_value="Airdrome - Set country fields read only">3e72c15bdbf64150bcced03cd39619a1</ui_policy>
         <visible>ignore</visible>
     </sys_ui_policy_action>
 </record_update>

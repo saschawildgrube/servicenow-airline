@@ -14,6 +14,7 @@
 	var GetRecord = x_snc_devtools.GetRecord;
 	var GetIntegerValue = x_snc_devtools.GetIntegerValue;
 	var GetFloatValue = x_snc_devtools.GetFloatValue;
+	var GetBoolValue = x_snc_devtools.GetBoolValue;
 	var HtmlEncode = x_snc_devtools.HtmlEncode;
 	var ArrayPushUnique = x_snc_devtools.ArrayPushUnique;
 	var GetValue = x_snc_devtools.GetValue;
@@ -52,7 +53,31 @@
 			return '<span style="color: red;">unspecified</span>';
 		}
 		return fVolume.toFixed(2) + ' m³';
-	}	
+	}
+	function RenderBorderControl(bEuropeanUnion, bSchengen)
+	{
+		bEuropeanUnion = GetBoolValue(bEuropeanUnion);
+		bSchengen = GetBoolValue(bSchengen);
+		var strHtml = '';
+		if (bEuropeanUnion == true)
+		{
+			strHtml += 'EU';
+		}
+		else
+		{
+			strHtml += '<b>non-EU</b>';
+		}
+		strHtml += ' / ';
+		if (bSchengen == true)
+		{
+			strHtml += 'Schengen';
+		}
+		else
+		{
+			strHtml += '<b>non-Schengen</b>';
+		}
+		return strHtml;
+	}
 		
 	
 	var strHtml = '';
@@ -66,6 +91,9 @@
 
 	var aSegments = GetSegmentsFromFlight(grFlight.sys_id);
 	var aParcels = GetParcelsFromSegments(aSegments);
+	
+	var bEuropeanUnion = true;
+	var bSchengen = true;
 
 	var aParcelSysIds = Array();
 	for (var nParcel = 0; nParcel < aParcels.length; nParcel++)
@@ -78,7 +106,16 @@
 	var nMaxWeight = 0;
 	for (var nSegment = 0; nSegment < aSegments.length; nSegment++)
 	{
-		nMaxWeight = Math.max(nMaxWeight,aSegments[nSegment].cargo_weight);
+		var segment = aSegments[nSegment];
+		nMaxWeight = Math.max(nMaxWeight,segment.cargo_weight);
+		if (segment.departure_european_union == false || segment.arrival_european_union == false)
+		{
+			bEuropeanUnion = false;
+		}
+		if (segment.departure_schengen == false|| segment.arrival_schengen == false)
+		{
+			bSchengen = false;
+		}
 	}
 	
 	//var aContacts = Array();
@@ -133,6 +170,7 @@
 		strHtml += '<td>';
 			strHtml += '<table width="100%"><tbody>';
 			strHtml += '<tr><th>Departure Date</th><td>'+RenderDate(grFlight.departure_datetime)+'</td></tr>';
+			strHtml += '<tr><th>Border Control</th><td>'+RenderBorderControl(bEuropeanUnion,bSchengen)+'</td></tr>';
 			strHtml += '<tr><th>Aircraft Tail Number</th><td>'+grFlight.aircraft.tail_number+'</td></tr>';
 			strHtml += '<tr><th>Aircraft Model</th><td> '+grFlight.aircraft.model.name+'</td></tr>';
 			strHtml += '<tr><th>Pilot</th><td>'+grFlight.pilot.name+'</td></tr>';
@@ -354,13 +392,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-27 19:55:46</sys_created_on>
         <sys_id>d8a48a74db2ec510bcced03cd39619cb</sys_id>
-        <sys_mod_count>130</sys_mod_count>
+        <sys_mod_count>137</sys_mod_count>
         <sys_name>HtmlRenderMissionSheetA4</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_d8a48a74db2ec510bcced03cd39619cb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-12 15:33:46</sys_updated_on>
+        <sys_updated_on>2022-04-16 20:20:48</sys_updated_on>
     </sys_script_include>
 </record_update>
