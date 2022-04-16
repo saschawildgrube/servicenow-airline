@@ -212,7 +212,7 @@
 
 		strHtml += '<table style="width: 100%;"><tbody>';
 		strHtml += '<tr>';
-			strHtml += '<th>Number</th><th>Category</th><th>Weight</th><th colspan="2">Departure</th><th colspan="2">Arrival</th>';
+			strHtml += '<th>Number</th><th>Categories</th><th>Weight</th><th colspan="2">Departure</th><th colspan="2">Arrival</th>';
 		strHtml += '</tr>';
 		for (var nParcel = 0; nParcel < aParcels.length; nParcel++)
 		{
@@ -321,11 +321,18 @@
 			strHtml += '<table width="100%"><tbody>';
 				strHtml += '<tr><th colspan="5">Route (Zulu/UTC)</th></tr>';
 					strHtml += '<tr>';
-					strHtml += '<td>' + RenderDate(segment.departure_datetime) + '</td>';
-					strHtml += '<td>' + RenderTime(segment.departure_datetime) + '</td>';
-					strHtml += '<td>' + segment.departure_icao + '</td>';
-					strHtml += '<td>' + segment.arrival_icao + '</td>';
-					strHtml += '<td>' + RenderTime(segment.arrival_datetime) + '</td>';
+					strHtml += '<td style="text-align: center;">' + RenderDate(segment.departure_datetime) + '</td>';
+					strHtml += '<td style="text-align: center;">' + RenderTime(segment.departure_datetime) + '</td>';
+					strHtml += '<td style="text-align: center;">' + segment.departure_icao + '</td>';
+					strHtml += '<td style="text-align: center;">' + segment.arrival_icao + '</td>';
+					strHtml += '<td style="text-align: center;">' + RenderTime(segment.arrival_datetime) + '</td>';
+					strHtml += '</tr>';;
+					strHtml += '<tr>';
+					strHtml += '<td></td>';
+					strHtml += '<td style="text-align: center;">' + RenderBorderControl(segment.departure_european_union,segment.departure_schengen) + '</td>';
+					strHtml += '<td style="text-align: center;">' + segment.departure_country + '</td>';
+					strHtml += '<td style="text-align: center;">' + segment.arrival_country + '</td>';
+					strHtml += '<td style="text-align: center;">' + RenderBorderControl(segment.arrival_european_union,segment.arrival_schengen) + '</td>';
 					strHtml += '</tr>';;
 			strHtml += '</tbody></table>';
 		strHtml += '</td>';
@@ -392,13 +399,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-27 19:55:46</sys_created_on>
         <sys_id>d8a48a74db2ec510bcced03cd39619cb</sys_id>
-        <sys_mod_count>137</sys_mod_count>
+        <sys_mod_count>140</sys_mod_count>
         <sys_name>HtmlRenderMissionSheetA4</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_d8a48a74db2ec510bcced03cd39619cb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-16 20:20:48</sys_updated_on>
+        <sys_updated_on>2022-04-16 21:08:59</sys_updated_on>
     </sys_script_include>
 </record_update>

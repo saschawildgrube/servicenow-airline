@@ -49,6 +49,7 @@
 	
 	segment.departure_datetime = GetStringValue(grFlight.departure_datetime);
 	segment.departure_icao = GetStringValue(grFlight.departure.icao);
+	segment.departure_country = GetStringValue(grFlight.departure.core_country.name);
 	segment.departure_european_union = GetBoolValue(grFlight.departure.core_country.x_snc_geodata_european_union);
 	segment.departure_schengen = GetBoolValue(grFlight.departure.core_country.x_snc_geodata_schengen);
 	segment.parcels = GetArrayValue(grFlight.parcel_load);
@@ -63,6 +64,7 @@
 	{
 		segment.arrival_datetime = GetStringValue(grStops.arrival_datetime);
 		segment.arrival_icao = GetStringValue(grStops.airdrome.icao);
+		segment.arrival_country = GetStringValue(grStops.airdrome.core_country.name);
 		segment.arrival_european_union = GetBoolValue(grStops.airdrome.core_country.x_snc_geodata_european_union);
 		segment.arrival_schengen = GetBoolValue(grStops.airdrome.core_country.x_snc_geodata_schengen);
 		
@@ -74,6 +76,7 @@
 		segment = {};
 		segment.departure_datetime = GetStringValue(grStops.departure_datetime);
 		segment.departure_icao = GetStringValue(grStops.airdrome.icao);
+		segment.departure_country = GetStringValue(grStops.airdrome.core_country.name);
 		segment.departure_european_union = GetBoolValue(grStops.airdrome.core_country.x_snc_geodata_european_union);
 		segment.departure_schengen = GetBoolValue(grStops.airdrome.core_country.x_snc_geodata_schengen);
 		
@@ -94,6 +97,7 @@
 
 	segment.arrival_datetime = GetStringValue(grFlight.arrival_datetime);
 	segment.arrival_icao = GetStringValue(grFlight.arrival.icao);
+	segment.arrival_country = GetStringValue(grFlight.arrival.core_country.name);
 	segment.arrival_european_union = GetBoolValue(grFlight.arrival.core_country.x_snc_geodata_european_union);
 	segment.arrival_schengen = GetBoolValue(grFlight.arrival.core_country.x_snc_geodata_schengen);
 
@@ -106,13 +110,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-29 19:19:28</sys_created_on>
         <sys_id>a04ec8addb628910b652edb305961973</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>GetSegmentsFromFlight</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_a04ec8addb628910b652edb305961973</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-16 20:16:27</sys_updated_on>
+        <sys_updated_on>2022-04-16 20:51:06</sys_updated_on>
     </sys_script_include>
 </record_update>
