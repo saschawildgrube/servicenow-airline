@@ -5,7 +5,7 @@
         <element label="Cargo Capacity (kg)" max_length="40" name="cargo_capacity" type="integer"/>
         <element label="IFR" max_length="40" name="ifr" type="boolean"/>
         <element label="model" max_length="32" name="model" reference="x_snc_airline_aircraft_model" type="reference"/>
-        <element label="Seats (including pilot)" max_length="40" name="seats" type="integer"/>
+        <element label="Seats (excluding pilot)" max_length="40" name="seats" type="integer"/>
         <element display="true" label="Tail Number" mandatory="true" max_length="6" name="tail_number" type="string"/>
         <index name="index">
             <element name="model"/>
