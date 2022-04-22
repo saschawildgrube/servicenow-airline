@@ -3,7 +3,6 @@
         <element display="true" label="Display" max_length="100" name="display" read_only="true" type="string"/>
         <element label="Manufacturer" mandatory="true" max_length="20" name="manufacturer" type="string"/>
         <element label="Model" mandatory="true" max_length="30" name="model" type="string"/>
-        <element label="Name (old)" mandatory="true" max_length="40" name="name" type="string"/>
         <element label="Type Designator" mandatory="true" max_length="10" name="type" type="string"/>
     </element>
 </database>
