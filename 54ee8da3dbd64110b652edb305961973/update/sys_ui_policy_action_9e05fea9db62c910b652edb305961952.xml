@@ -17,7 +17,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-03-30 07:21:52</sys_updated_on>
         <table>x_snc_airline_flight_stop</table>
-        <ui_policy display_value="Flight Stop - Set read only when flight is scheduled">89b43ea9db62c910b652edb30596191f</ui_policy>
+        <ui_policy display_value="Flight Stop - Set read only after planning">89b43ea9db62c910b652edb30596191f</ui_policy>
         <visible>ignore</visible>
     </sys_ui_policy_action>
 </record_update>

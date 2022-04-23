@@ -56,5 +56,25 @@
             <sys_updated_on>2022-03-27 18:12:29</sys_updated_on>
             <value>scheduled</value>
         </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Completed</label>
+            <language>en</language>
+            <name>x_snc_airline_flight</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-23 16:12:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2374d069dbc74190bcced03cd3961978</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-23 16:12:06</sys_updated_on>
+            <value>completed</value>
+        </sys_choice>
     </sys_choice>
 </record_update>

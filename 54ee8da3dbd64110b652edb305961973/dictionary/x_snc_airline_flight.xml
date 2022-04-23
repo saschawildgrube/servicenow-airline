@@ -14,6 +14,7 @@
             <choice>
                 <element inactive_on_update="false" label="Planning" sequence="1" value="planning"/>
                 <element inactive_on_update="false" label="Scheduled" sequence="2" value="scheduled"/>
+                <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
             </choice>
         </element>
         <index name="index">
