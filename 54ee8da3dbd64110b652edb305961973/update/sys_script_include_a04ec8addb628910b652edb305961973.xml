@@ -19,7 +19,7 @@
 	var Clone = x_snc_devtools.Clone;
 
 	
-	function GetTotalWeight(aParcels) 
+	function GetTotalParcelWeight(aParcels) 
 	{
 		var nTotalWeight = 0;
 		for (var nParcel = 0; nParcel < aParcels.length; nParcel++)
@@ -37,6 +37,25 @@
 		}
 		return nTotalWeight;
 	}
+
+	function GetTotalPassengerWeight(aPassengers) 
+	{
+		var nTotalWeight = 0;
+		for (var nPassenger = 0; nPassenger < aPassengers.length; nPassenger++)
+		{
+			var grPassengers = GetPassengerRecord(aPassengers[nPassenger]);
+			if (IsValidRecord(grPassengers))
+			{
+				var nPassengerWeight = GetIntegerValue(grPassengers.total_weight);
+				if (nPassengerWeight == 0)
+				{
+					return 0;
+				}
+				nTotalWeight += nPassengerWeight;
+			}
+		}
+		return nTotalWeight;
+	}	
 	
 	var grFlight = GetFlightRecord(strFlightSysId);
 	if (IsValidRecord(grFlight) == false)
@@ -54,6 +73,7 @@
 	segment.departure_european_union = GetBoolValue(grFlight.departure.core_country.x_snc_geodata_european_union);
 	segment.departure_schengen = GetBoolValue(grFlight.departure.core_country.x_snc_geodata_schengen);
 	segment.parcels = GetArrayValue(grFlight.parcel_load);
+	//segment.passengers = GetArrayValue(grFlight.passenger_boarding);
 	segment.cargo_weight = GetTotalWeight(segment.parcels);
 
 	
@@ -71,10 +91,11 @@
 		
 		
 		var aParcels = Clone(segment.parcels);
+		var aPassengers = Clone(segment.passengers);
 	
 		
 		aSegments.push(segment);
-		Debug(x_snc_devtools.RenderValue(aSegments));
+		//Debug(x_snc_devtools.RenderValue(aSegments));
 		
 		segment = {};
 		segment.departure_datetime = GetStringValue(grStops.departure_datetime);
@@ -95,7 +116,22 @@
 			aParcels = ArrayPushUnique(aParcels,aStopParcelLoad[nParcelLoad]);
 		}
 		segment.parcels = Clone(aParcels);
-		segment.cargo_weight = GetTotalWeight(segment.parcels);
+		segment.cargo_weight = GetTotalParcelWeight(segment.parcels);
+
+	
+		var aStopPassengerXXX = GetArrayValue(grStops.passenger_xxx);
+		for (var nPassengerXXX = 0; nPassengerXXX < aStopPassengerXXX.length; nPassengerXXX++)
+		{
+			aPassengers = ArrayRemoveValue(aParcels,aStopParcelUnload[nParcelUnload]);
+		}
+
+		var aStopPassengerBoarding = GetArrayValue(grStops.passenger_boarding);
+		for (var nPassengerBoarding = 0; nPassengerBoarding < aStopPassengerBoarding.length; nPassengerBoarding++)
+		{
+			aPassengers = ArrayPushUnique(aPassengers,aStopPassengerBoarding[nPassengerBoarding]);
+		}
+		segment.passengers = Clone(aPassengers);
+		segment.passenger_weight = GetTotalPassengerWeight(segment.passengers);
 	}
 
 	segment.arrival_datetime = GetStringValue(grFlight.arrival_datetime);
@@ -105,7 +141,7 @@
 	segment.arrival_schengen = GetBoolValue(grFlight.arrival.core_country.x_snc_geodata_schengen);
 
 	aSegments.push(segment);
-	Debug(x_snc_devtools.RenderValue(aSegments));
+	//Debug(x_snc_devtools.RenderValue(aSegments));
 
 	
 	return aSegments;
@@ -115,13 +151,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-29 19:19:28</sys_created_on>
         <sys_id>a04ec8addb628910b652edb305961973</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>GetSegmentsFromFlight</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_a04ec8addb628910b652edb305961973</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-22 11:51:26</sys_updated_on>
+        <sys_updated_on>2022-04-23 16:07:55</sys_updated_on>
     </sys_script_include>
 </record_update>
