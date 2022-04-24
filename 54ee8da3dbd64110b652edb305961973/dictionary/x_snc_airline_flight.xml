@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Flight" max_length="40" name="x_snc_airline_flight" sizeclass="6" type="collection">
+    <element label="Flight" max_length="40" name="x_snc_airline_flight" sizeclass="7" type="collection">
         <element label="Aircraft" max_length="32" name="aircraft" reference="x_snc_airline_aircraft" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
         <element label="Arrival" max_length="32" name="arrival" reference="x_snc_airline_airdrome" type="reference"/>
         <element label="Arrival Date/Time" max_length="40" name="arrival_datetime" type="glide_date_time"/>
