@@ -104,24 +104,36 @@
 	}
 
 	var aSegments = GetSegmentsFromFlight(grFlight.sys_id);
-	var aParcels = GetParcelsFromSegments(aSegments);
 	
-	var bEuropeanUnion = true;
-	var bSchengen = true;
-
+	var aPassengers = GetPassengersFromSegments(aSegments);
+	var aPassengerSysIds = Array();
+	for (var nPassenger = 0; nPassenger < aPassengers.length; nPassenger++)
+	{
+		aPassengerSysIds = ArrayPushUnique(aPassengerSysIds,GetValue(aPassengers[nPassenger],'sys_id'));
+	}	
+	
+	var aParcels = GetParcelsFromSegments(aSegments);
 	var aParcelSysIds = Array();
 	for (var nParcel = 0; nParcel < aParcels.length; nParcel++)
 	{
 		aParcelSysIds = ArrayPushUnique(aParcelSysIds,GetValue(aParcels[nParcel],'sys_id'));
 	}
-	
 	var strCategories = x_snc_parcel.GetCategoriesFromParcels(aParcelSysIds);
 	
-	var nMaxLoad = 0;
+	var bEuropeanUnion = true;
+	var bSchengen = true;
+	
+	
+	var nMaxPassengers = 0;
+	var nMaxPassengerWeight = 0;
+	var nMaxCargoWeight = 0;
+
 	for (var nSegment = 0; nSegment < aSegments.length; nSegment++)
 	{
-		var segment = aSegments[nSegment];
-		nMaxLoad = Math.max(nMaxLoad,segment.cargo_weight);
+		var segment = aSegments[nSegment];		
+		nMaxPassengers = Math.max(nMaxPassengers,segment.passengers.length);
+		nMaxPassengerWeight = Math.max(nMaxPassengerWeight,segment.passenger_weight);
+		nMaxCargoWeight = Math.max(nMaxCargoWeight,segment.cargo_weight);
 		if (segment.departure_european_union == false || segment.arrival_european_union == false)
 		{
 			bEuropeanUnion = false;
@@ -132,8 +144,9 @@
 		}
 	}
 	
-	//var aContacts = Array();
-	var aContacts = x_snc_parcel.GetContactsFromParcels(aParcelSysIds);
+
+	var aContactsPassengers = GetContactsFromPassengers(aPassengerSysIds);
+	var aContactsParcel = x_snc_parcel.GetContactsFromParcels(aParcelSysIds);
 	
 	/*
 	var contact = {};
@@ -213,6 +226,40 @@
 	strHtml += '</tbody></table>';
 	
 	
+	// PASSENGERS
+	if (aPassengers.length > 0)
+	{
+		strHtml += '<table style="width: 100%;"><tbody>';
+			strHtml += '<tr><th class="title2" colspan="5">Passenger Details</th></tr>';
+			strHtml += '<tr>';
+				strHtml += '<th>Maximum Passengers</th><td>'+nMaxPassengers+'</td>';
+				strHtml += '<th>Maximum Passenger Weight</th><td>'+RenderWeight(nMaxPassengerWeight)+'</td>';
+			strHtml += '</tr>';
+		strHtml += '</tbody></table>';
+
+		strHtml += '<table style="width: 100%;"><tbody>';
+		strHtml += '<tr>';
+			strHtml += '<th>Number</th><th>Name</th><th>Total Weight</th><th colspan="2">Departure</th><th colspan="2">Arrival</th>';
+		strHtml += '</tr>';
+		for (var nPassenger = 0; nPassenger < aPassengers.length; nPassenger++)
+		{
+			strHtml += '<tr>';
+			var passenger = aPassengers[nPassenger]; 
+			strHtml += '<td>'+passenger.number+'</td>';
+			strHtml += '<td>'+passenger.name+'</td>';
+			strHtml += '<td style="text-align: right;">'+RenderWeight(passenger.total_weight)+'</td>';
+			strHtml += '<td>'+RenderTime(passenger.departure_datetime)+'</td>';
+			strHtml += '<td>'+passenger.departure_icao+'</td>';
+			strHtml += '<td>'+passenger.arrival_icao+'</td>';
+			strHtml += '<td>'+RenderTime(passenger.arrival_datetime)+'</td>';
+			strHtml += '</tr>';
+		}
+		strHtml += '</tbody></table>';
+	}
+		
+	
+	
+	
 	// CARGO
 	if (aParcels.length > 0)
 	{
@@ -220,7 +267,7 @@
 			strHtml += '<tr><th class="title2" colspan="5">Cargo Details</th></tr>';
 			strHtml += '<tr>';
 				strHtml += '<th>Categories</th><td>'+RenderCategories(strCategories)+'</td>';
-				strHtml += '<th>Maximum Load</th><td>'+RenderWeight(nMaxLoad)+'</td>';
+				strHtml += '<th>Maximum Cargo Weight</th><td>'+RenderWeight(nMaxCargoWeight)+'</td>';
 			strHtml += '</tr>';
 		strHtml += '</tbody></table>';
 
@@ -266,7 +313,7 @@
 	
 	// CONTACT SHEET
 	
-	if (aContacts.length > 0)
+	if (aContactsParcel.length > 0 || aContactsPassengers.length > 0)
 	{
 		var strHtml = '';
 		
@@ -290,11 +337,21 @@
 		strHtml += '<table style="width: 100%;"><tbody>';
 			strHtml += '<tr><th class="title2" colspan="5">Contact Details</th></tr>';
 			strHtml += '<tr>';
-				strHtml += '<th>Parcels</th><th>Function</th><th>Name</th><th>Mobile</th>';
+				strHtml += '<th>Reference</th><th>Function</th><th>Name</th><th>Mobile</th>';
 			strHtml += '</tr>';
-			for (var nContact = 0; nContact < aContacts.length; nContact++)
+			for (var nContact = 0; nContact < aContactsPassengers.length; nContact++)
 			{
-				var contact = aContacts[nContact];
+				var contact = aContactsPassengers[nContact];
+				strHtml += '<tr>';
+				strHtml += '<td>'+StringReplace(contact.passengers,',',', ')+'</td>';
+				strHtml += '<td>'+contact.passenger_function+'</td>';
+				strHtml += '<td>'+contact.name+'</td>';
+				strHtml += '<td>'+contact.mobile_phone+'</td>';
+				strHtml += '</tr>';
+			}
+			for (var nContact = 0; nContact < aContactsParcel.length; nContact++)
+			{
+				var contact = aContactsParcel[nContact];
 				strHtml += '<tr>';
 				strHtml += '<td>'+StringReplace(contact.parcels,',',', ')+'</td>';
 				strHtml += '<td>'+contact.parcel_function+'</td>';
@@ -353,10 +410,62 @@
 
 		strHtml += '</tr>';
 		strHtml += '</tbody></table>';	
+	
 		
+		// PASSENGERS
+		var aPassengersInSegment = GetPassengersFromSegments(segment);
+		
+		if (aPassengersInSegment.length > 0)
+		{
+
+			var nTotalPassengerWeight = 0;
+			for (var nPassenger = 0; nPassenger < aPassengersInSegment.length; nPassenger++)
+			{
+				nTotalPassengerWeight += aPassengersInSegment[nPassenger].total_weight;
+			}
+
+			
+			strHtml += '<table style="width: 100%;"><tbody>';
+				strHtml += '<tr><th class="title2" colspan="5">Boarding List</th></tr>';
+				strHtml += '<tr>';
+					strHtml += '<th>Passengers</th><td>'+aPassengersInSegment.length+'</td>';
+					strHtml += '<th>Total Passenger Weight</th><td>'+RenderWeight(nTotalPassengerWeight)+'</td>';
+				strHtml += '</tr>';
+			strHtml += '</tbody></table>';
+
+			strHtml += '<table style="width: 100%;"><tbody>';
+			strHtml += '<tr>';
+				//strHtml += '<th>L</th>';
+				strHtml += '<th>Number</th><th>Name</th><th>Nationality</th><th>Ward Status</th><th>Mobility</th><th>Weight</th>';//'<th>Height</th><th>Width</th><th>Length</th><th>Volume</th>';
+				//strHtml += '<th>U</th>';
+			strHtml += '</tr>';
+			
+			for (var nPassenger = 0; nPassenger < aPassengersInSegment.length; nPassenger++)
+			{
+				var passenger = aPassengersInSegment[nPassenger];
+				strHtml += '<tr>';
+					strHtml += '<td>'+passenger.number+'</td>';
+					strHtml += '<td>'+passenger.name+'</td>';
+					strHtml += '<td>'+passenger.nationality+'</td>';
+					strHtml += '<td>'+passenger.ward_status+'</td>';
+					strHtml += '<td>'+passenger.mobility+'</td>';
+					strHtml += '<td style="text-align: right;">'+RenderWeight(passenger.total_weight)+'</td>';
+				strHtml += '</tr>';
+			}
+			
+			strHtml += '</tbody></table>';
+
+		}
+		else
+		{
+			strHtml += '<table style="width: 100%;"><tbody>';
+				strHtml += '<tr><th class="title2" colspan="5">No passengers</th></tr>';
+			strHtml += '</tbody></table>';			
+		}
+
 		
 		// CARGO
-		if (aParcels.length > 0)
+		if (segment.parcels.length /*aParcels.length*/ > 0)
 		{
 			var aParcelParts = GetParcelPartsFromSegment(segment);
 			
@@ -402,6 +511,12 @@
 			
 			strHtml += '</tbody></table>';
 		}
+		else
+		{
+			strHtml += '<table style="width: 100%;"><tbody>';
+				strHtml += '<tr><th class="title2" colspan="5">No cargo</th></tr>';
+			strHtml += '</tbody></table>';			
+		}
 
 		strHtmlPages += HtmlRenderPageA4(strHtml,1,2);
 	}
@@ -413,13 +528,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-27 19:55:46</sys_created_on>
         <sys_id>d8a48a74db2ec510bcced03cd39619cb</sys_id>
-        <sys_mod_count>148</sys_mod_count>
+        <sys_mod_count>160</sys_mod_count>
         <sys_name>HtmlRenderFlightSheetA4</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_d8a48a74db2ec510bcced03cd39619cb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-23 16:28:37</sys_updated_on>
+        <sys_updated_on>2022-04-24 13:10:17</sys_updated_on>
     </sys_script_include>
 </record_update>

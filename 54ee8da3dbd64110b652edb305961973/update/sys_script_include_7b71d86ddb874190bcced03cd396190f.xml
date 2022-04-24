@@ -15,6 +15,8 @@
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
 	var GetStringValue = x_snc_devtools.GetStringValue;
 	var GetIntegerValue = x_snc_devtools.GetIntegerValue;
+	var GetBoolValue = x_snc_devtools.GetBoolValue;
+
 	
 	aSegments = GetArrayValue(aSegments);
 	
@@ -38,6 +40,11 @@
 					passenger.sys_id             = strPassengerInSegmentSysId;
 					passenger.number             = GetStringValue(grPassenger.number);
 					passenger.name               = GetStringValue(grPassenger.display);
+					passenger.nationality        = grPassenger.getDisplayValue('nationality');
+					passenger.mobility           = grPassenger.getDisplayValue('mobility');
+					passenger.blind              = GetBoolValue(grPassenger.blind);
+					passenger.hearing_impaired   = GetBoolValue(grPassenger.hearing_impaired);
+					passenger.ward_status        = grPassenger.getDisplayValue('ward_status');
 					passenger.total_weight       = GetIntegerValue(grPassenger.total_weight);
 					passenger.departure_icao     = segment.departure_icao;
 					passenger.departure_datetime = segment.departure_datetime;
@@ -72,13 +79,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-23 15:58:45</sys_created_on>
         <sys_id>7b71d86ddb874190bcced03cd396190f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>GetPassengersFromSegments</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_7b71d86ddb874190bcced03cd396190f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-23 16:01:21</sys_updated_on>
+        <sys_updated_on>2022-04-24 13:10:42</sys_updated_on>
     </sys_script_include>
 </record_update>

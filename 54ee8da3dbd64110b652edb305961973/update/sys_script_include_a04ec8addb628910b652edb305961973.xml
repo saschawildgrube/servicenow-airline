@@ -75,8 +75,9 @@
 	segment.departure_european_union = GetBoolValue(grFlight.departure.core_country.x_snc_geodata_european_union);
 	segment.departure_schengen = GetBoolValue(grFlight.departure.core_country.x_snc_geodata_schengen);
 	segment.parcels = GetArrayValue(grFlight.parcel_load);
-	//segment.passengers = GetArrayValue(grFlight.passenger_boarding);
 	segment.cargo_weight = GetTotalParcelWeight(segment.parcels);
+	segment.passengers = GetArrayValue(grFlight.passenger_boarding);
+	segment.passenger_weight = GetTotalPassengerWeight(segment.passengers);
 
 	
 	var grStops = new GlideRecord('x_snc_airline_flight_stop');
@@ -124,7 +125,7 @@
 		var aStopPassengerOffboarding = GetArrayValue(grStops.passenger_offboarding);
 		for (var nPassengerOffboarding = 0; nPassengerOffboarding < aStopPassengerOffboarding.length; nPassengerOffboarding++)
 		{
-			aPassengers = ArrayRemoveValue(aParcels,aStopParcelUnload[nParcelUnload]);
+			aPassengers = ArrayRemoveValue(aPassengers,aStopPassengerOffboarding[nPassengerOffboarding]);
 		}
 
 		var aStopPassengerBoarding = GetArrayValue(grStops.passenger_boarding);
@@ -153,13 +154,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-29 19:19:28</sys_created_on>
         <sys_id>a04ec8addb628910b652edb305961973</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>GetSegmentsFromFlight</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_a04ec8addb628910b652edb305961973</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-24 11:48:29</sys_updated_on>
+        <sys_updated_on>2022-04-24 12:59:29</sys_updated_on>
     </sys_script_include>
 </record_update>
