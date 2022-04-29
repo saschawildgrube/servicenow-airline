@@ -355,6 +355,29 @@
 			strHtml += '<tr>';
 				strHtml += '<th>Reference</th><th>Function</th><th>Name</th><th>Mobile</th>';
 			strHtml += '</tr>';
+		
+			var grPilot = GetRecord('x_snc_airline_pilot',grFlight.pilot);
+			if (IsValidRecord(grPilot))
+			{
+				strHtml += '<tr>';
+				strHtml += '<td>'+grFlight.aircraft.tail_number+'</td>';
+				strHtml += '<td>Pilot</td>';
+				strHtml += '<td>'+grPilot.name+'</td>';
+				strHtml += '<td>'+grPilot.mobile_phone+'</td>';
+				strHtml += '</tr>';
+			}
+			var grCoPilot = GetRecord('x_snc_airline_pilot',grFlight.co_pilot);
+			if (IsValidRecord(grCoPilot))
+			{
+				strHtml += '<tr>';
+				strHtml += '<td>'+grFlight.aircraft.tail_number+'</td>';
+				strHtml += '<td>Co-Pilot</td>';
+				strHtml += '<td>'+grCoPilot.name+'</td>';
+				strHtml += '<td>'+grCoPilot.mobile_phone+'</td>';
+				strHtml += '</tr>';
+			}			
+		
+		
 			for (var nContact = 0; nContact < aContactsPassengers.length; nContact++)
 			{
 				var contact = aContactsPassengers[nContact];
@@ -549,13 +572,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-27 19:55:46</sys_created_on>
         <sys_id>d8a48a74db2ec510bcced03cd39619cb</sys_id>
-        <sys_mod_count>162</sys_mod_count>
+        <sys_mod_count>163</sys_mod_count>
         <sys_name>HtmlRenderFlightSheetA4</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_d8a48a74db2ec510bcced03cd39619cb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-24 13:25:24</sys_updated_on>
+        <sys_updated_on>2022-04-29 20:25:37</sys_updated_on>
     </sys_script_include>
 </record_update>
