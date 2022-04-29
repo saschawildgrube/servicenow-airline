@@ -121,6 +121,8 @@
 
 	var aSegments = GetSegmentsFromFlight(grFlight.sys_id);
 	
+	var aAirdromes = GetAirdromesFromFlight(grFlight.sys_id);
+	
 	var aPassengers = GetPassengersFromSegments(aSegments);
 	var aPassengerSysIds = Array();
 	for (var nPassenger = 0; nPassenger < aPassengers.length; nPassenger++)
@@ -324,79 +326,87 @@
 	
 	// CONTACT SHEET
 	
-	if (IsValidRecord(grPilot) || IsValidRecord(grCoPilot) || aContactsParcel.length > 0 || aContactsPassengers.length > 0)
+	var strHtml = '';
+
+	strHtml += '<table style="width: 100%;"><tbody>';
+
+	// TITLE
+	strHtml += '<tr>';
+	strHtml += '<th class="title1">';
+	if (grFlight.state == 'planning')
 	{
-		var strHtml = '';
-		
-		strHtml += '<table style="width: 100%;"><tbody>';
-		
-		// TITLE
+		strHtml += '<span style="color: red;">DRAFT</span> ';
+	}
+	strHtml += ''+grFlight.number;
+	strHtml += '</th>';
+	strHtml += '</tr>';
+
+	strHtml += '<table style="width: 100%;"><tbody>';
+
+
+	// CONTACT DETAILS
+	strHtml += '<table style="width: 100%;"><tbody>';
+	strHtml += '<tr><th class="title2" colspan="5">Contact Details</th></tr>';
+	strHtml += '<tr>';
+	strHtml += '<th>Reference</th><th>Function</th><th>Name</th><th>Mobile</th>';
+	strHtml += '</tr>';
+
+
+	if (IsValidRecord(grPilot))
+	{
 		strHtml += '<tr>';
-			strHtml += '<th class="title1">';
-			if (grFlight.state == 'planning')
-			{
-				strHtml += '<span style="color: red;">DRAFT</span> ';
-			}
-			strHtml += ''+grFlight.number;
-			strHtml += '</th>';
+		strHtml += '<td>'+grFlight.aircraft.tail_number+'</td>';
+		strHtml += '<td>Pilot</td>';
+		strHtml += '<td>'+grPilot.name+'</td>';
+		strHtml += '<td>'+grPilot.mobile_phone+'</td>';
 		strHtml += '</tr>';
-		
-		strHtml += '<table style="width: 100%;"><tbody>';
+	}
 
-		
-		// CONTACT DETAILS
-		strHtml += '<table style="width: 100%;"><tbody>';
-			strHtml += '<tr><th class="title2" colspan="5">Contact Details</th></tr>';
-			strHtml += '<tr>';
-				strHtml += '<th>Reference</th><th>Function</th><th>Name</th><th>Mobile</th>';
-			strHtml += '</tr>';
-		
+	if (IsValidRecord(grCoPilot))
+	{
+		strHtml += '<tr>';
+		strHtml += '<td>'+grFlight.aircraft.tail_number+'</td>';
+		strHtml += '<td>Co-Pilot</td>';
+		strHtml += '<td>'+grCoPilot.name+'</td>';
+		strHtml += '<td>'+grCoPilot.mobile_phone+'</td>';
+		strHtml += '</tr>';
+	}			
 
-			if (IsValidRecord(grPilot))
-			{
-				strHtml += '<tr>';
-				strHtml += '<td>'+grFlight.aircraft.tail_number+'</td>';
-				strHtml += '<td>Pilot</td>';
-				strHtml += '<td>'+grPilot.name+'</td>';
-				strHtml += '<td>'+grPilot.mobile_phone+'</td>';
-				strHtml += '</tr>';
-			}
+	for (var nAirdrome = 0; nAirdrome < aAirdromes.length; nAirdrome++)
+	{
+		var airdrome = aAirdromes[nAirdrome];
+		strHtml += '<tr>';
+		strHtml += '<td>'+airdrome.icao+'</td>';
+		strHtml += '<td>'+airdrome.airdrome_function+'</td>';
+		strHtml += '<td>'+airdrome.name+'</td>';
+		strHtml += '<td>'+airdrome.phone+'</td>';
+		strHtml += '</tr>';
+	}
 
-			if (IsValidRecord(grCoPilot))
-			{
-				strHtml += '<tr>';
-				strHtml += '<td>'+grFlight.aircraft.tail_number+'</td>';
-				strHtml += '<td>Co-Pilot</td>';
-				strHtml += '<td>'+grCoPilot.name+'</td>';
-				strHtml += '<td>'+grCoPilot.mobile_phone+'</td>';
-				strHtml += '</tr>';
-			}			
-		
-		
-			for (var nContact = 0; nContact < aContactsPassengers.length; nContact++)
-			{
-				var contact = aContactsPassengers[nContact];
-				strHtml += '<tr>';
-				strHtml += '<td>'+StringReplace(contact.passengers,',',', ')+'</td>';
-				strHtml += '<td>'+contact.passenger_function+'</td>';
-				strHtml += '<td>'+contact.name+'</td>';
-				strHtml += '<td>'+contact.mobile_phone+'</td>';
-				strHtml += '</tr>';
-			}
-			for (var nContact = 0; nContact < aContactsParcel.length; nContact++)
-			{
-				var contact = aContactsParcel[nContact];
-				strHtml += '<tr>';
-				strHtml += '<td>'+StringReplace(contact.parcels,',',', ')+'</td>';
-				strHtml += '<td>'+contact.parcel_function+'</td>';
-				strHtml += '<td>'+contact.name+'</td>';
-				strHtml += '<td>'+contact.mobile_phone+'</td>';
-				strHtml += '</tr>';
-			}
-		strHtml += '</tbody></table>';
-		
-		strHtmlPages += HtmlRenderPageA4(strHtml,1,2);
-	}	
+	for (var nContact = 0; nContact < aContactsPassengers.length; nContact++)
+	{
+		var contact = aContactsPassengers[nContact];
+		strHtml += '<tr>';
+		strHtml += '<td>'+StringReplace(contact.passengers,',',', ')+'</td>';
+		strHtml += '<td>'+contact.passenger_function+'</td>';
+		strHtml += '<td>'+contact.name+'</td>';
+		strHtml += '<td>'+contact.mobile_phone+'</td>';
+		strHtml += '</tr>';
+	}
+	for (var nContact = 0; nContact < aContactsParcel.length; nContact++)
+	{
+		var contact = aContactsParcel[nContact];
+		strHtml += '<tr>';
+		strHtml += '<td>'+StringReplace(contact.parcels,',',', ')+'</td>';
+		strHtml += '<td>'+contact.parcel_function+'</td>';
+		strHtml += '<td>'+contact.name+'</td>';
+		strHtml += '<td>'+contact.mobile_phone+'</td>';
+		strHtml += '</tr>';
+	}
+	strHtml += '</tbody></table>';
+
+	strHtmlPages += HtmlRenderPageA4(strHtml,1,2);
+
 	
 	// SEGMENTS SHEETS
 	for (var nSegment = 0; nSegment < aSegments.length; nSegment++)
@@ -567,13 +577,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-27 19:55:46</sys_created_on>
         <sys_id>d8a48a74db2ec510bcced03cd39619cb</sys_id>
-        <sys_mod_count>165</sys_mod_count>
+        <sys_mod_count>168</sys_mod_count>
         <sys_name>HtmlRenderFlightSheetA4</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_d8a48a74db2ec510bcced03cd39619cb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-29 20:50:07</sys_updated_on>
+        <sys_updated_on>2022-04-29 21:11:08</sys_updated_on>
     </sys_script_include>
 </record_update>
