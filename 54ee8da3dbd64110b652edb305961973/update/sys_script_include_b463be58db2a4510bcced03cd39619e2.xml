@@ -17,6 +17,12 @@
 			postfix: ' kg'
 		};
 	
+	var format_fuel =
+		{
+			decimals: 0,
+			postfix: ' l'
+		};	
+	
 	if (strTable == 'x_snc_airline_aircraft')
 	{
 		var formatconfig = {
@@ -34,6 +40,14 @@
 		};
 		return formatconfig;
 	}	
+	
+	if (strTable == 'x_snc_airline_flight_stop')
+	{
+		var formatconfig = {
+			fuel: format_fuel
+		};
+		return formatconfig;
+	}
 
 	return false;
 }]]></script>
@@ -41,13 +55,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:17</sys_created_on>
         <sys_id>b463be58db2a4510bcced03cd39619e2</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>DevToolsGetFormatConfig</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_b463be58db2a4510bcced03cd39619e2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-23 12:37:22</sys_updated_on>
+        <sys_updated_on>2022-04-30 16:55:05</sys_updated_on>
     </sys_script_include>
 </record_update>
