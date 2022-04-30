@@ -2,12 +2,12 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_snc_airline.MakePriorPermissionRequest</api_name>
+        <api_name>x_snc_airline.MakePriorPermissionRequired</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
         <description/>
-        <name>MakePriorPermissionRequest</name>
-        <script><![CDATA[function MakePriorPermissionRequest(grStop)
+        <name>MakePriorPermissionRequired</name>
+        <script><![CDATA[function MakePriorPermissionRequired(grStop)
 {
 	var GetStringValue = x_snc_devtools.GetStringValue;
 	var RenderDate = x_snc_devtools.RenderDate;
@@ -34,7 +34,7 @@
 	
 	strPPR += 'Dear madams and sirs,\n';
 	strPPR += '\n';
-	strPPR += 'please confirm the following Prior Permission Request:\n';
+	strPPR += 'please confirm the following Prior Permission Required request:\n';
 	strPPR += '\n';	
 	
 	strPPR += 'Call Sign / Tail number: '+GetStringValue(grStop.flight.aircraft.tail_number)+'\n';
@@ -169,13 +169,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-30 19:09:00</sys_created_on>
         <sys_id>c1ffb07bdb8bc910b652edb305961972</sys_id>
-        <sys_mod_count>18</sys_mod_count>
-        <sys_name>MakePriorPermissionRequest</sys_name>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>MakePriorPermissionRequired</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_c1ffb07bdb8bc910b652edb305961972</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-30 19:59:14</sys_updated_on>
+        <sys_updated_on>2022-04-30 20:30:59</sys_updated_on>
     </sys_script_include>
 </record_update>
