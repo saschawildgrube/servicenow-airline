@@ -14,14 +14,16 @@
 		return '';
 	}
 	
-
 	var GetStringValue = x_snc_devtools.GetStringValue;
 	var IsValidSysId = x_snc_devtools.IsValidSysId;
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
 	var GetRecord = x_snc_devtools.GetRecord;
 	var GetBoolValue = x_snc_devtools.GetBoolValue;
 	var RenderDate = x_snc_devtools.RenderDate;
-	
+	var SetValue = x_snc_devtools.SetValue;
+	var Clone = x_snc_devtools.Clone;
+	var GetKeys = x_snc_devtools.GetKeys;
+	var GetValue = x_snc_devtools.GetValue;
 
 	
 	function HtmlRenderPagePriorPermissionRequiredStateNoContext()
@@ -58,7 +60,19 @@
 		strHtml += '<h2>'+MakePriorPermissionRequiredHeader(grStop)+'</h2>';
 		strHtml += '<span>Email:</span><pre>'+GetStringValue(grStop.airdrome.email)+'</pre>';
 		strHtml += '<span>Subject:</span><pre>Prior Permission Required: '+MakePriorPermissionRequiredSubject(grStop)+'</pre>';
-		strHtml += '<span>Body:</span><pre>'+MakePriorPermissionRequired(grStop)+'</pre>';
+		
+		var strPPR = '';
+		strPPR += 'Dear madams and sirs,\n';
+		strPPR += '\n';
+		strPPR += 'please confirm the following Prior Permission Required request:\n';
+		strPPR += '\n';	
+		strPPR += MakePriorPermissionRequired(grStop);
+		strPPR += '\n';
+		strPPR += 'Thank you.\n';
+		strPPR += '\n';
+		strPPR += 'Best regards,\n';
+		
+		strHtml += '<span>Body:</span><pre>'+strPPR+'</pre>';
 		return strHtml;
 	}
 
@@ -76,6 +90,109 @@
 		return strHtml;
 	}	
 	
+	function HtmlRenderPagePriorPermissionRequiredStateMission(grMission)
+	{
+		var aFlights = [];
+		
+		var grFlights = new GlideRecord('x_snc_airline_flight');
+		grFlights.addQuery('mission','=',grMission.sys_id);
+		grFlights.query();
+		while (grFlights.next())
+		{
+			aFlights.push(GetStringValue(grFlights.sys_id));
+		}
+		
+		
+		var ppr = {};
+		
+		var grStops = new GlideRecord('x_snc_airline_flight_stop');
+		grStops.addQuery('flight','IN',GetStringValue(aFlights));
+		grStops.orderBy('flight.number');
+		grStops.query();
+		while(grStops.next())
+		{
+			var grAirdrome = GetRecord('x_snc_airline_airdrome',grStops.airdrome);
+			if (IsValidRecord(grAirdrome) == true)
+			{
+				SetValue(Clone(grStops),ppr,GetStringValue(grStops.airdrome),GetStringValue(grStops.sys_id));
+			}
+			
+			//strHtml += HtmlRenderPagePriorPermissionRequiredStateStop(grStops);
+		}
+
+		var strHtml = ''; 
+		
+		var aAirdromes = GetKeys(ppr);
+		for (var nAirdrome = 0; nAirdrome < aAirdromes.length; nAirdrome++)
+		{
+			var strAirdromeSysId = aAirdromes[nAirdrome];
+			var grAirdrome = GetRecord('x_snc_airline_airdrome',strAirdromeSysId);
+			
+			strHtml += '<h2>'+grAirdrome.display+'</h2>';
+			strHtml += '<span>Email:</span><pre>'+GetStringValue(grAirdrome.email)+'</pre>';
+			strHtml += '<span>Subject:</span><pre>Prior Permission Required: '+grMission.number+': '+grMission.name+'</pre>';
+			
+			var strPPR = '';
+			strPPR += 'Dear madams and sirs,\n';
+			strPPR += '\n';
+			strPPR += 'please confirm the following Prior Permission Required request(s):\n';
+			strPPR += '\n';	
+			
+			var aStops = GetKeys(GetValue(ppr,strAirdromeSysId));
+			for (var nStop = 0; nStop < aStops.length; nStop++)
+			{
+				if (nStop > 0)
+				{
+					strPPR += '##############################\n';
+					strPPR += '\n';
+				}
+				
+				var strStopSysId = aStops[nStop];
+				var grStop = GetRecord('x_snc_airline_flight_stop',strStopSysId);
+				strPPR += MakePriorPermissionRequired(grStop);
+			}
+			
+			strPPR += '\n';
+			strPPR += 'Thank you.\n';
+			strPPR += '\n';
+			strPPR += 'Best regards,\n';
+
+			strHtml += '<span>Body:</span><pre>'+strPPR+'</pre>';			
+			
+			
+			
+			
+		}
+		
+		
+		
+		/*
+		
+				strHtml = '';
+		
+		var strPPR = '';
+		strPPR += 'Dear madams and sirs,\n';
+		strPPR += '\n';
+		strPPR += 'please confirm the following Prior Permission Required request:\n';
+		strPPR += '\n';	
+		strPPR += MakePriorPermissionRequired(grStop);
+		strPPR += '\n';
+		strPPR += 'Thank you.\n';
+		strPPR += '\n';
+		strPPR += 'Best regards,\n';
+		
+		strHtml += '<span>Body:</span><pre>'+strPPR+'</pre>';
+		return strHtml;
+		
+		
+		*/
+		
+		
+		
+		
+		return strHtml;
+	}	
+	
 	var strHtml = '';
 	
 	
@@ -84,21 +201,27 @@
 	var strFlight = GetStringValue(RP.getParameterValue('flight'));
 	var strMission = GetStringValue(RP.getParameterValue('mission'));
 
-	
-	var grFlight = GetFlightRecord(strFlight);
-	if (IsValidRecord(grFlight) == true)
+	var grMission = GetRecord('x_snc_airline_mission',strMission);
+	if (IsValidRecord(grMission) == true)
 	{
-		strState = 'flight';
+		strState = 'mission';
 	}
 	else
 	{
-		var grStop = GetRecord('x_snc_airline_flight_stop',strStop);
-		if (IsValidRecord(grStop) == true)
+		var grFlight = GetFlightRecord(strFlight);
+		if (IsValidRecord(grFlight) == true)
 		{
-			strState = 'stop';
+			strState = 'flight';
+		}
+		else
+		{
+			var grStop = GetRecord('x_snc_airline_flight_stop',strStop);
+			if (IsValidRecord(grStop) == true)
+			{
+				strState = 'stop';
+			}
 		}
 	}
-	
 
 	strHtml += '<h1>Prior Permission Required</h1>\n';
 
@@ -124,13 +247,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-30 18:47:08</sys_created_on>
         <sys_id>46d97077db8bc910b652edb305961957</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>HtmlRenderPagePriorPermissionRequired</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_46d97077db8bc910b652edb305961957</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-30 20:31:46</sys_updated_on>
+        <sys_updated_on>2022-05-01 10:31:55</sys_updated_on>
     </sys_script_include>
 </record_update>

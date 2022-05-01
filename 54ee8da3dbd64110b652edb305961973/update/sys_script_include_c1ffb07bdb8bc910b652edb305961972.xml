@@ -32,11 +32,6 @@
 	
 	var strPPR = '';
 	
-	strPPR += 'Dear madams and sirs,\n';
-	strPPR += '\n';
-	strPPR += 'please confirm the following Prior Permission Required request:\n';
-	strPPR += '\n';	
-	
 	strPPR += 'Call Sign / Tail number: '+GetStringValue(grStop.flight.aircraft.tail_number)+'\n';
 	strPPR += 'Aircraft Type: '+GetStringValue(grStop.flight.aircraft.model.display)+'\n';
 	strPPR += 'Flight Date: '+RenderDate(grStop.arrival_datetime)+'\n';
@@ -156,12 +151,6 @@
 	}
 	strPPR += '\n';	
 	
-	
-
-	strPPR += '\n';
-	strPPR += 'Thank you.\n';
-	strPPR += '\n';
-	strPPR += 'Best regards,\n';
 
 	return strPPR;
 }]]></script>
@@ -169,13 +158,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-30 19:09:00</sys_created_on>
         <sys_id>c1ffb07bdb8bc910b652edb305961972</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>MakePriorPermissionRequired</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_c1ffb07bdb8bc910b652edb305961972</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-30 20:30:59</sys_updated_on>
+        <sys_updated_on>2022-05-01 09:53:52</sys_updated_on>
     </sys_script_include>
 </record_update>
