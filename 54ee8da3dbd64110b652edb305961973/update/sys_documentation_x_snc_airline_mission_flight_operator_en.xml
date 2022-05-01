@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="flight_operator" label="Flight Operator" language="en" table="x_snc_airline_mission">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>flight_operator</element>
+            <help/>
+            <hint/>
+            <label>Flight Operator</label>
+            <language>en</language>
+            <name>x_snc_airline_mission</name>
+            <plural>Flight Operators</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-01 09:01:05</sys_created_on>
+            <sys_id>5f9e7377dbcf0d10b652edb30596192b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Flight Operator</sys_name>
+            <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_airline_mission_flight_operator_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-01 09:01:05</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
