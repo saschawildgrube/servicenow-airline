@@ -13,6 +13,7 @@
 	var RenderDate = x_snc_devtools.RenderDate;
 	var GetIntegerValue = x_snc_devtools.GetIntegerValue;
 	var GetFloatValue = x_snc_devtools.GetFloatValue;
+	var GetBoolValue = x_snc_devtools.GetBoolValue;
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
 	var GetArrayValue = x_snc_devtools.GetArrayValue;
 
@@ -36,7 +37,7 @@
 	strPPR += 'Aircraft Type: '+GetStringValue(grStop.flight.aircraft.model.display)+'\n';
 	strPPR += 'Flight Date: '+RenderDate(grStop.arrival_datetime)+'\n';
 	strPPR += '\n';
-	strPPR += 'Arrival Time: '+RenderTime(grStop.arrival_datetime)+'\n';
+	strPPR += 'Arrival Time: '+RenderTime(grStop.arrival_datetime)+' (UTC)\n';
 
 	var grPreviousStop = new GlideRecord('x_snc_airline_flight_stop');
 	grPreviousStop.orderBy(grStop.stop);
@@ -54,7 +55,7 @@
 	}
 	
 	strPPR += '\n';
-	strPPR += 'Departure Time: '+RenderTime(grStop.departure_datetime)+'\n';
+	strPPR += 'Departure Time: '+RenderTime(grStop.departure_datetime)+' (UTC)\n';
 
 	var grNextStop = new GlideRecord('x_snc_airline_flight_stop');
 	grNextStop.orderBy(grStop.stop);
@@ -74,9 +75,19 @@
 	strPPR += '\n';
 
 	
+	var bFuelRequired = GetBoolValue(grStop.fuel_required);
 	var nFuel = GetIntegerValue(grStop.fuel);
-	var strFuelRequired = (nFuel)?(nFuel+' liters '+grStop.flight.aircraft.fuel.getDisplayValue()):('NO');
-	strPPR += 'Refuel Required: ' + strFuelRequired + '\n';
+
+	strPPR += 'Refuel Required: ';
+	if (bFuelRequired == true)
+	{
+		strPPR +=  (nFuel)?(nFuel+' liters '+grStop.flight.aircraft.fuel.getDisplayValue()):('YES');
+	}
+	else
+	{
+		strPPR +=  'NO';
+	}
+	strPPR += '\n';
 	
 	strPPR += '\n';
 	strPPR += 'Pilot in Command: '+grStop.flight.pilot.name+' '+grStop.flight.pilot.mobile_phone+'\n';
@@ -158,13 +169,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-30 19:09:00</sys_created_on>
         <sys_id>c1ffb07bdb8bc910b652edb305961972</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>MakePriorPermissionRequired</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_c1ffb07bdb8bc910b652edb305961972</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-01 09:53:52</sys_updated_on>
+        <sys_updated_on>2022-05-07 18:13:52</sys_updated_on>
     </sys_script_include>
 </record_update>
