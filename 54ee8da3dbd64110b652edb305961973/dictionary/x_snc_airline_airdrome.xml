@@ -5,6 +5,7 @@
         <element label="email" max_length="100" name="email" type="email"/>
         <element label="ICAO" mandatory="true" max_length="4" name="icao" type="string"/>
         <element label="IFR" max_length="40" name="ifr" type="boolean"/>
+        <element label="Notes" max_length="2000" name="notes" type="string"/>
         <index name="index">
             <element name="core_country"/>
         </index>
