@@ -2,17 +2,18 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_snc_airline.HtmlRenderPagePriorPermissionRequired</api_name>
+        <api_name>x_snc_airline.HtmlRenderPageMissionContacts</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
         <description/>
-        <name>HtmlRenderPagePriorPermissionRequired</name>
-        <script><![CDATA[function HtmlRenderPagePriorPermissionRequired()
+        <name>HtmlRenderPageMissionContacts</name>
+        <script><![CDATA[function HtmlRenderPageMissionContacts()
 {
 	if (IsActive() == false)
 	{
 		return '';
 	}
+	
 	
 	var GetStringValue = x_snc_devtools.GetStringValue;
 	var IsValidSysId = x_snc_devtools.IsValidSysId;
@@ -26,13 +27,14 @@
 	var GetValue = x_snc_devtools.GetValue;
 
 	
-	function HtmlRenderPagePriorPermissionRequiredStateNoContext()
+	function HtmlRenderPageMissionContactsStateNoContext()
 	{
 		var strHtml = '';
- 		strHtml += '<p style="color: red;">ERROR: No context defined!</p>';
+ 		strHtml += '<p style="color: red;">ERROR: No mission defined!</p>';
 		return strHtml;
 	}
-	
+
+	/*
 	function MakePriorPermissionRequiredHeader(grStop)
 	{
 		var strHeader = '';
@@ -54,7 +56,7 @@
 	}
 	
 	
-	function HtmlRenderPagePriorPermissionRequiredStateStop(grStop)
+	function HtmlRenderPageMissionContactsStateStop(grStop)
 	{
 		strHtml = '';
 		strHtml += '<h2>'+MakePriorPermissionRequiredHeader(grStop)+'</h2>';
@@ -76,7 +78,7 @@
 		return strHtml;
 	}
 
-	function HtmlRenderPagePriorPermissionRequiredStateFlight(grFlight)
+	function HtmlRenderPageMissionContactsStateFlight(grFlight)
 	{
 		var strHtml = ''; 
 		var grStops = new GlideRecord('x_snc_airline_flight_stop');
@@ -85,13 +87,18 @@
 		grStops.query();
 		while(grStops.next())
 		{
-			strHtml += HtmlRenderPagePriorPermissionRequiredStateStop(grStops);
+			strHtml += HtmlRenderPageMissionContactsStateStop(grStops);
 		}
 		return strHtml;
-	}	
+	}
+	*/
 	
-	function HtmlRenderPagePriorPermissionRequiredStateMission(grMission)
+	function HtmlRenderPageMissionContactsStateMission(grMission)
 	{
+		
+		strHtml += '<h1>Mission '+grMission.number+' '+grMission.name+'</h1>\n';
+		
+		/*
 		var aFlights = [];
 		
 		var grFlights = new GlideRecord('x_snc_airline_flight');
@@ -117,7 +124,7 @@
 				SetValue(Clone(grStops),ppr,GetStringValue(grStops.airdrome),GetStringValue(grStops.sys_id));
 			}
 			
-			//strHtml += HtmlRenderPagePriorPermissionRequiredStateStop(grStops);
+			//strHtml += HtmlRenderPageMissionContactsStateStop(grStops);
 		}
 
 		var strHtml = ''; 
@@ -161,7 +168,6 @@
 			
 			
 			
-			
 		}
 		
 		
@@ -197,8 +203,6 @@
 	
 	
 	var strState = '';
-	var strStop = GetStringValue(RP.getParameterValue('stop'));
-	var strFlight = GetStringValue(RP.getParameterValue('flight'));
 	var strMission = GetStringValue(RP.getParameterValue('mission'));
 
 	var grMission = GetRecord('x_snc_airline_mission',strMission);
@@ -206,39 +210,15 @@
 	{
 		strState = 'mission';
 	}
-	else
-	{
-		var grFlight = GetFlightRecord(strFlight);
-		if (IsValidRecord(grFlight) == true)
-		{
-			strState = 'flight';
-		}
-		else
-		{
-			var grStop = GetRecord('x_snc_airline_flight_stop',strStop);
-			if (IsValidRecord(grStop) == true)
-			{
-				strState = 'stop';
-			}
-		}
-	}
-
-	strHtml += '<h1>Prior Permission Required</h1>\n';
 
 	switch (strState)
 	{
-	case 'stop':
-		strHtml += HtmlRenderPagePriorPermissionRequiredStateStop(grStop);
-		break;
-	case 'flight':
-		strHtml += HtmlRenderPagePriorPermissionRequiredStateFlight(grFlight);
-		break;
 	case 'mission':
-		strHtml += HtmlRenderPagePriorPermissionRequiredStateMission(grMission);
+		strHtml += HtmlRenderPageMissionContactsStateMission(grMission);
 		break;
 	case '':
 	default:
-		strHtml += HtmlRenderPagePriorPermissionRequiredStateNoContext();
+		strHtml += HtmlRenderPageMissionContactsStateNoContext();
 	}
 	
 	return strHtml;
@@ -247,13 +227,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-30 18:47:08</sys_created_on>
         <sys_id>46d97077db8bc910b652edb305961957</sys_id>
-        <sys_mod_count>32</sys_mod_count>
-        <sys_name>HtmlRenderPagePriorPermissionRequired</sys_name>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>HtmlRenderPageMissionContacts</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_46d97077db8bc910b652edb305961957</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-01 10:31:55</sys_updated_on>
+        <sys_updated_on>2022-05-27 17:42:41</sys_updated_on>
     </sys_script_include>
 </record_update>
