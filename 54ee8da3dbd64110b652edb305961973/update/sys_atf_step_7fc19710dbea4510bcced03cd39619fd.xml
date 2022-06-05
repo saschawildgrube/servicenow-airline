@@ -2,7 +2,7 @@
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
         <copied_from/>
-        <description>Checks if the scoped app "DevTools" is installed in a compatible version to: 1.36.0
+        <description>Checks if the scoped app "DevTools" is installed in a compatible version to: 1.39.0
 </description>
         <display_name>DevTools - Check scoped app dependency</display_name>
         <inputs/>
@@ -15,14 +15,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 12:15:23</sys_created_on>
         <sys_id>7fc19710dbea4510bcced03cd39619fd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>DevTools - Check scoped app dependency</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_atf_step_7fc19710dbea4510bcced03cd39619fd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-26 12:15:23</sys_updated_on>
+        <sys_updated_on>2022-06-05 09:26:01</sys_updated_on>
         <table/>
         <test display_value="Airline - Installation">3863be58db2a4510bcced03cd39619fc</test>
         <timeout/>
@@ -37,10 +37,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 12:15:24</sys_created_on>
         <sys_id>bed1d710dbea4510bcced03cd3961954</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-26 12:15:24</sys_updated_on>
-        <value>1.36.0</value>
+        <sys_updated_on>2022-06-05 09:26:01</sys_updated_on>
+        <value>1.39.0</value>
         <variable display_value="Versions">fc5964cadb3da490ba15a353059619b3</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
