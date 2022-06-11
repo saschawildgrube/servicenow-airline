@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_snc_airline.manager" name="x_snc_airline.manager">9e837298db2a4510bcced03cd3961977</contains>
+        <role display_value="x_snc_airline.admin" name="x_snc_airline.admin">05733298db2a4510bcced03cd3961977</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-26 10:03:16</sys_created_on>
+        <sys_id>1f93b298db2a4510bcced03cd396194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_airline.manager.x_snc_airline.admin</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_user_role_contains_1f93b298db2a4510bcced03cd396194e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-26 10:03:16</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

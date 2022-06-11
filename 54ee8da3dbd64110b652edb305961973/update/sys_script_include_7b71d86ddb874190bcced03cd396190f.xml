@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_airline.GetPassengersFromSegments</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>GetPassengersFromSegments</name>
+        <script><![CDATA[function GetPassengersFromSegments(aSegments)
+{
+	var GetArrayValue = x_snc_devtools.GetArrayValue;
+	var ArrayValueExists = x_snc_devtools.ArrayValueExists;
+	var GetKeys = x_snc_devtools.GetKeys;
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var GetIntegerValue = x_snc_devtools.GetIntegerValue;
+	var GetBoolValue = x_snc_devtools.GetBoolValue;
+
+	
+	aSegments = GetArrayValue(aSegments);
+	
+	var passengers = {};
+	for (var nSegment = 0; nSegment < aSegments.length; nSegment++)
+	{
+		var segment = aSegments[nSegment];
+		var aPassengersInSegment = segment.passengers;
+		
+		for (var nPassengerInSegment = 0; nPassengerInSegment < aPassengersInSegment.length; nPassengerInSegment++)
+		{
+			var strPassengerInSegmentSysId = aPassengersInSegment[nPassengerInSegment];
+			
+			// The passenger is boarding (it does not yet exist)
+			if (ArrayValueExists(GetKeys(passengers),strPassengerInSegmentSysId) == false)
+			{
+				var grPassenger = GetPassengerRecord(strPassengerInSegmentSysId);
+				if (IsValidRecord(grPassenger) == true)
+				{
+					var passenger = {};
+					passenger.sys_id             = strPassengerInSegmentSysId;
+					passenger.number             = GetStringValue(grPassenger.number);
+					passenger.name               = GetStringValue(grPassenger.display);
+					passenger.nationality        = grPassenger.getDisplayValue('nationality');
+					passenger.mobility           = grPassenger.getDisplayValue('mobility');
+					passenger.blind              = GetBoolValue(grPassenger.blind);
+					passenger.hearing_impaired   = GetBoolValue(grPassenger.hearing_impaired);
+					passenger.ward_status        = grPassenger.getDisplayValue('ward_status');
+					passenger.total_weight       = GetIntegerValue(grPassenger.total_weight);
+					passenger.departure_icao     = segment.departure_icao;
+					passenger.departure_datetime = segment.departure_datetime;
+					passenger.arrival_icao     = segment.arrival_icao;
+					passenger.arrival_datetime = segment.arrival_datetime;
+					passengers[strPassengerInSegmentSysId] = passenger;
+				}
+				
+			}
+			// The passenger is already on the plane (it exists)
+			else
+			{
+				var passenger = passengers[strPassengerInSegmentSysId];
+				passenger.arrival_icao     = segment.arrival_icao;
+				passenger.arrival_datetime = segment.arrival_datetime;
+				passengers[strPassengerInSegmentSysId] = passenger;
+			}
+			
+		}
+	}
+
+	var aPassengers = Array();
+
+	var aKeys = GetKeys(passengers);
+	for (var nKey = 0; nKey < aKeys.length; nKey++)
+	{
+		aPassengers.push(passengers[aKeys[nKey]]);
+	}
+	return aPassengers;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-23 15:58:45</sys_created_on>
+        <sys_id>7b71d86ddb874190bcced03cd396190f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>GetPassengersFromSegments</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_7b71d86ddb874190bcced03cd396190f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-24 13:10:42</sys_updated_on>
+    </sys_script_include>
+</record_update>

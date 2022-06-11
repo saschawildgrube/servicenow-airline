@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_airline.GetAirdromesFromFlight</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>GetAirdromesFromFlight</name>
+        <script><![CDATA[function GetAirdromesFromFlight(strFlightSysId)
+{
+
+	var GetKeys = x_snc_devtools.GetKeys;
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var GetArrayValue = x_snc_devtools.GetArrayValue;
+	var GetRecord = x_snc_devtools.GetRecord;
+	var GetValue = x_snc_devtools.GetValue;
+	var IsObject= x_snc_devtools.IsObject;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+
+	
+	var grFlight = GetFlightRecord(strFlightSysId);
+	if (IsValidRecord(grFlight) == false)
+	{
+		return Array();
+	}
+	
+
+	var airdromes = {};
+
+	
+	function AddAirdrome(grAirdrome,strFunction)
+	{
+		var airdrome = GetValue(airdromes,grAirdrome.sys_id);
+		if (IsObject(airdrome) == true)
+		{
+			airdrome.airdrome_function += ', '+strFunction;
+		}
+		else
+		{
+			var airdrome = {};
+			airdrome.name = grAirdrome.name;
+			airdrome.icao = grAirdrome.icao;
+			airdrome.phone = grAirdrome.phone;
+			airdrome.airdrome_function = strFunction;
+		}
+		
+		airdromes[GetStringValue(grAirdrome.sys_id)] = airdrome;
+	}
+	
+	
+	var grAirdrome = GetRecord('x_snc_airline_airdrome',grFlight.departure);
+	if (IsValidRecord(grAirdrome))
+	{
+		AddAirdrome(grAirdrome,'Departure');
+	}
+
+	var grStops = new GlideRecord('x_snc_airline_flight_stop');
+	grStops.addQuery('flight','=',grFlight.sys_id);
+	grStops.orderBy('stop');
+	grStops.query();
+	while (grStops.next())
+	{
+		grAirdrome = GetRecord('x_snc_airline_airdrome',grStops.airdrome);
+		if (IsValidRecord(grAirdrome))
+		{
+			AddAirdrome(grAirdrome,'Stop '+grStops.stop);
+		}
+	}
+
+	grAirdrome = GetRecord('x_snc_airline_airdrome',grFlight.arrival);
+	if (IsValidRecord(grAirdrome))
+	{
+		AddAirdrome(grAirdrome,'Arrival');
+	}
+	
+	var aAirdromes = [];
+	var aSysIds = GetKeys(airdromes);
+	for (var nAirdrome = 0; nAirdrome < aSysIds.length; nAirdrome++)
+	{
+		aAirdromes.push(airdromes[aSysIds[nAirdrome]]);
+	}
+	
+	return aAirdromes;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-29 20:51:19</sys_created_on>
+        <sys_id>3bfd042bdbcb4910b652edb30596199d</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>GetAirdromesFromFlight</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_3bfd042bdbcb4910b652edb30596199d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-29 21:33:08</sys_updated_on>
+    </sys_script_include>
+</record_update>

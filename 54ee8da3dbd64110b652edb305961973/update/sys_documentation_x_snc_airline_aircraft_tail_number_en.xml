@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="tail_number" label="Tail Number" language="en" table="x_snc_airline_aircraft">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>tail_number</element>
+            <help/>
+            <hint/>
+            <label>Tail Number</label>
+            <language>en</language>
+            <name>x_snc_airline_aircraft</name>
+            <plural>Tail Numbers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-03-27 12:46:50</sys_created_on>
+            <sys_id>0da2a434db26c510bcced03cd3961931</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Tail Number</sys_name>
+            <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_airline_aircraft_tail_number_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-03-27 12:46:50</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_airline.GetContactsFromPassengers</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>GetContactsFromPassengers</name>
+        <script><![CDATA[function GetContactsFromPassengers(vPassengers)
+{
+	var ArrayPushUnique = x_snc_devtools.ArrayPushUnique;
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var GetArrayValue = x_snc_devtools.GetArrayValue;
+	var ArrayAppend = x_snc_devtools.ArrayAppend;
+	var GetRecord = x_snc_devtools.GetRecord;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var ArrayUnique = x_snc_devtools.ArrayUnique;
+	var GetValue = x_snc_devtools.GetValue;
+
+	
+	var aPassengerSysIds = GetArrayValue(vPassengers);
+
+	var aContactSysIds = Array();
+	var contacts_to_passengers = {};
+	for (var nPassenger = 0; nPassenger < aPassengerSysIds.length; nPassenger++)
+	{
+		var grPassenger = GetPassengerRecord(aPassengerSysIds[nPassenger]);
+		if (IsValidRecord(grPassenger) == true)
+		{
+			var aPassengerContactSysIds = GetArrayValue(grPassenger.contacts);
+			aContactSysIds = ArrayAppend(aContactSysIds,aPassengerContactSysIds);
+			
+			for (var nPassengerContact = 0; nPassengerContact < aPassengerContactSysIds.length; nPassengerContact++)
+			{
+				contacts_to_passengers[aPassengerContactSysIds[nPassengerContact]] =
+					ArrayPushUnique(contacts_to_passengers[aPassengerContactSysIds[nPassengerContact]],GetStringValue(grPassenger.number));
+			}
+			
+		}
+	}
+	
+	aContactSysIds = ArrayUnique(aContactSysIds);
+
+	var aContacts = Array();
+	for (var nContact = 0; nContact < aContactSysIds.length; nContact++)
+	{
+		var grUser = GetRecord('sys_user',aContactSysIds[nContact]);
+		if (IsValidRecord(grUser) == true)
+		{
+			var contact = {};
+			contact.passengers = GetStringValue(GetValue(contacts_to_passengers,grUser.sys_id));
+			contact.name = GetStringValue(grUser.name);
+			contact.mobile_phone = GetStringValue(grUser.mobile_phone);
+			//contact.passenger_function = GetStringValue(grUser.x_snc_parcel_function);
+			contact.passenger_function = '';
+			aContacts.push(contact);
+		}
+	}
+	return aContacts;
+}
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-24 12:24:56</sys_created_on>
+        <sys_id>ef996879dbc7c190bcced03cd39619c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GetContactsFromPassengers</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_ef996879dbc7c190bcced03cd39619c8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-24 12:24:56</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_airline.CheckFlightBeforeScheduling</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>CheckFlightBeforeScheduling</name>
+        <script><![CDATA[function CheckFlightBeforeScheduling(grFlight)
+{
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var ArrayValueExists = x_snc_devtools.ArrayValueExists;
+	var GetArrayValue = x_snc_devtools.GetArrayValue;
+	var GetBoolValue = x_snc_devtools.GetBoolValue;
+
+
+	if (IsValidRecord(grFlight) == false)
+	{
+		return 'ERROR: No flight record provided!';
+	}
+	
+	var strErrorMessage = '';
+	
+	if (GetStringValue(grFlight.departure) == '')
+	{
+		strErrorMessage += 'Departure airport has not been set.\n';
+	}
+	else
+	{
+		if (GetBoolValue(grFlight.departure.core_country.x_snc_airline_flight_operations) == false)
+		{
+			strErrorMessage += 'The departure airport is in a country which is not configured for flight operations.\n';
+		}
+	}
+
+	if (GetStringValue(grFlight.arrival) == '')
+	{
+		strErrorMessage += 'Arrival airport has not been set.\n';
+	}
+	else
+	{
+		if (GetBoolValue(grFlight.arrival.core_country.x_snc_airline_flight_operations) == false)
+		{
+			strErrorMessage += 'The arrival airport is in a country which is not configured for flight operations.\n';
+		}
+	}	
+
+	if (GetStringValue(grFlight.departure_datetime) == '')
+	{
+		strErrorMessage += 'Departure date and time has not been set.\n';
+	}
+
+	if (GetStringValue(grFlight.arrival_datetime) == '')
+	{
+		strErrorMessage += 'Arrival date and time has not been set.\n';
+	}
+
+	if (GetStringValue(grFlight.departure_datetime) != '' && (GetStringValue(grFlight.departure_datetime) == GetStringValue(grFlight.arrival_datetime)))
+	{
+		strErrorMessage += 'Departure and arrival date and time are identical.\n';
+	}
+
+	if (GetStringValue(grFlight.aircraft) == '')
+	{
+		strErrorMessage += 'No aircraft selected.\n';
+	}
+
+	if (GetStringValue(grFlight.pilot) == '')
+	{
+		strErrorMessage += 'No pilot selected.\n';
+	}
+	else
+	{
+		if (GetStringValue(grFlight.pilot) == GetStringValue(grFlight.co_pilot))
+		{
+			strErrorMessage += 'A pilot cannot be the pilot and the co-pilot on the same flight.\n';
+		}	
+	}
+	
+	
+	if (GetStringValue(grFlight.pilot) != '' && GetStringValue(grFlight.aircraft))
+	{
+		if (ArrayValueExists(GetArrayValue(grFlight.pilot.aircraft_licenses), GetStringValue(grFlight.aircraft.model)) == false)
+		{
+			strErrorMessage += 'According to the pilot\'s profile the pilot cannot fly the selected aircraft model.\n';
+		}
+	}
+	
+	if (GetStringValue(grFlight.co_pilot) != '' && GetStringValue(grFlight.aircraft))
+	{
+		// deactivated due to story STRY0010206 -> should be configurable
+		/*
+		if (ArrayValueExists(GetArrayValue(grFlight.co_pilot.aircraft_licenses), GetStringValue(grFlight.aircraft.model)) == false)
+		{
+			strErrorMessage += 'According to the co-pilot\'s profile the co-pilot cannot fly the selected aircraft model.\n';
+		}
+		*/
+	}	
+	
+
+	/*
+	var aSegments = GetSegmentsFromFlight(grFlight.sys_id);
+	for (var nSegment = 0; nSegment < aSegments.length; nSegment++)
+	{
+		if (GetStringValue(grFlight.arrival) == '')
+		{
+			strErrorMessage += 'Arrival airport has not been set.\n';
+		}
+		else
+		{
+			if (GetBoolValue(grFlight.arrival.core_country.x_snc_airline_flight_operations) == false)
+			{
+				strErrorMessage += 'The arrival airport is in a country which is not configured for flight operations.\n';
+			}
+		}		
+	}
+	*/
+	
+	var grStops = new GlideRecord('x_snc_airline_flight_stop');
+	grStops.addQuery('flight','=',grFlight.sys_id);
+	grStops.orderBy('stop');
+	grStops.query();
+	while (grStops.next())
+	{
+		if (GetStringValue(grStops.airdrome) == '')
+		{
+			strErrorMessage += 'Stop '+grStops.stop+' airport has not been set.\n';
+		}
+		else
+		{
+			if (GetBoolValue(grStops.airdrome.core_country.x_snc_airline_flight_operations) == false)
+			{
+				strErrorMessage += 'Stop '+grStops.stop+' airport is in a country which is not configured for flight operations.\n';
+			}
+		}		
+		
+		if (GetStringValue(grStops.arrival_datetime) == '')
+		{
+			strErrorMessage += 'Stop '+grStops.stop+' arrival date and time has not been set.\n';
+		}		
+		if (GetStringValue(grStops.departure_datetime) == '')
+		{
+			strErrorMessage += 'Stop '+grStops.stop+' departure date and time has not been set.\n';
+		}		
+	}
+	
+	
+	return strErrorMessage;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-30 10:04:19</sys_created_on>
+        <sys_id>11391b61dba6c910b652edb30596194e</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>CheckFlightBeforeScheduling</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_11391b61dba6c910b652edb30596194e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-24 13:17:45</sys_updated_on>
+    </sys_script_include>
+</record_update>
