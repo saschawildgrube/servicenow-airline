@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Passenger" max_length="40" name="x_snc_airline_passenger" sizeclass="3" type="collection">
+    <element label="Passenger" max_length="40" name="x_snc_airline_passenger" sizeclass="1" type="collection">
+        <element label="Preferred Arrival" max_length="32" name="arrival" reference="x_snc_airline_airdrome" type="reference"/>
         <element label="Blind" max_length="40" name="blind" type="boolean"/>
+        <element label="Company / Organisation" max_length="32" name="company" reference="core_company" type="reference"/>
         <element label="Contacts" max_length="4000" name="contacts" reference="sys_user" type="glide_list"/>
+        <element label="Preferred Date" max_length="40" name="date" type="glide_date"/>
+        <element label="Preferred Departure" max_length="32" name="departure" reference="x_snc_airline_airdrome" type="reference"/>
         <element display="true" label="Display" max_length="200" name="display" read_only="true" type="string"/>
         <element label="First name" max_length="100" name="first_name" type="string"/>
         <element label="Hearing impaired" max_length="40" name="hearing_impaired" type="boolean"/>
+        <element label="id" max_length="20" name="id" type="string"/>
         <element label="Last name" max_length="200" name="last_name" type="string"/>
         <element label="Luggage Weight (kg)" max_length="40" name="luggage_weight" type="integer"/>
+        <element label="Preferred Mission" max_length="32" name="mission" reference="x_snc_airline_mission" type="reference"/>
         <element choice="3" default="regular" label="Mobility" max_length="40" name="mobility" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Regular" sequence="1" value="regular"/>
@@ -29,7 +35,19 @@
             </choice>
         </element>
         <index name="index">
+            <element name="mission"/>
+        </index>
+        <index name="index2">
             <element name="nationality"/>
+        </index>
+        <index name="index3">
+            <element name="arrival"/>
+        </index>
+        <index name="index4">
+            <element name="company"/>
+        </index>
+        <index name="index5">
+            <element name="departure"/>
         </index>
     </element>
 </database>
