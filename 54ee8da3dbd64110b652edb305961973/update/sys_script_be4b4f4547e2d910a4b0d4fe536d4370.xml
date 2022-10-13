@@ -2,26 +2,25 @@
     <sys_script action="INSERT_OR_UPDATE">
         <abort_action>false</abort_action>
         <access>package_private</access>
-        <action_delete>true</action_delete>
-        <action_insert>true</action_insert>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
         <active>true</active>
-        <add_message>false</add_message>
+        <add_message>true</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_snc_airline_flight_stop</collection>
+        <collection>x_snc_airline_flight</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_snc_airline_flight_stop">flight.state=scheduled^ORflight.state=completed^EQ<item display_value="scheduled" endquery="false" field="flight.state" goto="false" newquery="false" operator="=" or="false" value="scheduled"/>
-            <item display_value="completed" endquery="false" field="flight.state" goto="false" newquery="false" operator="=" or="true" value="completed"/>
+        <filter_condition table="x_snc_airline_flight">potential_flight_capacityGT_FIELDaircraft.cargo_capacity^EQ<item endquery="false" field="potential_flight_capacity" goto="false" newquery="false" operator="GT_FIELD" or="false" value="aircraft.cargo_capacity"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
-        <message/>
-        <name>Flight Stop - No change when scheduled</name>
+        <message><![CDATA[<p>Warning: The potential flight capacity has been set above the potential aircraft capacity. The pilot is responsible to decide how much weight (cargo, passengers and fuel) is loaded to the plane. </p>]]></message>
+        <name>Flight - Potential Capacity Warning</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -32,28 +31,26 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	gs.addErrorMessage('No changes are allowed when flight is scheduled or completed.');
-	current.setAbortAction(true);
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-03-30 07:29:57</sys_created_on>
+        <sys_created_on>2022-10-13 15:55:56</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>fb86fa2ddb62c910b652edb3059619b3</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Flight Stop - No change when scheduled</sys_name>
+        <sys_id>be4b4f4547e2d910a4b0d4fe536d4370</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Flight - Potential Capacity Warning</sys_name>
         <sys_overrides/>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
-        <sys_update_name>sys_script_fb86fa2ddb62c910b652edb3059619b3</sys_update_name>
+        <sys_update_name>sys_script_be4b4f4547e2d910a4b0d4fe536d4370</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-13 15:47:22</sys_updated_on>
+        <sys_updated_on>2022-10-13 15:55:56</sys_updated_on>
         <template/>
         <when>before</when>
         <x_snc_datasilos_created>false</x_snc_datasilos_created>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=fb86fa2ddb62c910b652edb3059619b3"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=be4b4f4547e2d910a4b0d4fe536d4370"/>
 </record_update>
