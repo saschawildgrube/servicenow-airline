@@ -9,26 +9,25 @@
         <name>HtmlRenderPageMissionContacts</name>
         <script><![CDATA[function HtmlRenderPageMissionContacts()
 {
-	var HtmlRenderError = x_snc_devtools.HtmlRenderError;
-	var HtmlRenderInfo = x_snc_devtools.HtmlRenderInfo;
-	
-	
+
 	if (IsActive() == false)
 	{
 		return '';
 	}
-	
-	
+
 	var GetStringValue = x_snc_devtools.GetStringValue;
-	var IsValidSysId = x_snc_devtools.IsValidSysId;
+	var HtmlRenderError = x_snc_devtools.HtmlRenderError;
+	var HtmlRenderInfo = x_snc_devtools.HtmlRenderInfo;
+	var IsValidEmail = x_snc_devtools.IsValidEmail;
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
 	var GetRecord = x_snc_devtools.GetRecord;
-	var GetBoolValue = x_snc_devtools.GetBoolValue;
-	var RenderDate = x_snc_devtools.RenderDate;
-	var SetValue = x_snc_devtools.SetValue;
-	var Clone = x_snc_devtools.Clone;
-	var GetKeys = x_snc_devtools.GetKeys;
 	var GetValue = x_snc_devtools.GetValue;
+
+	/*
+	var IsValidSysId = x_snc_devtools.IsValidSysId;
+
+	var SetValue = x_snc_devtools.SetValue;
+*/
 
 	
 	function HtmlRenderPageMissionContactsStateNoContext()
@@ -36,81 +35,37 @@
 		return HtmlRenderError('No mission defined!');
 	}
 
-	/*
-	function MakePriorPermissionRequiredHeader(grStop)
-	{
-		var strHeader = '';
-		strHeader += GetStringValue(grStop.flight.number)
-		strHeader += ' - Stop '+grStop.stop;
-		strHeader += ' - '+grStop.airdrome.display;
-		strHeader += ' - '+grStop.flight.aircraft.tail_number;
-		return strHeader;
-	}
 
-	function MakePriorPermissionRequiredSubject(grStop)
-	{
-		var strSubject = '';
-		strSubject += GetStringValue(grStop.flight.number)
-		strSubject += ' - Stop '+grStop.stop;
-		strSubject += ' - '+grStop.flight.aircraft.tail_number;
-		strSubject += ' - '+RenderDate(grStop.arrival_datetime);
-		return strSubject;
-	}
-	
-	
-	function HtmlRenderPageMissionContactsStateStop(grStop)
-	{
-		strHtml = '';
-		strHtml += '<h2>'+MakePriorPermissionRequiredHeader(grStop)+'</h2>';
-		strHtml += '<span>Email:</span><pre>'+GetStringValue(grStop.airdrome.email)+'</pre>';
-		strHtml += '<span>Subject:</span><pre>Prior Permission Required: '+MakePriorPermissionRequiredSubject(grStop)+'</pre>';
-		
-		var strPPR = '';
-		strPPR += 'Dear madams and sirs,\n';
-		strPPR += '\n';
-		strPPR += 'please confirm the following Prior Permission Required request:\n';
-		strPPR += '\n';	
-		strPPR += MakePriorPermissionRequired(grStop);
-		strPPR += '\n';
-		strPPR += 'Thank you.\n';
-		strPPR += '\n';
-		strPPR += 'Best regards,\n';
-		
-		strHtml += '<span>Body:</span><pre>'+strPPR+'</pre>';
-		return strHtml;
-	}
-
-	function HtmlRenderPageMissionContactsStateFlight(grFlight)
-	{
-		var strHtml = ''; 
-		var grStops = new GlideRecord('x_snc_airline_flight_stop');
-		grStops.addQuery('flight','=',grFlight.sys_id);
-		grStops.orderBy('stop');
-		grStops.query();
-		while(grStops.next())
-		{
-			strHtml += HtmlRenderPageMissionContactsStateStop(grStops);
-		}
-		return strHtml;
-	}
-	*/
-	
 	function HtmlRenderPageMissionContactsStateMission(grMission)
 	{
 	
-		strHtml += '<h1>Mission '+grMission.number+' '+grMission.name+'</h1>\n';
+		var strHtml = '<h1>Mission '+grMission.number+' '+grMission.name+'</h1>\n';
 		
-		aContacts = GetContactsFromMission(grMission.sys_id);
+		var aContacts = GetContactsFromMission(grMission.sys_id);
 		if (aContacts == false)
 		{
-			return HtmlRenderError('Could not get contacts for given mission!');
+			return strHtml + HtmlRenderError('Could not get contacts for given mission!');
 		}
 		
 		if (aContacts.length == 0)
 		{
-			return HtmlRenderInfo('There are no contacts for this mission.');
+			return strHtml + HtmlRenderInfo('There are no contacts for this mission.');
 		}
 		
+		strHtml += '<pre>';
+		
+		for (var nContact = 0; nContact < aContacts.length; nContact++)
+		{
+			var contact = aContacts[nContact];
+			
+			var strEmail = GetValue(contact,'email');
+			
+			if (IsValidEmail(strEmail))
+			{
+				strHtml += strEmail + '\n';
+			}
+		}
+		strHtml += '</pre>';
 		
 		return strHtml;
 	}	
@@ -143,13 +98,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-30 18:47:08</sys_created_on>
         <sys_id>46d97077db8bc910b652edb305961957</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>42</sys_mod_count>
         <sys_name>HtmlRenderPageMissionContacts</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_46d97077db8bc910b652edb305961957</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-25 17:57:13</sys_updated_on>
+        <sys_updated_on>2022-12-25 18:25:11</sys_updated_on>
     </sys_script_include>
 </record_update>
