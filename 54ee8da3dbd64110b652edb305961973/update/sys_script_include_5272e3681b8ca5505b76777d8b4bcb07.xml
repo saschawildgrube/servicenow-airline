@@ -45,12 +45,12 @@
 	grFlight.query();
 	while (grFlight.next())
 	{
-		var grPilot = GetRecord('sys_user',grFlight.pilot);
+		var grPilot = GetPilotRecord(grFlight.pilot);
 		if (IsValidRecord(grPilot) == true)
 		{
 			ArrayPushUnique(aContacts,Clone(grPilot));
 		}
-		var grCoPilot = GetRecord('sys_user',grFlight.co_pilot);
+		var grCoPilot = GetPilotRecord(grFlight.co_pilot);
 		if (IsValidRecord(grCoPilot) == true)
 		{
 			ArrayPushUnique(aContacts,Clone(grCoPilot));
@@ -76,7 +76,7 @@
 	
 	for (var nPassenger = 0; nPassenger < aPassengerSysIds.length; nPassenger++)
 	{
-		var grPassenger = GetRecord('x_snc_airline_passenger',aPassengerSysIds[nPassenger]);
+		var grPassenger = GetPassengerRecord(aPassengerSysIds[nPassenger]);
 		if (IsValidRecord(grPassenger) == true)
 		{
 			var aContactSysIds = GetArrayValue(grPassenger.contacts);
@@ -121,13 +121,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-25 17:54:28</sys_created_on>
         <sys_id>5272e3681b8ca5505b76777d8b4bcb07</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>GetContactsFromMission</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_5272e3681b8ca5505b76777d8b4bcb07</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-25 18:50:41</sys_updated_on>
+        <sys_updated_on>2022-12-25 18:56:17</sys_updated_on>
     </sys_script_include>
 </record_update>
