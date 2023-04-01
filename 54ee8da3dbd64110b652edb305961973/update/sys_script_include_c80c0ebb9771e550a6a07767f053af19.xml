@@ -23,6 +23,7 @@
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
 	var GetRecord = x_snc_devtools.GetRecord;
 	var GetValue = x_snc_devtools.GetValue;
+	var RecordGetValue = x_snc_devtools.RecordGetValue;
 
 
 	function HtmlRenderPageMissionContactsStateNoContext()
@@ -34,7 +35,7 @@
 	function HtmlRenderPageMissionContactsStateMission(grMission)
 	{
 	
-		var strHtml = '<h1>'+grMission.number+' '+grMission.name+' - Mailing List</h1>\n';
+		var strHtml = '<h1>'+grMission.number+' '+grMission.name+' - Contacts</h1>\n';
 		
 		var aContacts = GetContactsFromMission(grMission.sys_id);
 		if (aContacts == false)
@@ -52,6 +53,7 @@
 		aRows.push(
 			[
 					{ header: true, content: 'Name'},
+					{ header: true, content: 'Organization'},
 					{ header: true, content: 'Phone'},
 					{ header: true, content: 'Email'},
 			]);
@@ -61,12 +63,14 @@
 			var contact = aContacts[nContact];
 			
 			var strName = GetValue(contact,'name');
-			var strPhone = GetValue(contact,'mobile');
+			var strOrganization = RecordGetValue('core_company',GetValue(contact,'company'),'name');
+			var strPhone = GetValue(contact,'mobile_phone');
 			var strEmail = GetValue(contact,'email');
 			
 			aRows.push(
 				[
 					GetValue(contact,'name'),
+					strOrganization,
 					strPhone,
 					strEmail				
 				]);
@@ -77,6 +81,8 @@
 			'contacts',
 			'table.contacts, th.contacts, td.contacts { border: 2px solid; padding: 2px; vertical-align: top }'
 		);
+		
+		//strHtml += x_snc_devtools.RenderValue(aContacts);
 		
 		return strHtml;
 	}	
@@ -109,13 +115,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-04-01 13:44:09</sys_created_on>
         <sys_id>c80c0ebb9771e550a6a07767f053af19</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>HtmlRenderPageMissionContacts</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_c80c0ebb9771e550a6a07767f053af19</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-01 13:49:19</sys_updated_on>
+        <sys_updated_on>2023-04-01 14:04:05</sys_updated_on>
     </sys_script_include>
 </record_update>
