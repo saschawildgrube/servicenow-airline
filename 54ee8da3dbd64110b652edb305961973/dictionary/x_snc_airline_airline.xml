@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="core_company" label="Airline" max_length="40" name="x_snc_airline_airline" sizeclass="0" type="collection">
-        <element label="Airline Shorthand" mandatory="true" max_length="3" name="airline_shorthand" type="string"/>
-        <element label="Flight Notes Template" max_length="4000" name="flight_notes_template" type="string"/>
-    </element>
-</database>
