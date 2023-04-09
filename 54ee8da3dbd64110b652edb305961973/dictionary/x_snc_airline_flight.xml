@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="8f5431b79731e550a6a07767f053af7e" label="Flight" max_length="40" name="x_snc_airline_flight" type="collection">
         <element label="Aircraft" max_length="32" name="aircraft" reference="x_snc_airline_aircraft" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element label="Airline" mandatory="true" max_length="32" name="airline" reference="x_snc_airline_airline" type="reference"/>
         <element label="Arrival" max_length="32" name="arrival" reference="x_snc_airline_airdrome" type="reference"/>
         <element label="Arrival Date/Time" max_length="40" name="arrival_datetime" type="glide_date_time"/>
         <element label="Co-Pilot" max_length="32" name="co_pilot" reference="x_snc_airline_pilot" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
@@ -26,18 +27,21 @@
             <element name="aircraft"/>
         </index>
         <index name="index2">
-            <element name="arrival"/>
+            <element name="airline"/>
         </index>
         <index name="index3">
-            <element name="co_pilot"/>
+            <element name="arrival"/>
         </index>
         <index name="index4">
-            <element name="departure"/>
+            <element name="co_pilot"/>
         </index>
         <index name="index5">
-            <element name="mission"/>
+            <element name="departure"/>
         </index>
         <index name="index6">
+            <element name="mission"/>
+        </index>
+        <index name="index7">
             <element name="pilot"/>
         </index>
     </element>
