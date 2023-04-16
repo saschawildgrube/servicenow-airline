@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_airline_airdrome</collection>
+        <condition/>
+        <description>Sets the country based on the core_country value if available.</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Airdrome - Set country</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	if (x_snc_devtools.IsValidSysId(current.core_country))
+	{
+		current.country = current.core_country.name;
+	}
+	else
+	{
+		current.country = '';
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-12 13:55:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c4cbc3f1db3ac510bcced03cd3961923</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Airdrome - Set country</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_c4cbc3f1db3ac510bcced03cd3961923</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-12 13:55:18</sys_updated_on>
+        <template/>
+        <when>before</when>
+        <x_snc_datasilos_created>false</x_snc_datasilos_created>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=c4cbc3f1db3ac510bcced03cd3961923"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</application>
+        <file_path/>
+        <instance_id>84975bb2db8d919c4d2bac44d4961989</instance_id>
+        <instance_name>wildgrubetokyo</instance_name>
+        <name>sys_script_c4cbc3f1db3ac510bcced03cd3961923</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;
+    &lt;sys_script action="INSERT_OR_UPDATE"&gt;
+        &lt;abort_action&gt;false&lt;/abort_action&gt;
+        &lt;access&gt;package_private&lt;/access&gt;
+        &lt;action_delete&gt;false&lt;/action_delete&gt;
+        &lt;action_insert&gt;true&lt;/action_insert&gt;
+        &lt;action_query&gt;false&lt;/action_query&gt;
+        &lt;action_update&gt;true&lt;/action_update&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;add_message&gt;false&lt;/add_message&gt;
+        &lt;advanced&gt;true&lt;/advanced&gt;
+        &lt;change_fields&gt;false&lt;/change_fields&gt;
+        &lt;client_callable&gt;false&lt;/client_callable&gt;
+        &lt;collection&gt;x_snc_airline_airdrome&lt;/collection&gt;
+        &lt;condition/&gt;
+        &lt;description&gt;Sets the country based on the core_country value if available.&lt;/description&gt;
+        &lt;execute_function&gt;false&lt;/execute_function&gt;
+        &lt;filter_condition/&gt;
+        &lt;is_rest&gt;false&lt;/is_rest&gt;
+        &lt;message/&gt;
+        &lt;name&gt;Airdrome - Set country&lt;/name&gt;
+        &lt;order&gt;100&lt;/order&gt;
+        &lt;priority&gt;100&lt;/priority&gt;
+        &lt;rest_method/&gt;
+        &lt;rest_method_text/&gt;
+        &lt;rest_service/&gt;
+        &lt;rest_service_text/&gt;
+        &lt;rest_variables/&gt;
+        &lt;role_conditions/&gt;
+        &lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	if (x_snc_devtools.IsValidSysId(current.core_country))
+	{
+		current.country = current.core_country.name;
+	}
+	else
+	{
+		current.country = '';
+	}
+
+})(current, previous);]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2022-04-12 13:55:18&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;c4cbc3f1db3ac510bcced03cd3961923&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Airdrome - Set country&lt;/sys_name&gt;
+        &lt;sys_overrides/&gt;
+        &lt;sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline"&gt;54ee8da3dbd64110b652edb305961973&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Airline WORK IN PROGRESS"&gt;54ee8da3dbd64110b652edb305961973&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_c4cbc3f1db3ac510bcced03cd3961923&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2022-04-12 13:55:18&lt;/sys_updated_on&gt;
+        &lt;template/&gt;
+        &lt;when&gt;before&lt;/when&gt;
+        &lt;x_snc_datasilos_created&gt;false&lt;/x_snc_datasilos_created&gt;
+    &lt;/sys_script&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=c4cbc3f1db3ac510bcced03cd3961923"/&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>1393275917</payload_hash>
+        <record_name>Airdrome - Set country</record_name>
+        <reverted_from/>
+        <source>017435b79731e550a6a07767f053afed</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-01 12:01:55</sys_created_on>
+        <sys_id>2e9471f79731e550a6a07767f053afe3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1873cb20fce0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-01 12:01:55</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>ea9471f75a31e5502e73b63172efe2e3</update_guid>
+        <update_guid_history>ea9471f75a31e5502e73b63172efe2e3:1393275917</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-16 16:04:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>006fafda735b4c04800640be14a4e409</sys_id>
+        <sys_metadata>c4cbc3f1db3ac510bcced03cd3961923</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Airdrome - Set country</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_parent display_value="Airport (old)">e454bd779731e550a6a07767f053afe1</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope_delete display_value="">c6f42fe7959e4054a7cc3eae6bd19390</sys_scope_delete>
+        <sys_update_name>sys_script_c4cbc3f1db3ac510bcced03cd3961923</sys_update_name>
+        <sys_update_version display_value="sys_script_c4cbc3f1db3ac510bcced03cd3961923">2e9471f79731e550a6a07767f053afe3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-16 16:04:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
