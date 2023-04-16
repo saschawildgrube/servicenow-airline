@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="6bbd43a81b526d10cd6153d16b4bcb70" label="Airport" max_length="40" name="x_snc_airline_airport" type="collection"/>
+    <element db_object_id="6bbd43a81b526d10cd6153d16b4bcb70" label="Airport" max_length="40" name="x_snc_airline_airport" type="collection">
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element label="Contact" max_length="32" name="contact" reference="sys_user" type="reference"/>
+        <element label="Country" max_length="32" name="core_country" reference="core_country" type="reference"/>
+        <element display="true" label="Display" max_length="200" name="display" type="string"/>
+        <element label="Email" max_length="100" name="email" type="email"/>
+        <element label="ICAO" mandatory="true" max_length="4" name="icao" type="string"/>
+        <element label="IFR" max_length="40" name="ifr" type="boolean"/>
+        <element label="Latitude" max_length="40" name="latitude" type="float"/>
+        <element label="Longitude" max_length="40" name="longitude" type="float"/>
+        <element label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element label="Notes" max_length="2000" name="notes" type="string"/>
+        <element label="Phone" max_length="40" name="phone" type="string"/>
+        <element label="Street" max_length="255" name="street" type="string"/>
+        <element label="Zip / Postal Code" max_length="40" name="zip" type="string"/>
+        <index name="index">
+            <element name="contact"/>
+        </index>
+        <index name="index2">
+            <element name="core_country"/>
+        </index>
+    </element>
 </database>
