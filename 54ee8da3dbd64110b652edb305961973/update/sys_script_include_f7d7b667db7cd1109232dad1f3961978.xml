@@ -28,7 +28,7 @@
 	function HtmlRenderPagePriorPermissionRequiredStateNoContext()
 	{
 		var strHtml = '';
- 		strHtml += '<p style="color: red;">ERROR: No context defined!</p>';
+		strHtml += '<p style="color: red;">ERROR: No context defined!</p>';
 		return strHtml;
 	}
 	
@@ -37,7 +37,7 @@
 		var strHeader = '';
 		strHeader += GetStringValue(grStop.flight.number)
 		strHeader += ' - Stop '+grStop.stop;
-		strHeader += ' - '+grStop.airdrome.display;
+		strHeader += ' - '+grStop.airport.display;
 		strHeader += ' - '+grStop.flight.aircraft.tail_number;
 		return strHeader;
 	}
@@ -56,7 +56,7 @@
 	{
 		strHtml = '';
 		strHtml += '<h2>'+MakePriorPermissionRequiredHeader(grStop)+'</h2>';
-		strHtml += '<span>Email:</span><pre>'+GetStringValue(grStop.airdrome.email)+'</pre>';
+		strHtml += '<span>Email:</span><pre>'+GetStringValue(grStop.airport.email)+'</pre>';
 		strHtml += '<span>Subject:</span><pre>Prior Permission Required: '+MakePriorPermissionRequiredSubject(grStop)+'</pre>';
 		
 		var strPPR = '';
@@ -108,24 +108,24 @@
 		grStops.query();
 		while(grStops.next())
 		{
-			var grAirdrome = GetRecord('x_snc_airline_airdrome',grStops.airdrome);
-			if (IsValidRecord(grAirdrome) == true)
+			var grAirport = GetRecord('x_snc_airline_airport',grStops.airport);
+			if (IsValidRecord(grAirport) == true)
 			{
-				SetValue(Clone(grStops),ppr,GetStringValue(grStops.airdrome),GetStringValue(grStops.sys_id));
+				SetValue(Clone(grStops),ppr,GetStringValue(grStops.airport),GetStringValue(grStops.sys_id));
 			}
 			
 			//strHtml += HtmlRenderPagePriorPermissionRequiredStateStop(grStops);
 		}
 		var strHtml = ''; 
 		
-		var aAirdromes = GetKeys(ppr);
-		for (var nAirdrome = 0; nAirdrome < aAirdromes.length; nAirdrome++)
+		var aAirports = GetKeys(ppr);
+		for (var nAirport = 0; nAirport < aAirports.length; nAirport++)
 		{
-			var strAirdromeSysId = aAirdromes[nAirdrome];
-			var grAirdrome = GetRecord('x_snc_airline_airdrome',strAirdromeSysId);
+			var strAirportSysId = aAirports[nAirport];
+			var grAirport = GetRecord('x_snc_airline_airport',strAirportSysId);
 			
-			strHtml += '<h2>'+grAirdrome.display+'</h2>';
-			strHtml += '<span>Email:</span><pre>'+GetStringValue(grAirdrome.email)+'</pre>';
+			strHtml += '<h2>'+grAirport.display+'</h2>';
+			strHtml += '<span>Email:</span><pre>'+GetStringValue(grAirport.email)+'</pre>';
 			strHtml += '<span>Subject:</span><pre>Prior Permission Required: '+grMission.number+': '+grMission.name+'</pre>';
 			
 			var strPPR = '';
@@ -134,7 +134,7 @@
 			strPPR += 'please confirm the following Prior Permission Required request(s):\n';
 			strPPR += '\n';	
 			
-			var aStops = GetKeys(GetValue(ppr,strAirdromeSysId));
+			var aStops = GetKeys(GetValue(ppr,strAirportSysId));
 			for (var nStop = 0; nStop < aStops.length; nStop++)
 			{
 				if (nStop > 0)
@@ -239,13 +239,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-26 09:04:39</sys_created_on>
         <sys_id>f7d7b667db7cd1109232dad1f3961978</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>HtmlRenderPagePriorPermissionRequired</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_f7d7b667db7cd1109232dad1f3961978</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-26 09:04:39</sys_updated_on>
+        <sys_updated_on>2023-04-16 16:17:59</sys_updated_on>
     </sys_script_include>
 </record_update>
