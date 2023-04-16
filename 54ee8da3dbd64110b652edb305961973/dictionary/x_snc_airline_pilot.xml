@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_user" label="Pilot" max_length="40" name="x_snc_airline_pilot" type="collection">
+    <element db_object_id="8164b1b79731e550a6a07767f053af22" extends="sys_user" label="Pilot" max_length="40" name="x_snc_airline_pilot" type="collection">
         <element label="Aircraft Licenses" max_length="4000" name="aircraft_licenses" reference="x_snc_airline_aircraft_model" type="glide_list"/>
         <element label="Associated Aircraft" max_length="4000" name="associated_aircraft" reference="x_snc_airline_aircraft" type="glide_list"/>
-        <element label="Associated Airports" max_length="4000" name="associated_airdromes" reference="x_snc_airline_airdrome" type="glide_list"/>
+        <element label="Associated Airports (old)" max_length="4000" name="associated_airdromes" reference="x_snc_airline_airdrome" type="glide_list"/>
+        <element label="Associated Airports" max_length="4000" name="associated_airports" reference="x_snc_airline_airport" type="glide_list"/>
         <element label="IFR" max_length="40" name="ifr" type="boolean"/>
         <element label="Nationalities" max_length="4000" name="nationalities" reference="core_country" type="glide_list"/>
         <element label="Notes" max_length="4000" name="notes" type="string"/>
