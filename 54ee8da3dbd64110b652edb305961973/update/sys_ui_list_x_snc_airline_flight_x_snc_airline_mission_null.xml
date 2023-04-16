@@ -3,122 +3,152 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>airline</element>
-            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">3d8abafe1b0ced505b76777d8b4bcbfc</list_id>
+            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">337edb681b926d10cd6153d16b4bcb93</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-01-01 14:43:37</sys_created_on>
-            <sys_id>f58abafe1b0ced505b76777d8b4bcbfd</sys_id>
+            <sys_created_on>2023-04-16 13:55:43</sys_created_on>
+            <sys_id>bb7edb681b926d10cd6153d16b4bcb93</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-01-01 14:43:37</sys_updated_on>
+            <sys_updated_on>2023-04-16 13:55:43</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>number</element>
-            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">3d8abafe1b0ced505b76777d8b4bcbfc</list_id>
+            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">337edb681b926d10cd6153d16b4bcb93</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-01-01 14:43:37</sys_created_on>
-            <sys_id>798abafe1b0ced505b76777d8b4bcbfd</sys_id>
+            <sys_created_on>2023-04-16 13:55:43</sys_created_on>
+            <sys_id>3f7edb681b926d10cd6153d16b4bcb93</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-01-01 14:43:37</sys_updated_on>
+            <sys_updated_on>2023-04-16 13:55:43</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>aircraft</element>
-            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">3d8abafe1b0ced505b76777d8b4bcbfc</list_id>
+            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">337edb681b926d10cd6153d16b4bcb93</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-01-01 14:43:37</sys_created_on>
-            <sys_id>718a7efe1b0ced505b76777d8b4bcb08</sys_id>
+            <sys_created_on>2023-04-16 13:55:43</sys_created_on>
+            <sys_id>bf7edb681b926d10cd6153d16b4bcb93</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-01-01 14:43:37</sys_updated_on>
+            <sys_updated_on>2023-04-16 13:55:43</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>departure_datetime</element>
-            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">3d8abafe1b0ced505b76777d8b4bcbfc</list_id>
+            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">337edb681b926d10cd6153d16b4bcb93</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-01-01 14:43:37</sys_created_on>
-            <sys_id>f18a7efe1b0ced505b76777d8b4bcb08</sys_id>
+            <sys_created_on>2023-04-16 13:55:43</sys_created_on>
+            <sys_id>337edb681b926d10cd6153d16b4bcb94</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-01-01 14:43:37</sys_updated_on>
+            <sys_updated_on>2023-04-16 13:55:43</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>departure</element>
-            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">3d8abafe1b0ced505b76777d8b4bcbfc</list_id>
+            <element>departure_airport</element>
+            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">337edb681b926d10cd6153d16b4bcb93</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-01-01 14:43:37</sys_created_on>
-            <sys_id>758a7efe1b0ced505b76777d8b4bcb08</sys_id>
+            <sys_created_on>2023-04-16 13:55:43</sys_created_on>
+            <sys_id>b37edb681b926d10cd6153d16b4bcb94</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-01-01 14:43:37</sys_updated_on>
+            <sys_updated_on>2023-04-16 13:55:43</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>arrival</element>
-            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">3d8abafe1b0ced505b76777d8b4bcbfc</list_id>
+            <element>departure</element>
+            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">337edb681b926d10cd6153d16b4bcb93</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-01-01 14:43:37</sys_created_on>
-            <sys_id>f58a7efe1b0ced505b76777d8b4bcb08</sys_id>
+            <sys_created_on>2023-04-16 13:55:43</sys_created_on>
+            <sys_id>377edb681b926d10cd6153d16b4bcb94</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-01-01 14:43:37</sys_updated_on>
+            <sys_updated_on>2023-04-16 13:55:43</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>arrival_datetime</element>
-            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">3d8abafe1b0ced505b76777d8b4bcbfc</list_id>
+            <element>arrival_airport</element>
+            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">337edb681b926d10cd6153d16b4bcb93</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>6</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-01-01 14:43:37</sys_created_on>
-            <sys_id>798a7efe1b0ced505b76777d8b4bcb08</sys_id>
+            <sys_created_on>2023-04-16 13:55:43</sys_created_on>
+            <sys_id>b77edb681b926d10cd6153d16b4bcb94</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-01-01 14:43:37</sys_updated_on>
+            <sys_updated_on>2023-04-16 13:55:43</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>state</element>
-            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">3d8abafe1b0ced505b76777d8b4bcbfc</list_id>
+            <element>arrival</element>
+            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">337edb681b926d10cd6153d16b4bcb93</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>7</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-01-01 14:43:37</sys_created_on>
-            <sys_id>f98a7efe1b0ced505b76777d8b4bcb08</sys_id>
+            <sys_created_on>2023-04-16 13:55:43</sys_created_on>
+            <sys_id>3b7edb681b926d10cd6153d16b4bcb94</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-01-01 14:43:37</sys_updated_on>
+            <sys_updated_on>2023-04-16 13:55:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>arrival_datetime</element>
+            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">337edb681b926d10cd6153d16b4bcb93</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-04-16 13:55:43</sys_created_on>
+            <sys_id>bb7edb681b926d10cd6153d16b4bcb94</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-04-16 13:55:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>state</element>
+            <list_id display_value="x_snc_airline_flight" element="NULL" name="x_snc_airline_flight" parent="x_snc_airline_mission" relationship="NULL" sys_domain="global" view="Default view">337edb681b926d10cd6153d16b4bcb93</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-04-16 13:55:43</sys_created_on>
+            <sys_id>3f7edb681b926d10cd6153d16b4bcb94</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-04-16 13:55:43</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -132,10 +162,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-01-01 14:43:37</sys_created_on>
+            <sys_created_on>2023-04-16 13:55:43</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>3d8abafe1b0ced505b76777d8b4bcbfc</sys_id>
+            <sys_id>337edb681b926d10cd6153d16b4bcb93</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_snc_airline_flight</sys_name>
             <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
@@ -143,7 +173,7 @@
             <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
             <sys_update_name>sys_ui_list_x_snc_airline_flight_x_snc_airline_mission_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-01-01 14:43:37</sys_updated_on>
+            <sys_updated_on>2023-04-16 13:55:43</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
