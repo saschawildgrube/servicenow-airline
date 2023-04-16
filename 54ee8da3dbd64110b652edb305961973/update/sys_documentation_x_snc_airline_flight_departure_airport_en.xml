@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="departure_airport" label="Departure" language="en" table="x_snc_airline_flight">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>departure_airport</element>
+            <help/>
+            <hint/>
+            <label>Departure</label>
+            <language>en</language>
+            <name>x_snc_airline_flight</name>
+            <plural>Departures</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-04-16 13:27:16</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Departure</sys_name>
+            <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_airline_flight_departure_airport_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-04-16 13:27:16</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
