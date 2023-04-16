@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Checks if the scoped app "GeoData" is installed in a compatible version to: 1.0.0
+</description>
+        <display_name>DevTools - Check scoped app dependency</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>3</order>
+        <snapshot/>
+        <step_config display_value="DevTools - Check scoped app dependency">c3f56886db3da490ba15a353059619ff</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-15 23:55:22</sys_created_on>
+        <sys_id>19d1f88bdbf6cd10bcced03cd39619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevTools - Check scoped app dependency</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_atf_step_19d1f88bdbf6cd10bcced03cd39619a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-15 23:55:22</sys_updated_on>
+        <table/>
+        <test display_value="Airline - Installation">3863be58db2a4510bcced03cd39619fc</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=19d1f88bdbf6cd10bcced03cd39619a1"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>19d1f88bdbf6cd10bcced03cd39619a1</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-15 23:55:22</sys_created_on>
+        <sys_id>27d1f88bdbf6cd10bcced03cd39619ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-15 23:55:22</sys_updated_on>
+        <value>1.0.0</value>
+        <variable display_value="Versions">fc5964cadb3da490ba15a353059619b3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>19d1f88bdbf6cd10bcced03cd39619a1</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-15 23:55:22</sys_created_on>
+        <sys_id>ebd1f88bdbf6cd10bcced03cd39619ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-15 23:55:22</sys_updated_on>
+        <value>f9cb2003dbf6cd10bcced03cd396199e</value>
+        <variable display_value="Application">7cf8ac8adb3da490ba15a353059619f5</variable>
+    </sys_variable_value>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</application>
+        <file_path/>
+        <instance_id>84975bb2db8d919c4d2bac44d4961989</instance_id>
+        <instance_name>wildgrubetokyo</instance_name>
+        <name>sys_atf_step_19d1f88bdbf6cd10bcced03cd39619a1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Checks if the scoped app "GeoData" is installed in a compatible version to: 1.0.0
+</description>
+        <display_name>DevTools - Check scoped app dependency</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>3</order>
+        <snapshot/>
+        <step_config display_value="DevTools - Check scoped app dependency">c3f56886db3da490ba15a353059619ff</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-15 23:55:22</sys_created_on>
+        <sys_id>19d1f88bdbf6cd10bcced03cd39619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevTools - Check scoped app dependency</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_atf_step_19d1f88bdbf6cd10bcced03cd39619a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-15 23:55:22</sys_updated_on>
+        <table/>
+        <test display_value="Airline - Installation">3863be58db2a4510bcced03cd39619fc</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=19d1f88bdbf6cd10bcced03cd39619a1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>19d1f88bdbf6cd10bcced03cd39619a1</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-15 23:55:22</sys_created_on>
+        <sys_id>27d1f88bdbf6cd10bcced03cd39619ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-15 23:55:22</sys_updated_on>
+        <value>1.0.0</value>
+        <variable display_value="Versions">fc5964cadb3da490ba15a353059619b3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>19d1f88bdbf6cd10bcced03cd39619a1</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-15 23:55:22</sys_created_on>
+        <sys_id>ebd1f88bdbf6cd10bcced03cd39619ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-15 23:55:22</sys_updated_on>
+        <value>f9cb2003dbf6cd10bcced03cd396199e</value>
+        <variable display_value="Application">7cf8ac8adb3da490ba15a353059619f5</variable>
+    </sys_variable_value>
+</record_update>]]></payload>
+        <payload_hash>-2082856200</payload_hash>
+        <record_name>DevTools - Check scoped app dependency</record_name>
+        <reverted_from/>
+        <source>017435b79731e550a6a07767f053afed</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-01 12:01:51</sys_created_on>
+        <sys_id>e19431f79731e550a6a07767f053af48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1873cb202100000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-01 12:01:51</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>a19431f72731e550b6c4c13669f9cc48</update_guid>
+        <update_guid_history>a19431f72731e550b6c4c13669f9cc48:-2082856200</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-16 16:24:03</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>465c8078c6d84061a0b60240d738b301</sys_id>
+        <sys_metadata>19d1f88bdbf6cd10bcced03cd39619a1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevTools - Check scoped app dependency</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope_delete display_value="">c6f42fe7959e4054a7cc3eae6bd19390</sys_scope_delete>
+        <sys_update_name>sys_atf_step_19d1f88bdbf6cd10bcced03cd39619a1</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_19d1f88bdbf6cd10bcced03cd39619a1">e19431f79731e550a6a07767f053af48</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-16 16:24:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
