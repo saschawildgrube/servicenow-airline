@@ -2,12 +2,12 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_snc_airline.GetAirdromesFromFlight</api_name>
+        <api_name>x_snc_airline.GetAirportsFromFlight</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
-        <description/>
-        <name>GetAirdromesFromFlight</name>
-        <script><![CDATA[function GetAirdromesFromFlight(strFlightSysId)
+        <description>Returns an array of objects containing all the airports used in a flight based on a Sys ID, or an empty array if the flight cannot be found.</description>
+        <name>GetAirportsFromFlight</name>
+        <script><![CDATA[function GetAirportsFromFlight(strFlightSysId)
 {
 
 	var GetKeys = x_snc_devtools.GetKeys;
@@ -26,33 +26,33 @@
 	}
 	
 
-	var airdromes = {};
+	var airports = {};
 
 	
-	function AddAirdrome(grAirdrome,strFunction)
+	function AddAirport(grAirport,strFunction)
 	{
-		var airdrome = GetValue(airdromes,grAirdrome.sys_id);
-		if (IsObject(airdrome) == true)
+		var airport = GetValue(airport,grAirport.sys_id);
+		if (IsObject(airport) == true)
 		{
-			airdrome.airdrome_function += ', '+strFunction;
+			airport.airport += ', '+strFunction;
 		}
 		else
 		{
-			var airdrome = {};
-			airdrome.name = grAirdrome.name;
-			airdrome.icao = grAirdrome.icao;
-			airdrome.phone = grAirdrome.phone;
-			airdrome.airdrome_function = strFunction;
+			var airport = {};
+			airport.name = grAirport.name;
+			airport.icao = grAirport.icao;
+			airport.phone = grAirport.phone;
+			airport.airport_function = strFunction;
 		}
 		
-		airdromes[GetStringValue(grAirdrome.sys_id)] = airdrome;
+		airports[GetStringValue(grAirport.sys_id)] = airport;
 	}
 	
 	
-	var grAirdrome = GetRecord('x_snc_airline_airdrome',grFlight.departure);
-	if (IsValidRecord(grAirdrome))
+	var grAirport = GetRecord('x_snc_airline_airport',grFlight.departure);
+	if (IsValidRecord(grAirport))
 	{
-		AddAirdrome(grAirdrome,'Departure');
+		AddAirport(grAirport,'Departure');
 	}
 
 	var grStops = new GlideRecord('x_snc_airline_flight_stop');
@@ -61,39 +61,39 @@
 	grStops.query();
 	while (grStops.next())
 	{
-		grAirdrome = GetRecord('x_snc_airline_airdrome',grStops.airdrome);
-		if (IsValidRecord(grAirdrome))
+		grAirport = GetRecord('x_snc_airline_airport',grStops.airport);
+		if (IsValidRecord(grAirport))
 		{
-			AddAirdrome(grAirdrome,'Stop '+grStops.stop);
+			AddAirport(grAirport,'Stop '+grStops.stop);
 		}
 	}
 
-	grAirdrome = GetRecord('x_snc_airline_airdrome',grFlight.arrival);
-	if (IsValidRecord(grAirdrome))
+	grAirport = GetRecord('x_snc_airline_airport',grFlight.arrival_airport);
+	if (IsValidRecord(grAirport))
 	{
-		AddAirdrome(grAirdrome,'Arrival');
+		AddAirport(grAirport,'Arrival');
 	}
 	
-	var aAirdromes = [];
-	var aSysIds = GetKeys(airdromes);
-	for (var nAirdrome = 0; nAirdrome < aSysIds.length; nAirdrome++)
+	var aAirports = [];
+	var aSysIds = GetKeys(airports);
+	for (var nAirport = 0; nAirport < aSysIds.length; nAirport++)
 	{
-		aAirdromes.push(airdromes[aSysIds[nAirdrome]]);
+		aAirports.push(airports[aSysIds[nAirport]]);
 	}
 	
-	return aAirdromes;
+	return aAirports;
 }]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-29 20:51:19</sys_created_on>
         <sys_id>3bfd042bdbcb4910b652edb30596199d</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_name>GetAirdromesFromFlight</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>GetAirportsFromFlight</sys_name>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_3bfd042bdbcb4910b652edb30596199d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-29 21:33:08</sys_updated_on>
+        <sys_updated_on>2023-04-22 10:46:40</sys_updated_on>
     </sys_script_include>
 </record_update>

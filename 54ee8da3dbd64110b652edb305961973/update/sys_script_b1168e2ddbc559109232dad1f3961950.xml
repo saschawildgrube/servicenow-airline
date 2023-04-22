@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>false</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_airline_flight</collection>
+        <condition/>
+        <description>Sets the update date and time of the post completion notes to the same value as sys_updated_on field if the post completion notes have been updated.</description>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_snc_airline_flight">post_completion_notesVALCHANGES^EQ<item endquery="false" field="post_completion_notes" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Flight - Update PCN Update on</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-01 10:34:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b1168e2ddbc559109232dad1f3961950</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Flight - Update PCN Update on</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_b1168e2ddbc559109232dad1f3961950</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-22 09:53:42</sys_updated_on>
+        <template>post_completion_notes_updated_onSAMEASsys_updated_on^EQ</template>
+        <when>before</when>
+        <x_snc_datasilos_created>false</x_snc_datasilos_created>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=b1168e2ddbc559109232dad1f3961950"/>
+</record_update>

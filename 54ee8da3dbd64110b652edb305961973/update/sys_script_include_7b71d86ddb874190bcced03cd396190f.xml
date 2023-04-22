@@ -5,7 +5,7 @@
         <api_name>x_snc_airline.GetPassengersFromSegments</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
-        <description/>
+        <description>Returns an array of objects containing passenger data based on a list of flight segments. </description>
         <name>GetPassengersFromSegments</name>
         <script><![CDATA[function GetPassengersFromSegments(aSegments)
 {
@@ -79,13 +79,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-23 15:58:45</sys_created_on>
         <sys_id>7b71d86ddb874190bcced03cd396190f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>GetPassengersFromSegments</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_7b71d86ddb874190bcced03cd396190f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-24 13:10:42</sys_updated_on>
+        <sys_updated_on>2023-04-22 12:28:18</sys_updated_on>
     </sys_script_include>
 </record_update>

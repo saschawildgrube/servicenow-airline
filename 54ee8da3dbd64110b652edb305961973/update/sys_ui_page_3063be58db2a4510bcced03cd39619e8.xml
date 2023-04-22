@@ -16,12 +16,14 @@
 	
 	<p>Welcome to the Airline app - created and maintained by&#160;<a href="mailto:sascha.wildgrube@servicenow.com">Sascha Wildgrube</a>.</p>
 	
-	<p>This app was built to help organizing the shipment of medical supplies to the Ukraine during the war that started in February 2022.</p>
-	<p>It is dedicated to the people of the Ukraine, their resistance and to everyone who invested their time and resources to help.</p> 
+	<p>This app was built to help organizing the shipment of medical supplies to the Ukraine during the full-scale invasion that started in February 2022.</p>
+	<p>It is dedicated to the people of Ukraine, their resistance, their bravery and to everyone who invests their time and resources to help.</p> 
 
 	<h2>Features</h2> 
-	<p>Manage pilots, aircraft and airfields.</p>
-	<p>Plan and schedule flights - produce PDF mission sheets for pilots.</p>
+	<p>Manage pilots, aircraft, aircraft models and airports.</p>
+	<p>Plan and schedule flights - produce PDF flight sheets for pilots and PPR for airports.</p>
+	<p>Aggregate multilpe flights to a mission - to coordinate connection flights and complex transport operations.</p>
+	<p>Manage freight and passengers.</p>
 
 	<h2>Disclaimer</h2>
 	<g2:no_escape>$[docapi.RenderDisclaimer()]</g2:no_escape>	
@@ -30,7 +32,7 @@
 	<ul>
 		<g2:no_escape>$[
 			docapi.RenderSystemRequirements(
-				'Quebec,Rome,San Diego',
+				'Tokyo,Utah',
 				true,
 				AppGetDependencies());
 		]</g2:no_escape>	
@@ -42,19 +44,36 @@
 			docapi.RenderInstallationInstructionsImportFromSourceControl(
 				'DevTools',
 				'https://github.com/saschawildgrube/servicenow-devtools',
-				true);
+				true,
+				'https://www.wildgrube.com/servicenow-devtools');
 		]</g2:no_escape>
 		<g2:no_escape>$[
 			docapi.RenderInstallationInstructionsImportFromSourceControl(
 				'Parcel',
-				'https://github.com/saschawildgrube/servicenow-parcel',
+				'https://github.com/saschawildgrube/servicenow-geodata',
 				true);
+		]</g2:no_escape>			
+		<g2:no_escape>$[
+			docapi.RenderInstallationInstructionsImportFromSourceControl(
+				'Parcel',
+				'https://github.com/saschawildgrube/servicenow-parcel',
+				true,
+				'https://www.wildgrube.com/servicenow-parcel');
 		]</g2:no_escape>		
 		<g2:no_escape>$[
 			docapi.RenderInstallationInstructionsAppInstall();
 		]</g2:no_escape>		
-		<li>Add one Airline record.</li>
+		<li>Add at least one airline.</li>
+		<li>Configure at least one country for airline operations.</li>
+		<li>Add aircraft models, aircraft, airports and pilots.</li>
 	</ol>
+
+	<h2>Glossary</h2>
+	<dl>
+		<dt>Mission</dt><dd>A mission is an aggregation of flights. This could be all flights related to a specific event, all flights of a day or any other meaningful grouping.</dd>
+		<dt>Potential Aircraft Capacity</dt><dd>The potential aircraft capacity is the estimated available cargo and passenger capacity in kilogram. This is a remaining capacity after deducting fuel and the pilot (and the pilot's luggage) from the total capacity of an aircraft.</dd>
+		<dt>Total Aircraft Capacity</dt><dd>The total aircraft capacity is the maximum allowed total weight of an aircraft at lift-off minus the weight of the totally empty aircraft (i.e. no cargo, no passengers, no fuel).</dd>
+	</dl>
 	
 	<h2>Reference</h2>
 
@@ -70,18 +89,6 @@
 	<h3>Script Includes</h3>
 	<g2:no_escape>$[docapi.RenderScriptIncludes()]</g2:no_escape>
 	
-	<h3>UI Scripts</h3>
-	<g2:no_escape>$[docapi.RenderUIScripts()]</g2:no_escape>	
-	
-	<h3>Test step configurations</h3>
-	<g2:no_escape>$[docapi.RenderTestStepConfigurations()]</g2:no_escape>
-	
-	<h3>Extension Points</h3>
-	<g2:no_escape>$[docapi.RenderExtensionPoints()]</g2:no_escape>		
-
-	<h3>Business Rules</h3>
-	<g2:no_escape>$[docapi.RenderBusinessRules()]</g2:no_escape>	
-	
 	<h2>License</h2>
 	<g2:no_escape>$[docapi.RenderCopyright(2022,'Sascha Wildgrube')]</g2:no_escape>
 	<g2:no_escape>$[docapi.RenderLicense()]</g2:no_escape>
@@ -95,7 +102,7 @@
 	</ol>
 -->
 
-	<h3>1.0.0 - 2022-TODO</h3>
+	<h3>1.0.0 - 2023-04-22</h3>
 	<p>First baselined version</p>
 
 <span style="visibility: hidden;">_CUT_HERE_</span>
@@ -107,13 +114,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:17</sys_created_on>
         <sys_id>3063be58db2a4510bcced03cd39619e8</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>manual</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_page_3063be58db2a4510bcced03cd39619e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-09 17:33:06</sys_updated_on>
+        <sys_updated_on>2023-04-22 14:28:39</sys_updated_on>
     </sys_ui_page>
 </record_update>

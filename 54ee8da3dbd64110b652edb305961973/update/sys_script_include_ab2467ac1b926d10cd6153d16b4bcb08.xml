@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_snc_airline.MigrateAirdromesToAirports</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>MigrateAirdromesToAirports</name>
+        <script><![CDATA[function MigrateAirdromesToAirports()
+{
+	
+	var RecordQueryOrInsert = x_snc_devtools.RecordQueryOrInsert;
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var IsValidSysId = x_snc_devtools.IsValidSysId;
+	var GetRecord = x_snc_devtools.GetRecord;
+	var ArrayPushUnique = x_snc_devtools.ArrayPushUnique;
+	var GetArrayValue = x_snc_devtools.GetArrayValue;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+
+
+	Log('MigrateAirdromesToAirports');
+	
+	var grAirdrome = new GlideRecord('x_snc_airline_airdrome');
+	grAirdrome.query();
+	while (grAirdrome.next())
+	{
+		Log(grAirdrome.display);
+		var strAirportSysId = RecordQueryOrInsert(
+		   'x_snc_airline_airport',
+		   {
+			   icao: grAirdrome.icao
+		   },
+		   {
+			   name: grAirdrome.name,
+			   ifr: grAirdrome.ifr,
+			   core_country: grAirdrome.core_country,
+			   email: grAirdrome.email,
+			   phone: grAirdrome.phone,
+			   street: grAirdrome.street,
+			   zip: grAirdrome.zip,
+			   city: grAirdrome.city,
+			   contact: grAirdrome.contact,
+			   latitude: grAirdrome.latitude,
+			   longitude: grAirdrome.longitude,
+			   notes: grAirdrome.notes
+		   },
+		   true);
+		
+		if (IsValidSysId(strAirportSysId) == true)
+		{
+			Log(strAirportSysId);
+			var grAirport = GetRecord('x_snc_airline_airport',strAirportSysId);
+			Log(grAirport);
+			
+			
+			// Flight Departure
+			var grFlight = new GlideRecord('x_snc_airline_flight');
+			grFlight.addQuery('departure','=',grAirdrome.sys_id);
+			grFlight.query();
+			while (grFlight.next())
+			{
+				grFlight.departure_airport = strAirportSysId;
+				grFlight.update();
+			}
+			
+			// Flight Arrival
+			var grFlight = new GlideRecord('x_snc_airline_flight');
+			grFlight.addQuery('arrival','=',grAirdrome.sys_id);
+			grFlight.query();
+			while (grFlight.next())
+			{
+				grFlight.arrival_airport = strAirportSysId;
+				grFlight.update();
+			}			
+			
+			// Stop
+			var grFlightStop = new GlideRecord('x_snc_airline_flight_stop');
+			grFlightStop.addQuery('airdrome','=',grAirdrome.sys_id);
+			grFlightStop.query();
+			while (grFlightStop.next())
+			{
+				grFlightStop.airport = strAirportSysId;
+				grFlightStop.update();
+			}				
+
+			// Aircraft
+			var grAircraft = new GlideRecord('x_snc_airline_aircraft');
+			grAircraft.addQuery('base_airdrome','=',grAirdrome.sys_id);
+			grAircraft.query();
+			while (grAircraft.next())
+			{
+				grAircraft.base_airport = strAirportSysId;
+				grAircraft.update();
+			}					
+			
+			// Passenger Departure
+			var grPax = new GlideRecord('x_snc_airline_passenger');
+			grPax.addQuery('departure','=',grAirdrome.sys_id);
+			grPax.query();
+			while (grPax.next())
+			{
+				grPax.departure_airport = strAirportSysId;
+				grPax.update();
+			}				
+			// Passenger Arrival
+			var grPax = new GlideRecord('x_snc_airline_passenger');
+			grPax.addQuery('arrival','=',grAirdrome.sys_id);
+			grPax.query();
+			while (grPax.next())
+			{
+				grPax.arrival_airport = strAirportSysId;
+				grPax.update();
+			}				
+
+			
+			// Pilot
+			var grPilot = new GlideRecord('x_snc_airline_pilot');
+			grPilot.addQuery('associated_airdromes','CONTAINS',grAirdrome.sys_id);
+			grPilot.query();
+			while (grPilot.next())
+			{
+
+				grPilot.associated_airports = GetStringValue(ArrayPushUnique(GetArrayValue(grPilot.associated_airports), strAirportSysId));
+				grPilot.update();
+			}				
+			
+			
+			
+		}
+		
+		
+		
+	}
+	
+	
+	
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-16 14:26:11</sys_created_on>
+        <sys_id>ab2467ac1b926d10cd6153d16b4bcb08</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>MigrateAirdromesToAirports</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_ab2467ac1b926d10cd6153d16b4bcb08</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-16 17:09:36</sys_updated_on>
+    </sys_script_include>
+</record_update>

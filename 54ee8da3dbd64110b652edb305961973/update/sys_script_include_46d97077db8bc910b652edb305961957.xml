@@ -2,199 +2,70 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_snc_airline.HtmlRenderPageMissionContacts</api_name>
+        <api_name>x_snc_airline.HtmlRenderPageMissionMailingList</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
-        <description/>
-        <name>HtmlRenderPageMissionContacts</name>
-        <script><![CDATA[function HtmlRenderPageMissionContacts()
+        <description>Renders the html page containing the mission mailing list.</description>
+        <name>HtmlRenderPageMissionMailingList</name>
+        <script><![CDATA[function HtmlRenderPageMissionMailingList()
 {
+
 	if (IsActive() == false)
 	{
 		return '';
 	}
-	
-	
+
 	var GetStringValue = x_snc_devtools.GetStringValue;
-	var IsValidSysId = x_snc_devtools.IsValidSysId;
+	var HtmlRenderError = x_snc_devtools.HtmlRenderError;
+	var HtmlRenderInfo = x_snc_devtools.HtmlRenderInfo;
+	var IsValidEmail = x_snc_devtools.IsValidEmail;
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
 	var GetRecord = x_snc_devtools.GetRecord;
-	var GetBoolValue = x_snc_devtools.GetBoolValue;
-	var RenderDate = x_snc_devtools.RenderDate;
-	var SetValue = x_snc_devtools.SetValue;
-	var Clone = x_snc_devtools.Clone;
-	var GetKeys = x_snc_devtools.GetKeys;
 	var GetValue = x_snc_devtools.GetValue;
 
-	
-	function HtmlRenderPageMissionContactsStateNoContext()
-	{
-		var strHtml = '';
- 		strHtml += '<p style="color: red;">ERROR: No mission defined!</p>';
-		return strHtml;
-	}
-
 	/*
-	function MakePriorPermissionRequiredHeader(grStop)
+	var IsValidSysId = x_snc_devtools.IsValidSysId;
+
+	var SetValue = x_snc_devtools.SetValue;
+*/
+
+	
+	function HtmlRenderPageMissionMailingListStateNoContext()
 	{
-		var strHeader = '';
-		strHeader += GetStringValue(grStop.flight.number)
-		strHeader += ' - Stop '+grStop.stop;
-		strHeader += ' - '+grStop.airdrome.display;
-		strHeader += ' - '+grStop.flight.aircraft.tail_number;
-		return strHeader;
+		return HtmlRenderError('No mission defined!');
 	}
 
-	function MakePriorPermissionRequiredSubject(grStop)
-	{
-		var strSubject = '';
-		strSubject += GetStringValue(grStop.flight.number)
-		strSubject += ' - Stop '+grStop.stop;
-		strSubject += ' - '+grStop.flight.aircraft.tail_number;
-		strSubject += ' - '+RenderDate(grStop.arrival_datetime);
-		return strSubject;
-	}
-	
-	
-	function HtmlRenderPageMissionContactsStateStop(grStop)
-	{
-		strHtml = '';
-		strHtml += '<h2>'+MakePriorPermissionRequiredHeader(grStop)+'</h2>';
-		strHtml += '<span>Email:</span><pre>'+GetStringValue(grStop.airdrome.email)+'</pre>';
-		strHtml += '<span>Subject:</span><pre>Prior Permission Required: '+MakePriorPermissionRequiredSubject(grStop)+'</pre>';
-		
-		var strPPR = '';
-		strPPR += 'Dear madams and sirs,\n';
-		strPPR += '\n';
-		strPPR += 'please confirm the following Prior Permission Required request:\n';
-		strPPR += '\n';	
-		strPPR += MakePriorPermissionRequired(grStop);
-		strPPR += '\n';
-		strPPR += 'Thank you.\n';
-		strPPR += '\n';
-		strPPR += 'Best regards,\n';
-		
-		strHtml += '<span>Body:</span><pre>'+strPPR+'</pre>';
-		return strHtml;
-	}
 
-	function HtmlRenderPageMissionContactsStateFlight(grFlight)
+	function HtmlRenderPageMissionMailingListStateMission(grMission)
 	{
-		var strHtml = ''; 
-		var grStops = new GlideRecord('x_snc_airline_flight_stop');
-		grStops.addQuery('flight','=',grFlight.sys_id);
-		grStops.orderBy('stop');
-		grStops.query();
-		while(grStops.next())
-		{
-			strHtml += HtmlRenderPageMissionContactsStateStop(grStops);
-		}
-		return strHtml;
-	}
-	*/
 	
-	function HtmlRenderPageMissionContactsStateMission(grMission)
-	{
+		var strHtml = '<h1>'+grMission.number+' '+grMission.name+' - Mailing List</h1>\n';
 		
-		strHtml += '<h1>Mission '+grMission.number+' '+grMission.name+'</h1>\n';
-		
-		/*
-		var aFlights = [];
-		
-		var grFlights = new GlideRecord('x_snc_airline_flight');
-		grFlights.addQuery('mission','=',grMission.sys_id);
-		grFlights.query();
-		while (grFlights.next())
+		var aContacts = GetContactsFromMission(grMission.sys_id);
+		if (aContacts == false)
 		{
-			aFlights.push(GetStringValue(grFlights.sys_id));
+			return strHtml + HtmlRenderError('Could not get contacts for given mission!');
 		}
 		
-		
-		var ppr = {};
-		
-		var grStops = new GlideRecord('x_snc_airline_flight_stop');
-		grStops.addQuery('flight','IN',GetStringValue(aFlights));
-		grStops.orderBy('flight.number');
-		grStops.query();
-		while(grStops.next())
+		if (aContacts.length == 0)
 		{
-			var grAirdrome = GetRecord('x_snc_airline_airdrome',grStops.airdrome);
-			if (IsValidRecord(grAirdrome) == true)
+			return strHtml + HtmlRenderInfo('There are no contacts for this mission.');
+		}
+		
+		strHtml += '<pre>';
+		
+		for (var nContact = 0; nContact < aContacts.length; nContact++)
+		{
+			var contact = aContacts[nContact];
+			
+			var strEmail = GetValue(contact,'email');
+			
+			if (IsValidEmail(strEmail))
 			{
-				SetValue(Clone(grStops),ppr,GetStringValue(grStops.airdrome),GetStringValue(grStops.sys_id));
+				strHtml += strEmail + '\n';
 			}
-			
-			//strHtml += HtmlRenderPageMissionContactsStateStop(grStops);
 		}
-
-		var strHtml = ''; 
-		
-		var aAirdromes = GetKeys(ppr);
-		for (var nAirdrome = 0; nAirdrome < aAirdromes.length; nAirdrome++)
-		{
-			var strAirdromeSysId = aAirdromes[nAirdrome];
-			var grAirdrome = GetRecord('x_snc_airline_airdrome',strAirdromeSysId);
-			
-			strHtml += '<h2>'+grAirdrome.display+'</h2>';
-			strHtml += '<span>Email:</span><pre>'+GetStringValue(grAirdrome.email)+'</pre>';
-			strHtml += '<span>Subject:</span><pre>Prior Permission Required: '+grMission.number+': '+grMission.name+'</pre>';
-			
-			var strPPR = '';
-			strPPR += 'Dear madams and sirs,\n';
-			strPPR += '\n';
-			strPPR += 'please confirm the following Prior Permission Required request(s):\n';
-			strPPR += '\n';	
-			
-			var aStops = GetKeys(GetValue(ppr,strAirdromeSysId));
-			for (var nStop = 0; nStop < aStops.length; nStop++)
-			{
-				if (nStop > 0)
-				{
-					strPPR += '##############################\n';
-					strPPR += '\n';
-				}
-				
-				var strStopSysId = aStops[nStop];
-				var grStop = GetRecord('x_snc_airline_flight_stop',strStopSysId);
-				strPPR += MakePriorPermissionRequired(grStop);
-			}
-			
-			strPPR += '\n';
-			strPPR += 'Thank you.\n';
-			strPPR += '\n';
-			strPPR += 'Best regards,\n';
-
-			strHtml += '<span>Body:</span><pre>'+strPPR+'</pre>';			
-			
-			
-			
-		}
-		
-		
-		
-		/*
-		
-				strHtml = '';
-		
-		var strPPR = '';
-		strPPR += 'Dear madams and sirs,\n';
-		strPPR += '\n';
-		strPPR += 'please confirm the following Prior Permission Required request:\n';
-		strPPR += '\n';	
-		strPPR += MakePriorPermissionRequired(grStop);
-		strPPR += '\n';
-		strPPR += 'Thank you.\n';
-		strPPR += '\n';
-		strPPR += 'Best regards,\n';
-		
-		strHtml += '<span>Body:</span><pre>'+strPPR+'</pre>';
-		return strHtml;
-		
-		
-		*/
-		
-		
-		
+		strHtml += '</pre>';
 		
 		return strHtml;
 	}	
@@ -214,11 +85,11 @@
 	switch (strState)
 	{
 	case 'mission':
-		strHtml += HtmlRenderPageMissionContactsStateMission(grMission);
+		strHtml += HtmlRenderPageMissionMailingListStateMission(grMission);
 		break;
 	case '':
 	default:
-		strHtml += HtmlRenderPageMissionContactsStateNoContext();
+		strHtml += HtmlRenderPageMissionMailingListStateNoContext();
 	}
 	
 	return strHtml;
@@ -227,13 +98,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-30 18:47:08</sys_created_on>
         <sys_id>46d97077db8bc910b652edb305961957</sys_id>
-        <sys_mod_count>37</sys_mod_count>
-        <sys_name>HtmlRenderPageMissionContacts</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name>HtmlRenderPageMissionMailingList</sys_name>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_46d97077db8bc910b652edb305961957</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-27 17:42:41</sys_updated_on>
+        <sys_updated_on>2023-04-22 09:54:05</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Flight" max_length="40" name="x_snc_airline_flight" sizeclass="10" type="collection">
+    <element db_object_id="8f5431b79731e550a6a07767f053af7e" label="Flight" max_length="40" name="x_snc_airline_flight" type="collection">
         <element label="Aircraft" max_length="32" name="aircraft" reference="x_snc_airline_aircraft" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
-        <element label="Arrival" max_length="32" name="arrival" reference="x_snc_airline_airdrome" type="reference"/>
+        <element label="Airline" mandatory="true" max_length="32" name="airline" reference="x_snc_airline_airline" type="reference"/>
+        <element label="Arrival" max_length="32" name="arrival_airport" reference="x_snc_airline_airport" type="reference"/>
         <element label="Arrival Date/Time" max_length="40" name="arrival_datetime" type="glide_date_time"/>
         <element label="Co-Pilot" max_length="32" name="co_pilot" reference="x_snc_airline_pilot" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
-        <element label="Departure" max_length="32" name="departure" reference="x_snc_airline_airdrome" type="reference"/>
+        <element label="Departure" max_length="32" name="departure_airport" reference="x_snc_airline_airport" type="reference"/>
         <element label="Departure Date/Time" max_length="40" name="departure_datetime" type="glide_date_time"/>
         <element label="Mission" max_length="32" name="mission" reference="x_snc_airline_mission" type="reference"/>
         <element label="Notes" max_length="4000" name="notes" type="string"/>
@@ -12,6 +13,9 @@
         <element label="Parcel Load" max_length="4000" name="parcel_load" reference="x_snc_parcel_parcel" type="glide_list"/>
         <element label="Passengers Boarding" max_length="4000" name="passenger_boarding" reference="x_snc_airline_passenger" type="glide_list"/>
         <element label="Pilot" max_length="32" name="pilot" reference="x_snc_airline_pilot" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element label="Post Completion Notes" max_length="4000" name="post_completion_notes" type="string"/>
+        <element label="Post Completion Notes Updated On" max_length="40" name="post_completion_notes_updated_on" read_only="true" type="glide_date_time"/>
+        <element label="Potential Flight Capacity" max_length="40" name="potential_flight_capacity" type="integer"/>
         <element choice="3" default="planning" label="State" max_length="40" name="state" read_only="true" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Planning" sequence="1" value="planning"/>
@@ -20,22 +24,25 @@
             </choice>
         </element>
         <index name="index">
-            <element name="mission"/>
+            <element name="aircraft"/>
         </index>
         <index name="index2">
-            <element name="pilot"/>
+            <element name="airline"/>
         </index>
         <index name="index3">
-            <element name="arrival"/>
+            <element name="arrival_airport"/>
         </index>
         <index name="index4">
             <element name="co_pilot"/>
         </index>
         <index name="index5">
-            <element name="aircraft"/>
+            <element name="departure_airport"/>
         </index>
         <index name="index6">
-            <element name="departure"/>
+            <element name="mission"/>
+        </index>
+        <index name="index7">
+            <element name="pilot"/>
         </index>
     </element>
 </database>

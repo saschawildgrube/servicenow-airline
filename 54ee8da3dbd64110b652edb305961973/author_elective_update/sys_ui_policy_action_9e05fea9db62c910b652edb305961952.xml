@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>airdrome</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-30 07:21:52</sys_created_on>
+        <sys_id>9e05fea9db62c910b652edb305961952</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>airdrome</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_ui_policy_action_9e05fea9db62c910b652edb305961952</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-30 07:21:52</sys_updated_on>
+        <table>x_snc_airline_flight_stop</table>
+        <ui_policy display_value="Flight Stop - Set read only after planning">89b43ea9db62c910b652edb30596191f</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</application>
+        <file_path/>
+        <instance_id>84975bb2db8d919c4d2bac44d4961989</instance_id>
+        <instance_name>wildgrubetokyo</instance_name>
+        <name>sys_ui_policy_action_9e05fea9db62c910b652edb305961952</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>airdrome</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-30 07:21:52</sys_created_on>
+        <sys_id>9e05fea9db62c910b652edb305961952</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>airdrome</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_ui_policy_action_9e05fea9db62c910b652edb305961952</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-30 07:21:52</sys_updated_on>
+        <table>x_snc_airline_flight_stop</table>
+        <ui_policy display_value="Flight Stop - Set read only after planning">89b43ea9db62c910b652edb30596191f</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>]]></payload>
+        <payload_hash>-271172795</payload_hash>
+        <record_name>airdrome</record_name>
+        <reverted_from/>
+        <source>017435b79731e550a6a07767f053afed</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-01 12:02:03</sys_created_on>
+        <sys_id>e0a475f79731e550a6a07767f053afb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1873cb231840000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-01 12:02:03</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>a0a475f7a431e5506341e246175503b1</update_guid>
+        <update_guid_history>a0a475f7a431e5506341e246175503b1:-271172795</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-16 16:57:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>069922de2eee45b080ff4558925b2690</sys_id>
+        <sys_metadata>9e05fea9db62c910b652edb305961952</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>airdrome</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_parent display_value="Flight Stop - Set read only after planning">89b43ea9db62c910b652edb30596191f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope_delete display_value="">c6f42fe7959e4054a7cc3eae6bd19390</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_9e05fea9db62c910b652edb305961952</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_9e05fea9db62c910b652edb305961952">e0a475f79731e550a6a07767f053afb1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-16 16:57:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

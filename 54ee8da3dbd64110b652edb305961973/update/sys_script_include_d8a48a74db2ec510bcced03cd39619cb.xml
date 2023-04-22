@@ -140,7 +140,7 @@
 
 	var aSegments = GetSegmentsFromFlight(grFlight.sys_id);
 	
-	var aAirdromes = GetAirdromesFromFlight(grFlight.sys_id);
+	var aAirports = GetAirportsFromFlight(grFlight.sys_id);
 	
 	var aPassengers = GetPassengersFromSegments(aSegments);
 	var aPassengerSysIds = Array();
@@ -339,6 +339,19 @@
 		
 	}
 	
+	// POST COMPLETION NOTES
+	var strPostCompletionNotes = GetStringValue(grFlight.post_completion_notes);
+	if (strPostCompletionNotes != '')
+	{
+		strHtml += '<table style="width: 100%;"><tbody>';
+			strHtml += '<tr><th class="title2" colspan="5">Post Completion Notes (Updated: '+RenderDate(grFlight.post_completion_notes_updated_on)+')</th></tr>';
+			strHtml += '<tr>';
+				strHtml += '<td>'+HtmlEncode(strPostCompletionNotes)+'</td>';
+			strHtml += '</tr>';
+		strHtml += '</tbody></table>';		
+		
+	}	
+	
 	var strHtmlPages = HtmlRenderPageA4(strHtml,1,2);
 	
 	
@@ -391,14 +404,14 @@
 		strHtml += '</tr>';
 	}			
 
-	for (var nAirdrome = 0; nAirdrome < aAirdromes.length; nAirdrome++)
+	for (var nAirport = 0; nAirport < aAirports.length; nAirport++)
 	{
-		var airdrome = aAirdromes[nAirdrome];
+		var airport = aAirports[nAirport];
 		strHtml += '<tr>';
-		strHtml += '<td>'+airdrome.icao+'</td>';
-		strHtml += '<td>'+airdrome.airdrome_function+'</td>';
-		strHtml += '<td>'+airdrome.name+'</td>';
-		strHtml += '<td>'+airdrome.phone+'</td>';
+		strHtml += '<td>'+airport.icao+'</td>';
+		strHtml += '<td>'+airport.airport_function+'</td>';
+		strHtml += '<td>'+airport.name+'</td>';
+		strHtml += '<td>'+airport.phone+'</td>';
 		strHtml += '</tr>';
 	}
 
@@ -620,13 +633,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-27 19:55:46</sys_created_on>
         <sys_id>d8a48a74db2ec510bcced03cd39619cb</sys_id>
-        <sys_mod_count>178</sys_mod_count>
+        <sys_mod_count>180</sys_mod_count>
         <sys_name>HtmlRenderFlightSheetA4</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_d8a48a74db2ec510bcced03cd39619cb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-07 18:28:53</sys_updated_on>
+        <sys_updated_on>2023-04-16 16:17:12</sys_updated_on>
     </sys_script_include>
 </record_update>
