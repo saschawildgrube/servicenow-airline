@@ -6,7 +6,7 @@
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
-        <comments/>
+        <comments>Display the the list of emails of everyone involved in this mission.</comments>
         <condition/>
         <form_action>true</form_action>
         <form_button>false</form_button>
@@ -26,7 +26,7 @@
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
-        <messages/>
+        <messages>Display a list of all email addresses of everyone involved in this mission.</messages>
         <name>Mission Mailing List</name>
         <onclick>onClickMissionMailingList()</onclick>
         <order>200</order>
@@ -45,15 +45,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d75d6b9cdb338d14bcced03cd39619a1</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Mission Mailing List</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_action_d75d6b9cdb338d14bcced03cd39619a1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-01 13:33:21</sys_updated_on>
+        <sys_updated_on>2023-04-22 09:58:20</sys_updated_on>
         <table>x_snc_airline_mission</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

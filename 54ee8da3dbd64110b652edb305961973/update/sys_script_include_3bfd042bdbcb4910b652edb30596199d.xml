@@ -5,7 +5,7 @@
         <api_name>x_snc_airline.GetAirportsFromFlight</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
-        <description/>
+        <description>Returns an array of objects containing all the airports used in a flight based on a Sys ID, or an empty array if the flight cannot be found.</description>
         <name>GetAirportsFromFlight</name>
         <script><![CDATA[function GetAirportsFromFlight(strFlightSysId)
 {
@@ -87,13 +87,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-29 20:51:19</sys_created_on>
         <sys_id>3bfd042bdbcb4910b652edb30596199d</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>GetAirportsFromFlight</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_3bfd042bdbcb4910b652edb30596199d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-16 16:12:04</sys_updated_on>
+        <sys_updated_on>2023-04-22 10:46:40</sys_updated_on>
     </sys_script_include>
 </record_update>

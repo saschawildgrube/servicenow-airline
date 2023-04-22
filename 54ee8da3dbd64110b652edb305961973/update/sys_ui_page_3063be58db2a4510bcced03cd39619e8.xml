@@ -16,12 +16,14 @@
 	
 	<p>Welcome to the Airline app - created and maintained by&#160;<a href="mailto:sascha.wildgrube@servicenow.com">Sascha Wildgrube</a>.</p>
 	
-	<p>This app was built to help organizing the shipment of medical supplies to the Ukraine during the war that started in February 2022.</p>
-	<p>It is dedicated to the people of the Ukraine, their resistance and to everyone who invested their time and resources to help.</p> 
+	<p>This app was built to help organizing the shipment of medical supplies to the Ukraine during the full-scale invasion that started in February 2022.</p>
+	<p>It is dedicated to the people of Ukraine, their resistance, their bravery and to everyone who invests their time and resources to help.</p> 
 
 	<h2>Features</h2> 
-	<p>Manage pilots, aircraft and airfields.</p>
-	<p>Plan and schedule flights - produce PDF mission sheets for pilots.</p>
+	<p>Manage pilots, aircraft, aircraft models and airports.</p>
+	<p>Plan and schedule flights - produce PDF flight sheets for pilots and PPR for airports.</p>
+	<p>Aggregate multilpe flights to a mission - to coordinate connection flights and complex transport operations.</p>
+	<p>Manage freight and passengers.</p>
 
 	<h2>Disclaimer</h2>
 	<g2:no_escape>$[docapi.RenderDisclaimer()]</g2:no_escape>	
@@ -42,18 +44,28 @@
 			docapi.RenderInstallationInstructionsImportFromSourceControl(
 				'DevTools',
 				'https://github.com/saschawildgrube/servicenow-devtools',
-				true);
+				true,
+				'https://www.wildgrube.com/servicenow-devtools');
 		]</g2:no_escape>
 		<g2:no_escape>$[
 			docapi.RenderInstallationInstructionsImportFromSourceControl(
 				'Parcel',
-				'https://github.com/saschawildgrube/servicenow-parcel',
+				'https://github.com/saschawildgrube/servicenow-geodata',
 				true);
+		]</g2:no_escape>			
+		<g2:no_escape>$[
+			docapi.RenderInstallationInstructionsImportFromSourceControl(
+				'Parcel',
+				'https://github.com/saschawildgrube/servicenow-parcel',
+				true,
+				'https://www.wildgrube.com/servicenow-parcel');
 		]</g2:no_escape>		
 		<g2:no_escape>$[
 			docapi.RenderInstallationInstructionsAppInstall();
 		]</g2:no_escape>		
-		<li>Add one Airline record.</li>
+		<li>Add at least one airline.</li>
+		<li>Configure at least one country for airline operations.</li>
+		<li>Add aircraft models, aircraft, airports and pilots.</li>
 	</ol>
 
 	<h2>Glossary</h2>
@@ -102,13 +114,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:17</sys_created_on>
         <sys_id>3063be58db2a4510bcced03cd39619e8</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>manual</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_page_3063be58db2a4510bcced03cd39619e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-01 12:06:11</sys_updated_on>
+        <sys_updated_on>2023-04-22 07:49:30</sys_updated_on>
     </sys_ui_page>
 </record_update>
