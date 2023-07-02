@@ -13,6 +13,8 @@
         <element label="Notes" max_length="2000" name="notes" type="string"/>
         <element label="Phone" max_length="40" name="phone" type="string"/>
         <element label="Street" max_length="255" name="street" type="string"/>
+        <element label="Tower Frequency (Mhz)" max_length="40" name="tower_frequency_mhz" type="float"/>
+        <element label="Website" max_length="1024" name="website" type="url"/>
         <element label="Zip / Postal Code" max_length="40" name="zip" type="string"/>
         <index name="index">
             <element name="contact"/>

@@ -8,14 +8,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-14 20:27:43</sys_created_on>
         <sys_id>69ac9f01db7359106a03dad1f39619a7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>DevTools</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>x_snc_devtools_dependency_69ac9f01db7359106a03dad1f39619a7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-01 13:58:47</sys_updated_on>
-        <versions>1.60.0</versions>
+        <sys_updated_on>2023-07-02 13:20:42</sys_updated_on>
+        <versions>1.63.0</versions>
     </x_snc_devtools_dependency>
 </record_update>
