@@ -11,6 +11,9 @@
         <element label="Longitude" max_length="40" name="longitude" type="float"/>
         <element label="Name" mandatory="true" max_length="100" name="name" type="string"/>
         <element label="Notes" max_length="2000" name="notes" type="string"/>
+        <element label="Operating Hours Saturdays" max_length="40" name="operating_hours_saturdays" type="boolean"/>
+        <element label="Operating Hours Sundays" max_length="40" name="operating_hours_sundays" type="boolean"/>
+        <element label="Operating Hours Workdays" max_length="40" name="operating_hours_workdays" type="boolean"/>
         <element label="Phone" max_length="40" name="phone" type="string"/>
         <element label="Street" max_length="255" name="street" type="string"/>
         <element label="Tower Frequency (Mhz)" max_length="40" name="tower_frequency_mhz" type="float"/>

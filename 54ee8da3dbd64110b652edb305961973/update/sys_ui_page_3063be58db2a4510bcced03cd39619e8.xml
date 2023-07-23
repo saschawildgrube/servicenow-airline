@@ -104,6 +104,7 @@
 	
 	<h3>1.2.0 - 2023-TODO</h3>
 	<ol>
+		<li>Operating Hours can now documented for Airports.</li> 
 		<li>The "Mission Contact" UI action did not work. This has been fixed.</li>
 	</ol>	
 	
@@ -128,13 +129,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:17</sys_created_on>
         <sys_id>3063be58db2a4510bcced03cd39619e8</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_page_3063be58db2a4510bcced03cd39619e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-11 15:41:56</sys_updated_on>
+        <sys_updated_on>2023-07-23 16:07:41</sys_updated_on>
     </sys_ui_page>
 </record_update>
