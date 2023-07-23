@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="schedule_admin" name="schedule_admin">506eb1d10a0007040197fe15abd1814a</contains>
+        <role display_value="x_snc_airline.manager" name="x_snc_airline.manager">9e837298db2a4510bcced03cd3961977</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-23 19:36:24</sys_created_on>
+        <sys_id>7548591497d87190a6a07767f053af1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>schedule_admin.x_snc_airline.manager</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_user_role_contains_7548591497d87190a6a07767f053af1c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-23 19:36:24</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>
