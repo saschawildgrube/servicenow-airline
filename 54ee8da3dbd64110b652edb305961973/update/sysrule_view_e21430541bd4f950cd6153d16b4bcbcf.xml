@@ -11,8 +11,6 @@
         <overrides_user_preference>true</overrides_user_preference>
         <script><![CDATA[(function overrideView(view, is_list) {
 
-	// x_snc_devtools.RecordSetValue('sysrule_view','e21430541bd4f950cd6153d16b4bcbcf','table','cmn_schedule');
-
 	var grCurrent = x_snc_devtools.GetCurrentRecord();
 	
 	if (x_snc_devtools.IsValidRecord(grCurrent) == true)
@@ -23,7 +21,6 @@
 		}
 	}
 	
-
 })(view, is_list);]]></script>
         <sys_class_name>sysrule_view</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -31,7 +28,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e21430541bd4f950cd6153d16b4bcbcf</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_name>Schedule - Airline</sys_name>
         <sys_overrides/>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
@@ -39,7 +36,7 @@
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sysrule_view_e21430541bd4f950cd6153d16b4bcbcf</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-23 19:26:50</sys_updated_on>
+        <sys_updated_on>2023-07-23 20:01:53</sys_updated_on>
         <table>cmn_schedule</table>
         <view/>
     </sysrule_view>
