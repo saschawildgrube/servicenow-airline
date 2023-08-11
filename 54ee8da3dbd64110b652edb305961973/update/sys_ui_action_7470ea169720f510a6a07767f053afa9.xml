@@ -8,10 +8,10 @@
 }]]></client_script_v2>
         <comments>Create a new airport schedule</comments>
         <condition/>
-        <form_action>false</form_action>
+        <form_action>true</form_action>
         <form_button>false</form_button>
         <form_button_v2>false</form_button_v2>
-        <form_context_menu>false</form_context_menu>
+        <form_context_menu>true</form_context_menu>
         <form_link>false</form_link>
         <form_menu_button_v2>false</form_menu_button_v2>
         <form_style/>
@@ -33,9 +33,11 @@
         <script><![CDATA[function onClickNewAirportSchedule()
 {
 	var strQuery = 'type=Airline^sys_scope=global^name=';
-	strQuery = HtmlEncode(strQuery);
-	var strUrl = HtmlEncode('cmn_schedule.do?sys_id=-1&sysparm_view=Airline&sysparm_query='+strQuery);
-	RedirectToUrl('/nav_to.do?uri='+strUrl);
+	strQuery = encodeURIComponent(strQuery);
+	//var strUrl = HtmlEncode('cmn_schedule.do?sys_id=-1&sysparm_view=Airline&sysparm_query='+strQuery);
+	var strPath = encodeURIComponent('cmn_schedule.do?sys_id=-1&sysparm_view=Airline&sysparm_query='+strQuery);
+	var strUrl = '/nav_to.do?uri='+strPath;
+	RedirectToUrl(strUrl);
 }]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -47,7 +49,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7470ea169720f510a6a07767f053afa9</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>New Airport Schedule</sys_name>
         <sys_overrides/>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
@@ -55,8 +57,8 @@
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_action_7470ea169720f510a6a07767f053afa9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-08-11 18:21:42</sys_updated_on>
-        <table>global</table>
+        <sys_updated_on>2023-08-11 18:59:38</sys_updated_on>
+        <table>cmn_schedule</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
     </sys_ui_action>
