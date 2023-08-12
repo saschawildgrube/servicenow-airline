@@ -14,7 +14,7 @@
         <license_model>none</license_model>
         <logo/>
         <menu/>
-        <name>Airline</name>
+        <name>Airline WORK IN PROGRESS</name>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
@@ -29,9 +29,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-23 18:47:42</sys_created_on>
         <sys_id>54ee8da3dbd64110b652edb305961973</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-08-12 17:51:16</sys_updated_on>
+        <sys_updated_on>2023-08-12 17:59:27</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
