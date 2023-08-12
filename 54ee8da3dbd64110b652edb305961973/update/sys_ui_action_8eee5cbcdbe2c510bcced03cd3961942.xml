@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name/>
+        <action_name>airline_aircraft_model_googleimages</action_name>
         <active>true</active>
         <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
@@ -28,9 +28,9 @@
         <list_style/>
         <messages/>
         <name>Google Images</name>
-        <onclick>GoogleImages()</onclick>
+        <onclick>onClickGoogleImages()</onclick>
         <order>100</order>
-        <script><![CDATA[function GoogleImages()
+        <script><![CDATA[function onClickGoogleImages()
 {
 	var strModel = encodeURIComponent(g_form.getDisplayValue());
 	var strUrl = 'https://www.google.com/search?tbm=isch&q='+strModel+'';
@@ -46,15 +46,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8eee5cbcdbe2c510bcced03cd3961942</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Google Images</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_action_8eee5cbcdbe2c510bcced03cd3961942</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-22 08:23:32</sys_updated_on>
+        <sys_updated_on>2023-08-12 09:26:53</sys_updated_on>
         <table>x_snc_airline_aircraft_model</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
