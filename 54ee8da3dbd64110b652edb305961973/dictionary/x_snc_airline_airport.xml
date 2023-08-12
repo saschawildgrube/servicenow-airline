@@ -11,6 +11,8 @@
         <element label="Longitude" max_length="40" name="longitude" type="float"/>
         <element label="Name" mandatory="true" max_length="100" name="name" type="string"/>
         <element label="Notes" max_length="2000" name="notes" type="string"/>
+        <element label="Operating Hours Notes" max_length="1000" name="operating_hours_notes" type="string"/>
+        <element label="Operating Hours Schedule" max_length="32" name="operating_hours_schedule" reference="cmn_schedule" reference_qual="type=Airline^EQ" reference_qual_condition="type=Airline^EQ" type="reference"/>
         <element label="Phone" max_length="40" name="phone" type="string"/>
         <element label="Street" max_length="255" name="street" type="string"/>
         <element label="Tower Frequency (Mhz)" max_length="40" name="tower_frequency_mhz" type="float"/>
@@ -21,6 +23,9 @@
         </index>
         <index name="index2">
             <element name="core_country"/>
+        </index>
+        <index name="index3">
+            <element name="operating_hours_schedule"/>
         </index>
     </element>
 </database>
