@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_airline.AppBaseline</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Activities to be performed when the application is being baselined.</description>
+        <name>AppBaseline</name>
+        <script><![CDATA[function AppBaseline()
+{
+	x_snc_devtools.RecordSetValue('sys_ui_action','7470ea169720f510a6a07767f053afa9','table','cmn_schedule',true);
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-16 13:20:24</sys_created_on>
+        <sys_id>c848af7397287d10a6a07767f053af78</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>AppBaseline</sys_name>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_c848af7397287d10a6a07767f053af78</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-16 13:26:15</sys_updated_on>
+    </sys_script_include>
+</record_update>
