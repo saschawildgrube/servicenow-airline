@@ -14,7 +14,7 @@
         <license_model>none</license_model>
         <logo/>
         <menu/>
-        <name>Airline WORK IN PROGRESS</name>
+        <name>Airline</name>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
@@ -29,16 +29,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-23 18:47:42</sys_created_on>
         <sys_id>54ee8da3dbd64110b652edb305961973</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-08-16 15:35:53</sys_updated_on>
+        <sys_updated_on>2023-08-19 13:26:09</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.3.0</version>
+        <version>1.2.4</version>
         <x_snc_devtools_documentation_url>https://www.wildgrube.com/servicenow-airline</x_snc_devtools_documentation_url>
         <x_snc_devtools_maintainer>Sascha Wildgrube</x_snc_devtools_maintainer>
         <x_snc_devtools_maintainer_email>sascha.wildgrube@servicenow.com</x_snc_devtools_maintainer_email>
