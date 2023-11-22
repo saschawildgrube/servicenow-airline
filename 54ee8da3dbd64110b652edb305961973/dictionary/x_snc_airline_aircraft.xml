@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="c554fd779731e550a6a07767f053af44" label="Aircraft" max_length="40" name="x_snc_airline_aircraft" type="collection">
+    <element db_object_id="ab4814ea1b02a1506c17fdd49b4bcbfc" label="Aircraft" max_length="40" name="x_snc_airline_aircraft" type="collection">
         <element label="Active" max_length="40" name="active" type="boolean"/>
         <element label="Base Airport" max_length="32" name="base_airport" reference="x_snc_airline_airport" type="reference"/>
         <element label="Total Aircraft Capacity (kg)" max_length="40" name="capacity" type="integer"/>

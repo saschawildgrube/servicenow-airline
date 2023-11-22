@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>flight.aircraft.fuel</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-14 10:01:10</sys_created_on>
+        <sys_id>544ca8461b6d6d105b76777d8b4bcbce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>flight.aircraft.fuel</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_ui_policy_action_544ca8461b6d6d105b76777d8b4bcbce</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-14 10:01:10</sys_updated_on>
+        <table>x_snc_airline_flight_stop</table>
+        <ui_policy display_value="Flight Stop - Hide fuel if not required">0244bc82db1f4d50bcced03cd3961955</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</application>
+        <file_path/>
+        <instance_id>25322e70dbb92590c1a4c5970596192e</instance_id>
+        <instance_name>wildgrubeutah</instance_name>
+        <name>sys_ui_policy_action_544ca8461b6d6d105b76777d8b4bcbce</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>flight.aircraft.fuel</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-14 10:01:10</sys_created_on>
+        <sys_id>544ca8461b6d6d105b76777d8b4bcbce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>flight.aircraft.fuel</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_ui_policy_action_544ca8461b6d6d105b76777d8b4bcbce</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-14 10:01:10</sys_updated_on>
+        <table>x_snc_airline_flight_stop</table>
+        <ui_policy display_value="Flight Stop - Hide fuel if not required">0244bc82db1f4d50bcced03cd3961955</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+</record_update>]]></payload>
+        <payload_hash>2126901586</payload_hash>
+        <record_name>flight.aircraft.fuel</record_name>
+        <reverted_from/>
+        <source>8348d0ea1b02a1506c17fdd49b4bcbe3</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-09 18:22:46</sys_created_on>
+        <sys_id>a378d42e1b02a1506c17fdd49b4bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18767419e820000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-09 18:22:46</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>6378d42efa02a15067ce994e10a315db</update_guid>
+        <update_guid_history>6378d42efa02a15067ce994e10a315db:2126901586</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-22 07:50:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>7653ede3291a48c4b9bd104abfbab8e4</sys_id>
+        <sys_metadata>544ca8461b6d6d105b76777d8b4bcbce</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>flight.aircraft.fuel</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_parent display_value="Flight Stop - Hide fuel if not required">0244bc82db1f4d50bcced03cd3961955</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope_delete display_value="">c6f42fe7959e4054a7cc3eae6bd19390</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_544ca8461b6d6d105b76777d8b4bcbce</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_544ca8461b6d6d105b76777d8b4bcbce">a378d42e1b02a1506c17fdd49b4bcbdb</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-22 07:50:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

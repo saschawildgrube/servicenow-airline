@@ -5,6 +5,7 @@
         <element label="Country" max_length="32" name="core_country" reference="core_country" type="reference"/>
         <element display="true" label="Display" max_length="200" name="display" type="string"/>
         <element label="Email" max_length="100" name="email" type="email"/>
+        <element label="Offered Fuel Types" max_length="4000" name="fuel_types" reference="x_snc_airline_fuel_type" type="glide_list"/>
         <element label="ICAO" mandatory="true" max_length="4" name="icao" type="string"/>
         <element label="IFR" max_length="40" name="ifr" type="boolean"/>
         <element label="Latitude" max_length="40" name="latitude" type="float"/>
