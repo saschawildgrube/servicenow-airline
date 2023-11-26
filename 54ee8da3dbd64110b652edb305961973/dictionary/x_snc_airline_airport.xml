@@ -15,6 +15,7 @@
         <element label="Operating Hours Notes" max_length="1000" name="operating_hours_notes" type="string"/>
         <element label="Operating Hours Schedule" max_length="32" name="operating_hours_schedule" reference="cmn_schedule" reference_qual="type=Airline^EQ" reference_qual_condition="type=Airline^EQ" type="reference"/>
         <element label="Phone" max_length="40" name="phone" type="string"/>
+        <element label="Pilot Briefing" max_length="2000" name="pilot_briefing" type="string"/>
         <element label="Street" max_length="255" name="street" type="string"/>
         <element label="Tower Frequency (Mhz)" max_length="40" name="tower_frequency_mhz" type="float"/>
         <element label="Website" max_length="1024" name="website" type="url"/>
