@@ -10,7 +10,7 @@
 <div style="padding-left: 20px;">
 <span style="visibility: hidden;">_CUT_HERE_</span>
 	<g2:no_escape>$[
-		var docapi = new x_snc_devtools.DocumentationAPI('54ee8da3dbd64110b652edb305961973');
+		var docapi = new x_snc_devtools.DocumentationAPI('x_snc_airline');
 		docapi.RenderHeader();
 	]</g2:no_escape>
 	
@@ -168,13 +168,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:17</sys_created_on>
         <sys_id>3063be58db2a4510bcced03cd39619e8</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_page_3063be58db2a4510bcced03cd39619e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-29 09:21:34</sys_updated_on>
+        <sys_updated_on>2023-11-29 09:23:36</sys_updated_on>
     </sys_ui_page>
 </record_update>
