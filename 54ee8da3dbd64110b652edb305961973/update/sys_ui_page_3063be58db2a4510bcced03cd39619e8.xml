@@ -10,7 +10,7 @@
 <div style="padding-left: 20px;">
 <span style="visibility: hidden;">_CUT_HERE_</span>
 	<g2:no_escape>$[
-		var docapi = new x_snc_devtools.DocumentationAPI('54ee8da3dbd64110b652edb305961973');
+		var docapi = new x_snc_devtools.DocumentationAPI('x_snc_airline');
 		docapi.RenderHeader();
 	]</g2:no_escape>
 	
@@ -32,7 +32,7 @@
 	<ul>
 		<g2:no_escape>$[
 			docapi.RenderSystemRequirements(
-				'Tokyo,Utah',
+				'Utah,Vancouver',
 				true,
 				AppGetDependencies());
 		]</g2:no_escape>	
@@ -49,9 +49,10 @@
 		]</g2:no_escape>
 		<g2:no_escape>$[
 			docapi.RenderInstallationInstructionsImportFromSourceControl(
-				'Parcel',
+				'GeoData',
 				'https://github.com/saschawildgrube/servicenow-geodata',
-				true);
+				true,
+				'https://www.wildgrube.com/servicenow-geodata');
 		]</g2:no_escape>			
 		<g2:no_escape>$[
 			docapi.RenderInstallationInstructionsImportFromSourceControl(
@@ -101,12 +102,22 @@
 		<li>TODO: document changes here</li>
 	</ol>
 
-	<h3>1.3.0 - 2023-TODO</h3>
-	<ol>
-		<li>TODO: document changes here</li>
-	</ol>
 
 -->
+
+	<h3>1.3.0 - 2023-11-29</h3>
+	<ol>
+		<li>Tokyo is no longer actively supported.</li>
+		<li>Airline has been fully tested with Vancouver.</li>
+		<li>DevTools 1.76.0 is now required.</li>
+		<li>Parcel 1.2.0 is now required.</li>
+		<li>Fuel types can now be configured by Airline manager users.</li>
+		<li>Fuel types can be associated with aircraft models.</li>
+		<li>When scheduling a flight, the compatible fuel types of the aircraft (model) are compared to the offered fuel types of the airport.</li>
+		<li>The airport form has a new tab "Pilot Briefing" with the pilot briefing field and the tower frequency.</li>
+		<li>The airport name field is no longer mandatory.</li>
+		<li>Added more missing ATF tests.</li>
+	</ol>	
 	
 	<h3>1.2.4 - 2023-08-19</h3>
 	<ol>
@@ -158,13 +169,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:17</sys_created_on>
         <sys_id>3063be58db2a4510bcced03cd39619e8</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_page_3063be58db2a4510bcced03cd39619e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-08-19 14:00:04</sys_updated_on>
+        <sys_updated_on>2023-11-29 12:23:34</sys_updated_on>
     </sys_ui_page>
 </record_update>

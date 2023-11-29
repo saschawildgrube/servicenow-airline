@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_airline.GetFuelTypesFromAircraft</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Returns the compatble fuel types for the given aircraft.</description>
+        <name>GetFuelTypesFromAircraft</name>
+        <script><![CDATA[function GetFuelTypesFromAircraft(vAircraft)
+{
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var GetRecord = x_snc_devtools.GetRecord;
+	var IsValidSysId = x_snc_devtools.IsValidSysId;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var ArrayAppend = x_snc_devtools.ArrayAppend;
+	var GetArrayValue = x_snc_devtools.GetArrayValue;
+
+	var aFuelTypes = [];
+	
+	var grAircraft = GetAircraftRecord(vAircraft);
+	if (IsValidRecord(grAircraft) == true)
+	{
+		var grModel = GetRecord('x_snc_airline_aircraft_model',grAircraft.model);
+		if (IsValidRecord(grModel) == true)
+		{
+			var strFuelType = GetStringValue(grModel.fuel_type);
+			if (IsValidSysId(strFuelType) == true)
+			{
+				aFuelTypes.push(strFuelType);
+			}
+			var aAlternativeFuelTypes = GetArrayValue(grModel.alternative_fuel_types);
+			aFuelTypes = ArrayAppend(aFuelTypes,aAlternativeFuelTypes);
+		}
+	}
+	
+	return aFuelTypes;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-26 18:42:45</sys_created_on>
+        <sys_id>d1c102b81bb2f5100e0b2f836b4bcb2f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>GetFuelTypesFromAircraft</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_d1c102b81bb2f5100e0b2f836b4bcb2f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-26 18:49:27</sys_updated_on>
+    </sys_script_include>
+</record_update>

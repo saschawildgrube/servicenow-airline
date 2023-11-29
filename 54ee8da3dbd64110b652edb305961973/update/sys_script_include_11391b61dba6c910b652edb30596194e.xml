@@ -14,7 +14,8 @@
 	var ArrayValueExists = x_snc_devtools.ArrayValueExists;
 	var GetArrayValue = x_snc_devtools.GetArrayValue;
 	var GetBoolValue = x_snc_devtools.GetBoolValue;
-
+	var GetIntegerValue = x_snc_devtools.GetIntegerValue;
+	var GetRecord = x_snc_devtools.GetRecord;
 
 	if (IsValidRecord(grFlight) == false)
 	{
@@ -22,6 +23,12 @@
 	}
 	
 	var strErrorMessage = '';
+	
+	var grAircraft = GetAircraftRecord(grFlight.aircraft);
+	if (IsValidRecord(grAircraft) == false)
+	{
+		strErrorMessage += 'No aircraft specified.\n';
+	}
 	
 	if (GetStringValue(grFlight.departure_airport) == '')
 	{
@@ -124,7 +131,8 @@
 	grStops.query();
 	while (grStops.next())
 	{
-		if (GetStringValue(grStops.airport) == '')
+		var grAirportStop = GetRecord('x_snc_airline_airport',grStops.airport);
+		if (IsValidRecord(grAirportStop) == false)
 		{
 			strErrorMessage += 'Stop '+grStops.stop+' airport has not been set.\n';
 		}
@@ -134,6 +142,46 @@
 			{
 				strErrorMessage += 'Stop '+grStops.stop+' airport is in a country which is not configured for flight operations.\n';
 			}
+			
+			var nRequiredFuel = GetIntegerValue(grStops.fuel);
+			if (nRequiredFuel > 0)
+			{
+				if (IsValidRecord(grAircraft) == true)
+				{
+					var aCompatibleFuelTypes = GetFuelTypesFromAircraft(grAircraft);
+					if (aCompatibleFuelTypes.length == 0)
+					{
+						strErrorMessage += 'No fuel types have been specified for the aircraft model.\n';
+					}
+					else
+					{
+						var aOfferedFuelTypes = GetArrayValue(grAirportStop.fuel_types);
+						if (aOfferedFuelTypes.length == 0)
+						{
+							strErrorMessage += 'Stop '+grStops.stop+' airport does not support any refueling.\n';
+						}
+						else
+						{
+							var bFuelTypeMatch = false;
+							for (var nFuelType = 0; nFuelType < aCompatibleFuelTypes.length; nFuelType++)
+							{
+								if (ArrayValueExists(aOfferedFuelTypes,aCompatibleFuelTypes[nFuelType]))
+								{
+									bFuelTypeMatch = true;
+								}
+							}
+							if (bFuelTypeMatch == false)
+							{
+								strErrorMessage += 'Stop '+grStops.stop+' airport does not offer any of the fuel types associated with the aircraft.\n';
+							}
+							
+						}
+					}
+				}
+			}
+					
+			
+			
 		}		
 		
 		if (GetStringValue(grStops.arrival_datetime) == '')
@@ -143,7 +191,7 @@
 		if (GetStringValue(grStops.departure_datetime) == '')
 		{
 			strErrorMessage += 'Stop '+grStops.stop+' departure date and time has not been set.\n';
-		}		
+		}
 	}
 	
 	
@@ -153,13 +201,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-30 10:04:19</sys_created_on>
         <sys_id>11391b61dba6c910b652edb30596194e</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>CheckFlightBeforeScheduling</sys_name>
-        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_11391b61dba6c910b652edb30596194e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-22 09:51:20</sys_updated_on>
+        <sys_updated_on>2023-11-26 18:59:24</sys_updated_on>
     </sys_script_include>
 </record_update>

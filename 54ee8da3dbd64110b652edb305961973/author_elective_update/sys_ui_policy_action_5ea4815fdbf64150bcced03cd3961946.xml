@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>airdrome.core_country.x_snc_geodata_european_union</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-16 19:56:11</sys_created_on>
+        <sys_id>5ea4815fdbf64150bcced03cd3961946</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>airdrome.core_country.x_snc_geodata_european_union</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_ui_policy_action_5ea4815fdbf64150bcced03cd3961946</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-16 19:56:11</sys_updated_on>
+        <table>x_snc_airline_flight_stop</table>
+        <ui_policy display_value="Flight Stop - Set related fields to read only">0194415fdbf64150bcced03cd396190e</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</application>
+        <file_path/>
+        <instance_id>25322e70dbb92590c1a4c5970596192e</instance_id>
+        <instance_name>wildgrubeutah</instance_name>
+        <name>sys_ui_policy_action_5ea4815fdbf64150bcced03cd3961946</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>airdrome.core_country.x_snc_geodata_european_union</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-16 19:56:11</sys_created_on>
+        <sys_id>5ea4815fdbf64150bcced03cd3961946</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>airdrome.core_country.x_snc_geodata_european_union</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_ui_policy_action_5ea4815fdbf64150bcced03cd3961946</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-16 19:56:11</sys_updated_on>
+        <table>x_snc_airline_flight_stop</table>
+        <ui_policy display_value="Flight Stop - Set related fields to read only">0194415fdbf64150bcced03cd396190e</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>]]></payload>
+        <payload_hash>75161221</payload_hash>
+        <record_name>airdrome.core_country.x_snc_geodata_european_union</record_name>
+        <reverted_from/>
+        <source>8348d0ea1b02a1506c17fdd49b4bcbe3</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-09 18:22:46</sys_created_on>
+        <sys_id>e378d42e1b02a1506c17fdd49b4bcbf6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18767419f2d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-09 18:22:46</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>a378d42e8f02a150ba8c0fa7320694f6</update_guid>
+        <update_guid_history>a378d42e8f02a150ba8c0fa7320694f6:75161221</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-26 18:21:16</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>465503fd7d4e46db99346985a4ce3189</sys_id>
+        <sys_metadata>5ea4815fdbf64150bcced03cd3961946</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>airdrome.core_country.x_snc_geodata_european_union</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_parent display_value="Flight Stop - Set related fields to read only">0194415fdbf64150bcced03cd396190e</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope_delete display_value="">c6f42fe7959e4054a7cc3eae6bd19390</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_5ea4815fdbf64150bcced03cd3961946</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_5ea4815fdbf64150bcced03cd3961946">e378d42e1b02a1506c17fdd49b4bcbf6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-26 18:21:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
