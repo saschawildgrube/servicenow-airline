@@ -4,13 +4,13 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>fc7c1e251bc3b9106c17fdd49b4bcbbe</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>fc7ed2e51bc3b9106c17fdd49b4bcb84</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>tail_number</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>707c1e251bc3b9106c17fdd49b4bcbbf</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>707ed2e51bc3b9106c17fdd49b4bcb85</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>model</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>f07c1e251bc3b9106c17fdd49b4bcbbf</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>f07ed2e51bc3b9106c17fdd49b4bcb85</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>base_airport</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>747c1e251bc3b9106c17fdd49b4bcbbf</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>747ed2e51bc3b9106c17fdd49b4bcb85</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>seats</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>f47c1e251bc3b9106c17fdd49b4bcbbf</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>f47ed2e51bc3b9106c17fdd49b4bcb85</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>capacity</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>787c1e251bc3b9106c17fdd49b4bcbbf</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>787ed2e51bc3b9106c17fdd49b4bcb85</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>cargo_capacity</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>f87c1e251bc3b9106c17fdd49b4bcbbf</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>f87ed2e51bc3b9106c17fdd49b4bcb85</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>.split</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>7c7c1e251bc3b9106c17fdd49b4bcbbf</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>7c7ed2e51bc3b9106c17fdd49b4bcb85</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>active</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>fc7c1e251bc3b9106c17fdd49b4bcbbf</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>fc7ed2e51bc3b9106c17fdd49b4bcb85</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -130,13 +130,13 @@
             <element>ifr</element>
             <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>707c1e251bc3b9106c17fdd49b4bcbc0</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>707ed2e51bc3b9106c17fdd49b4bcb86</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -144,13 +144,13 @@
             <element>model.fuel_type</element>
             <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>f07c1e251bc3b9106c17fdd49b4bcbc0</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>f07ed2e51bc3b9106c17fdd49b4bcb86</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -158,27 +158,55 @@
             <element>model.alternative_fuel_types</element>
             <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>747c1e251bc3b9106c17fdd49b4bcbc0</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>747ed2e51bc3b9106c17fdd49b4bcb86</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>deicing</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>f47ed2e51bc3b9106c17fdd49b4bcb86</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>deicing_methods</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>787ed2e51bc3b9106c17fdd49b4bcb86</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>12</position>
+            <position>14</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-12-11 14:39:19</sys_created_on>
-            <sys_id>f47c1e251bc3b9106c17fdd49b4bcbc0</sys_id>
+            <sys_created_on>2023-12-11 14:48:04</sys_created_on>
+            <sys_id>f87ed2e51bc3b9106c17fdd49b4bcb86</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_airline_aircraft" sys_domain="global" view="Default view">e0d22c34db26c510bcced03cd3961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-11 14:39:19</sys_updated_on>
+            <sys_updated_on>2023-12-11 14:48:04</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
