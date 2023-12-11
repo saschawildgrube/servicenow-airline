@@ -492,7 +492,20 @@
 		var grAircraft = GetAircraftRecord(grFlight.aircraft);
 		if (IsValidRecord(grAircraft))
 		{
-			strFuelType = GetStringValue(grAircraft.getDisplayValue('fuel'));
+			var aFuelTypes = GetFuelTypesFromAircraft(grAircraft);
+			for (var nFuelType = 0; nFuelType < aFuelTypes.length; nFuelType++)
+			{
+				var grFuelType = GetRecord('x_snc_airline_fuel_type',aFuelTypes[nFuelType]);
+				if (IsValidRecord(grFuelType))
+				{
+					if (strFuelType != '')
+					{
+						strFuelType += ' or ';
+					}
+					strFuelType += GetStringValue(grFuelType.name);
+				}
+				
+			}
 		}
 		if (strFuelType == '')
 		{
@@ -633,13 +646,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-27 19:55:46</sys_created_on>
         <sys_id>d8a48a74db2ec510bcced03cd39619cb</sys_id>
-        <sys_mod_count>180</sys_mod_count>
+        <sys_mod_count>182</sys_mod_count>
         <sys_name>HtmlRenderFlightSheetA4</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_d8a48a74db2ec510bcced03cd39619cb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-16 16:17:12</sys_updated_on>
+        <sys_updated_on>2023-12-11 14:12:27</sys_updated_on>
     </sys_script_include>
 </record_update>
