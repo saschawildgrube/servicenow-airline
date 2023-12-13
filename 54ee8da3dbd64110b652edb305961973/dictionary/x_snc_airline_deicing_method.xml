@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="3b3bd6e11bc3b9106c17fdd49b4bcbc5" label="Deicing Method" max_length="40" name="x_snc_airline_deicing_method" type="collection">
+        <element display="true" label="Name" mandatory="true" max_length="80" name="name" type="string"/>
+    </element>
+</database>

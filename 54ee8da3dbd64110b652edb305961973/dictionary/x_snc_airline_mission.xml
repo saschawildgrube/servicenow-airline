@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Mission" max_length="40" name="x_snc_airline_mission" sizeclass="1" type="collection">
+    <element db_object_id="d05854ea1b02a1506c17fdd49b4bcbde" label="Mission" max_length="40" name="x_snc_airline_mission" type="collection">
         <element label="Contacts" max_length="4000" name="contacts" reference="sys_user" type="glide_list"/>
+        <element label="Deicing required" max_length="40" name="deicing" type="boolean"/>
         <element label="Flight Operator" max_length="32" name="flight_operator" reference="sys_user" type="reference"/>
         <element display="true" label="Name" max_length="40" name="name" type="string"/>
         <element label="Notes" max_length="4000" name="notes" type="string"/>
