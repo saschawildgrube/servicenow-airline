@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test_suite_test">
     <sys_atf_test_suite_test action="INSERT_OR_UPDATE">
         <abort_on_failure>false</abort_on_failure>
-        <order>0</order>
+        <order>100</order>
         <sys_class_name>sys_atf_test_suite_test</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-12-13 15:46:17</sys_created_on>
         <sys_id>5dfe74961bcf3d106c17fdd49b4bcb58</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>99fe74961bcf3d106c17fdd49b4bcb54</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_atf_test_suite_test_5dfe74961bcf3d106c17fdd49b4bcb58</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-12-13 15:46:17</sys_updated_on>
+        <sys_updated_on>2023-12-13 16:12:42</sys_updated_on>
         <test display_value="Airline - GetFuelTypesFromAircraft">99fe74961bcf3d106c17fdd49b4bcb54</test>
         <test_suite display_value="Airline">fc63be58db2a4510bcced03cd39619f8</test_suite>
     </sys_atf_test_suite_test>
