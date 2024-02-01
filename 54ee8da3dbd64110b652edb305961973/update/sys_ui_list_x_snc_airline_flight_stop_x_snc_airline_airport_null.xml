@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="x_snc_airline_airport" relationship="" sys_domain="global" table="x_snc_airline_flight_stop" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>flight</element>
+            <list_id display_value="x_snc_airline_flight_stop" element="NULL" name="x_snc_airline_flight_stop" parent="x_snc_airline_airport" relationship="NULL" sys_domain="global" view="Default view">c87d1b961b4c8e106c17fdd49b4bcb18</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 20:21:29</sys_created_on>
+            <sys_id>447d1b961b4c8e106c17fdd49b4bcb19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 20:21:29</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>flight.mission</element>
+            <list_id display_value="x_snc_airline_flight_stop" element="NULL" name="x_snc_airline_flight_stop" parent="x_snc_airline_airport" relationship="NULL" sys_domain="global" view="Default view">c87d1b961b4c8e106c17fdd49b4bcb18</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 20:21:29</sys_created_on>
+            <sys_id>c47d1b961b4c8e106c17fdd49b4bcb19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 20:21:29</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>flight.airline</element>
+            <list_id display_value="x_snc_airline_flight_stop" element="NULL" name="x_snc_airline_flight_stop" parent="x_snc_airline_airport" relationship="NULL" sys_domain="global" view="Default view">c87d1b961b4c8e106c17fdd49b4bcb18</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 20:21:29</sys_created_on>
+            <sys_id>487d1b961b4c8e106c17fdd49b4bcb19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 20:21:29</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>flight.aircraft</element>
+            <list_id display_value="x_snc_airline_flight_stop" element="NULL" name="x_snc_airline_flight_stop" parent="x_snc_airline_airport" relationship="NULL" sys_domain="global" view="Default view">c87d1b961b4c8e106c17fdd49b4bcb18</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 20:21:29</sys_created_on>
+            <sys_id>c87d1b961b4c8e106c17fdd49b4bcb19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 20:21:29</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>arrival_datetime</element>
+            <list_id display_value="x_snc_airline_flight_stop" element="NULL" name="x_snc_airline_flight_stop" parent="x_snc_airline_airport" relationship="NULL" sys_domain="global" view="Default view">c87d1b961b4c8e106c17fdd49b4bcb18</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 20:21:29</sys_created_on>
+            <sys_id>4c7d1b961b4c8e106c17fdd49b4bcb19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 20:21:29</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>departure_datetime</element>
+            <list_id display_value="x_snc_airline_flight_stop" element="NULL" name="x_snc_airline_flight_stop" parent="x_snc_airline_airport" relationship="NULL" sys_domain="global" view="Default view">c87d1b961b4c8e106c17fdd49b4bcb18</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 20:21:29</sys_created_on>
+            <sys_id>cc7d1b961b4c8e106c17fdd49b4bcb19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 20:21:29</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>flight.state</element>
+            <list_id display_value="x_snc_airline_flight_stop" element="NULL" name="x_snc_airline_flight_stop" parent="x_snc_airline_airport" relationship="NULL" sys_domain="global" view="Default view">c87d1b961b4c8e106c17fdd49b4bcb18</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 20:21:29</sys_created_on>
+            <sys_id>407d1b961b4c8e106c17fdd49b4bcb1a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 20:21:29</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_snc_airline_flight_stop</name>
+            <parent>x_snc_airline_airport</parent>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 20:21:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c87d1b961b4c8e106c17fdd49b4bcb18</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_airline_flight_stop</sys_name>
+            <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+            <sys_update_name>sys_ui_list_x_snc_airline_flight_stop_x_snc_airline_airport_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 20:21:29</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>
