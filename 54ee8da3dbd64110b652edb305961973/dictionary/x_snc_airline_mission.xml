@@ -6,6 +6,7 @@
         <element display="true" label="Name" max_length="40" name="name" type="string"/>
         <element label="Notes" max_length="4000" name="notes" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Potential Pilots" max_length="4000" name="potential_pilots" reference="x_snc_airline_pilot" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="glide_list"/>
         <element label="Start" max_length="40" name="start_date" type="glide_date"/>
         <index name="index">
             <element name="flight_operator"/>
