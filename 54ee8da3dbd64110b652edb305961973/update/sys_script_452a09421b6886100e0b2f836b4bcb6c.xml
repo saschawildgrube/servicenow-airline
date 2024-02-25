@@ -36,7 +36,7 @@
 	current.potential_pilots = x_snc_devtools.GetStringValue(
 		x_snc_devtools.ArrayUnique(
 			x_snc_devtools.ArrayAppend(
-				current.potential_pilots,
+				x_snc_devtools.GetArrayValue(current.potential_pilots),
 				aPotentialPilotsSysIds)));
 
 })(current, previous);]]></script>
@@ -46,7 +46,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>452a09421b6886100e0b2f836b4bcb6c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Mission - Identify potential pilots</sys_name>
         <sys_overrides/>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
@@ -54,7 +54,7 @@
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_452a09421b6886100e0b2f836b4bcb6c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-25 12:06:10</sys_updated_on>
+        <sys_updated_on>2024-02-25 12:16:04</sys_updated_on>
         <template/>
         <when>before</when>
         <x_snc_datasilos_created>false</x_snc_datasilos_created>

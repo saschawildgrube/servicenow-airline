@@ -11,56 +11,42 @@
         <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-08-12 16:40:37</sys_created_on>
-        <sys_id>78dfebe697683910a6a07767f053afd8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_created_on>2024-02-25 12:09:12</sys_created_on>
+        <sys_id>b9e29d0a1b6886100e0b2f836b4bcb39</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Run Server Side Script</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
-        <sys_update_name>sys_atf_step_78dfebe697683910a6a07767f053afd8</sys_update_name>
+        <sys_update_name>sys_atf_step_b9e29d0a1b6886100e0b2f836b4bcb39</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-25 12:08:19</sys_updated_on>
+        <sys_updated_on>2024-02-25 12:11:26</sys_updated_on>
         <table/>
-        <test display_value="Airline - GetAircraftRecord">90cf2be697683910a6a07767f053af30</test>
+        <test display_value="Airline - GetAirportRecord">b4d25d0a1b6886100e0b2f836b4bcb28</test>
         <timeout/>
         <warning_message/>
     </sys_atf_step>
-    <sys_variable_value action="delete_multiple" query="document_key=78dfebe697683910a6a07767f053afd8"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b9e29d0a1b6886100e0b2f836b4bcb39"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>
-        <document_key>78dfebe697683910a6a07767f053afd8</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-08-12 16:40:37</sys_created_on>
-        <sys_id>35df2fe697683910a6a07767f053af79</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-08-12 16:40:37</sys_updated_on>
-        <value>3.1</value>
-        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_atf_step</document>
-        <document_key>78dfebe697683910a6a07767f053afd8</document_key>
+        <document_key>b9e29d0a1b6886100e0b2f836b4bcb39</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-08-12 16:40:37</sys_created_on>
-        <sys_id>f5df2fe697683910a6a07767f053af79</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_created_on>2024-02-25 12:09:12</sys_created_on>
+        <sys_id>47e29d0a1b6886100e0b2f836b4bcbb6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-25 12:08:19</sys_updated_on>
+        <sys_updated_on>2024-02-25 12:11:26</sys_updated_on>
         <value>(function(outputs, steps, stepResult, assertEqual)&#13;
 {&#13;
 	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
 	&#13;
 	test.SetResult(true);&#13;
 &#13;
-	function TestCase_GetAircraftRecord(strSysId, vExpected)&#13;
+	function TestCase_GetAirportRecord(vAirport, vExpected)&#13;
 	{&#13;
-		function TestCase_GetAircraftRecord_CheckResult(vInput,vExpected,vResult)&#13;
+		function TestCase_GetAirportRecord_CheckResult(vInput,vExpected,vResult)&#13;
 		{&#13;
 			if (x_snc_devtools.IsValidSysId(vExpected))&#13;
 			{&#13;
@@ -68,7 +54,7 @@
 				{&#13;
 					return false;&#13;
 				}&#13;
-				if (vResult.getRecordClassName() != 'x_snc_airline_aircraft')&#13;
+				if (vResult.getRecordClassName() != 'x_snc_airline_airport')&#13;
 				{&#13;
 					return false;&#13;
 				}&#13;
@@ -82,27 +68,43 @@
 		}&#13;
 &#13;
 		test.TestCase(&#13;
-			'Function GetAircraftRecord()',&#13;
-			GetAircraftRecord,&#13;
+			'Function GetAirportRecord()',&#13;
+			GetAirportRecord,&#13;
 			{&#13;
-				'SysId': strSysId&#13;
+				'vAirport': vAirport&#13;
 			},&#13;
 			vExpected,&#13;
-			TestCase_GetAircraftRecord_CheckResult);&#13;
+			TestCase_GetAirportRecord_CheckResult);&#13;
 	}&#13;
 &#13;
-	TestCase_GetAircraftRecord(null,false);&#13;
+	TestCase_GetAirportRecord(null,false);&#13;
 	&#13;
-	var grAircraft = new GlideRecord('x_snc_airline_aircraft');&#13;
-	grAircraft.initialize();&#13;
-	var strAircraftSysId = grAircraft.insert();&#13;
+	var grAirport = new GlideRecord('x_snc_airline_airport');&#13;
+	grAirport.initialize();&#13;
+	grAirport.name = 'TEST1';&#13;
+	grAirport.icao = 'ZZZZ';&#13;
+	var strAirportSysId = grAirport.insert();&#13;
 	&#13;
-	TestCase_GetAircraftRecord(grAircraft,strAircraftSysId);&#13;
-	TestCase_GetAircraftRecord(strAircraftSysId,strAircraftSysId);&#13;
+	TestCase_GetAirportRecord(grAirport,strAirportSysId);&#13;
+	TestCase_GetAirportRecord(strAirportSysId,strAirportSysId);&#13;
 	&#13;
 	return test.GetResult();&#13;
 	&#13;
 })(outputs, steps, stepResult, assertEqual);</value>
         <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>b9e29d0a1b6886100e0b2f836b4bcb39</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-25 12:09:12</sys_created_on>
+        <sys_id>8fe29d0a1b6886100e0b2f836b4bcbb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-25 12:09:12</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
     </sys_variable_value>
 </record_update>
