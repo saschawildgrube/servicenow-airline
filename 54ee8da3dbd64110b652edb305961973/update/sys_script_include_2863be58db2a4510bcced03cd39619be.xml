@@ -11,7 +11,6 @@
 {
 	var GetStringValue = x_snc_devtools.GetStringValue;
 	var GetProperty = x_snc_devtools.GetProperty;
-
 	
 	var installer = new x_snc_devtools.InstallerAPI(x_snc_devtools.GetAppName('x_snc_airline'));
 	
@@ -33,13 +32,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:16</sys_created_on>
         <sys_id>2863be58db2a4510bcced03cd39619be</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>AppInstall</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_2863be58db2a4510bcced03cd39619be</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-08-12 16:31:10</sys_updated_on>
+        <sys_updated_on>2024-02-25 12:22:20</sys_updated_on>
     </sys_script_include>
 </record_update>
