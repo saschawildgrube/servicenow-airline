@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_airline.GetPotentialPilotsFromPotentialAirports</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Returns an array of pilot Sys Ids based on a given list of Airport Sys Ids.</description>
+        <name>GetPotentialPilotsFromPotentialAirports</name>
+        <script><![CDATA[function GetPotentialPilotsFromPotentialAirports(aPotentialAirports)
+{
+	var GetArrayValue = x_snc_devtools.GetArrayValue;
+	var GetValue = x_snc_devtools.GetValue;
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	
+	aPotentialAirports = GetArrayValue(aPotentialAirports);
+	
+	if (aPotentialAirports.length == 0)
+	{
+		return [];
+	}
+	
+	var aPotentialPilotsSysIds = [];
+	
+	var grPilots = new GlideRecord('x_snc_airline_pilot');
+	
+	var grPotentialAirport = GetAirportRecord(GetValue(aPotentialAirports,0));
+	if (IsValidRecord(grPotentialAirport) == false)
+	{
+		return [];
+	}
+	
+	var condition = grPilots.addQuery('associated_airports','CONTAINS',grPotentialAirport.sys_id);
+	for (var nAirport = 1; nAirport < aPotentialAirports.length; nAirport++)
+	{
+		var grPotentialAirport = GetAirportRecord(GetValue(aPotentialAirports,nAirport));
+		if (IsValidRecord(grPotentialAirport) == true)
+		{
+			condition.addOrCondition('associated_airports','CONTAINS',grPotentialAirport.sys_id);
+		}		
+	}	
+	
+	grPilots.query();
+	while (grPilots.next())
+	{
+		aPotentialPilotsSysIds.push(GetStringValue(grPilots.sys_id));
+	}
+	
+	return aPotentialPilotsSysIds;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-25 11:49:47</sys_created_on>
+        <sys_id>b0fc89c21b6886100e0b2f836b4bcb51</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>GetPotentialPilotsFromPotentialAirports</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_b0fc89c21b6886100e0b2f836b4bcb51</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-25 11:50:10</sys_updated_on>
+    </sys_script_include>
+</record_update>
