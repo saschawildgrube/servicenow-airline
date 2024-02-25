@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Run Server Side Validation Script</description>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-25 11:50:46</sys_created_on>
+        <sys_id>b7ae01461b6886100e0b2f836b4bcbc3</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_atf_step_b7ae01461b6886100e0b2f836b4bcbc3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-25 12:01:42</sys_updated_on>
+        <table/>
+        <test display_value="Airline - GetPotentialPilotsFromPotentialAirports">239e4d061b6886100e0b2f836b4bcb1b</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=b7ae01461b6886100e0b2f836b4bcbc3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>b7ae01461b6886100e0b2f836b4bcbc3</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-25 11:50:46</sys_created_on>
+        <sys_id>b0be01461b6886100e0b2f836b4bcbd4</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-25 12:01:42</sys_updated_on>
+        <value>(function(outputs, steps, stepResult, assertEqual)&#13;
+{&#13;
+	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
+	&#13;
+	test.SetResult(true);&#13;
+&#13;
+	function TestCase_GetPotentialPilotsFromPotentialAirports(aPotentialAirports, vExpected)&#13;
+	{&#13;
+		function TestCase_GetPotentialPilotsFromPotentialAirports_CheckResult(vInput,vExpected,vResult)&#13;
+		{&#13;
+			vResult = x_snc_devtools.GetArrayValue(vResult); &#13;
+			return (vExpected == vResult.length);&#13;
+		}&#13;
+&#13;
+		test.TestCase(&#13;
+			'Function GetPotentialPilotsFromPotentialAirports()',&#13;
+			GetPotentialPilotsFromPotentialAirports,&#13;
+			{&#13;
+				'Potential Airports': aPotentialAirports&#13;
+			},&#13;
+			vExpected,&#13;
+			TestCase_GetPotentialPilotsFromPotentialAirports_CheckResult);&#13;
+	}&#13;
+&#13;
+	TestCase_GetPotentialPilotsFromPotentialAirports(null,0);&#13;
+&#13;
+&#13;
+	var grAirport = new GlideRecord('x_snc_airline_airport');&#13;
+	grAirport.initialize();&#13;
+	grAirport.icao = 'ZZZZ';&#13;
+	grAirport.name = 'AIRPORT1';&#13;
+	var strAirport1SysId = grAirport.insert();&#13;
+&#13;
+	var grAirport = new GlideRecord('x_snc_airline_airport');&#13;
+	grAirport.initialize();&#13;
+	grAirport.icao = 'ZZZX';&#13;
+	grAirport.name = 'AIRPORT2';&#13;
+	var strAirport2SysId = grAirport.insert();&#13;
+&#13;
+	var grPilot = new GlideRecord('x_snc_airline_pilot');&#13;
+	grPilot.initialize();&#13;
+	grPilot.first_name = 'PILOT1';&#13;
+	grPilot.associated_airports = '';&#13;
+	var strPilot2SysId = grPilot.insert();	&#13;
+&#13;
+	var grPilot = new GlideRecord('x_snc_airline_pilot');&#13;
+	grPilot.initialize();&#13;
+	grPilot.first_name = 'PILOT2';&#13;
+	grPilot.associated_airports = strAirport1SysId;&#13;
+	var strPilot1SysId = grPilot.insert();&#13;
+&#13;
+	var grPilot = new GlideRecord('x_snc_airline_pilot');&#13;
+	grPilot.initialize();&#13;
+	grPilot.first_name = 'PILOT3';&#13;
+	grPilot.associated_airports = strAirport1SysId+','+strAirport2SysId;&#13;
+	var strPilot2SysId = grPilot.insert();	&#13;
+&#13;
+	var grPilot = new GlideRecord('x_snc_airline_pilot');&#13;
+	grPilot.initialize();&#13;
+	grPilot.first_name = 'PILOT4';&#13;
+	grPilot.associated_airports = strAirport2SysId;&#13;
+	var strPilot4SysId = grPilot.insert();	&#13;
+&#13;
+	TestCase_GetPotentialPilotsFromPotentialAirports([strAirport1SysId],2);&#13;
+	TestCase_GetPotentialPilotsFromPotentialAirports([strAirport2SysId],2);&#13;
+	TestCase_GetPotentialPilotsFromPotentialAirports([strAirport1SysId,strAirport2SysId],3);&#13;
+	&#13;
+	return test.GetResult();&#13;
+	&#13;
+})(outputs, steps, stepResult, assertEqual);</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>b7ae01461b6886100e0b2f836b4bcbc3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-25 11:50:46</sys_created_on>
+        <sys_id>f8be01461b6886100e0b2f836b4bcbd3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-25 11:50:46</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+</record_update>
