@@ -11,13 +11,9 @@
         <initial_zoom>4</initial_zoom>
         <name>x_snc_airline_airports</name>
         <overview>false</overview>
-        <refresh_on_zoom>true</refresh_on_zoom>
+        <refresh_on_zoom>false</refresh_on_zoom>
         <roles/>
         <script><![CDATA[var GetStringValue = x_snc_devtools.GetStringValue;
-var GetParam = x_snc_devtools.GetParam;
-
-Debug(GetParam('pilots'));
-
 var grAirports = new GlideRecord('x_snc_airline_airport');
 grAirports.addQuery('longitude','!=','');
 grAirports.addQuery('latitude','!=','');
@@ -28,13 +24,12 @@ while (grAirports.next())
 	item.name = GetStringValue(grAirports.display);
 	item.latitude = GetStringValue(grAirports.latitude);
 	item.longitude = GetStringValue(grAirports.longitude);
-	//item.marker_label = GetStringValue(grAirports.icao);
-	//item.marker_label = "<img src='https://maps.google.com/mapfiles/marker.png'/>";
+	item.marker_label = '';
+	// https://maps.google.com/mapfiles/marker.png
+	// https://www.google.com/maps/d/u/0/viewer?mid=1icXjgXJ5da1l2BQjMNgXAI4dlkw
 	item.icon = 'https://maps.gstatic.com/mapfiles/ms2/micons/plane.png';
 	item.icon_width = '32';
 	item.icon_height = '32';
-	
-	//Debug(item);
 }]]></script>
         <show_device_location>false</show_device_location>
         <suffix>airports</suffix>
@@ -42,14 +37,14 @@ while (grAirports.next())
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-25 15:06:20</sys_created_on>
         <sys_id>9f4bfd861be886100e0b2f836b4bcbff</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>x_snc_airline_airports</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>cmn_map_page_9f4bfd861be886100e0b2f836b4bcbff</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-25 19:22:34</sys_updated_on>
+        <sys_updated_on>2024-02-26 08:12:38</sys_updated_on>
         <type>satellite</type>
         <type_selection>menu</type_selection>
         <use_advanced_configuration>false</use_advanced_configuration>
