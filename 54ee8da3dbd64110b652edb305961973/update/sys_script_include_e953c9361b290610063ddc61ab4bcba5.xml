@@ -22,6 +22,7 @@
 		false);
 
 	var grCountryDEU = x_snc_devtools.GetCountryRecord('DEU');
+	var grCountryFRA = x_snc_devtools.GetCountryRecord('FRA');
 
 	RecordInsertOrUpdate(
 		'x_snc_airline_airport',
@@ -38,18 +39,52 @@
 		},
 		false);
 
+	RecordInsertOrUpdate(
+		'x_snc_airline_airport',
+		{
+			name: 'Test Courchevel Altiport',
+			icao: 'TCOU'
+		},
+		{},
+		{
+			latitude: 45.3975,
+			longitude: 6.634444,
+			core_country: grCountryFRA.sys_id,
+			ifr: false
+		},
+		false);		
+
+/*
+				{
+					tooltip: 'London Heathrow (EGLL)',
+					latitude: 51.4775,
+					longitude: -0.461389,
+					icon: iconAirport,
+					link: 'https://en.wikipedia.org/wiki/Heathrow_Airport',
+					link_new_window: true
+				},
+				{
+					tooltip: 'New York La Guardia (KLGA)',
+					latitude: 40.775,
+					longitude:  -73.875,
+					icon: iconAirport,
+					link: 'https://en.wikipedia.org/wiki/LaGuardia_Airport',
+					link_new_window: true
+				}
+*/
+
 }]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-04-17 12:00:15</sys_created_on>
         <sys_id>e953c9361b290610063ddc61ab4bcba5</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>AppCreateTestData</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_e953c9361b290610063ddc61ab4bcba5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-04-17 12:11:49</sys_updated_on>
+        <sys_updated_on>2024-04-17 12:36:09</sys_updated_on>
     </sys_script_include>
 </record_update>
