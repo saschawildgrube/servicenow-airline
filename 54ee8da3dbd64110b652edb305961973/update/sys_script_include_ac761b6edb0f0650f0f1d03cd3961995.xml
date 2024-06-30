@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_airline.AirportsDataImprovement</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>If possible retrieves additional data on all existing airports.</description>
+        <name>AirportsDataImprovement</name>
+        <script><![CDATA[function AirportsDataImprovement()
+{
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var GetValue = x_snc_devtools.GetValue;
+
+	var grAirports = new GlideRecord('x_snc_airline_airport');
+	grAirports.query();
+	while (grAirports.next())
+	{
+		var strICAO = GetStringValue(grAirports.icao);
+		var airport = OpenAipApiGetAirportByICAO(strICAO);
+		if (airport != false)
+		{
+			var bUpdate = false;
+			if (grAirports.longitude == '' || grAirports.latitude == '')
+			{
+				grAirports.longitude = GetValue(airport,'geometry','coordinates',0);
+				grAirports.latitude = GetValue(airport,'geometry','coordinates',1);
+				bUpdate = true;
+			}
+			if (bUpdate == true)
+			{
+				Debug('Updating airport: '+grAirports.display);
+				grAirports.update();
+			}
+		}
+	}
+	return true;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-30 17:44:01</sys_created_on>
+        <sys_id>ac761b6edb0f0650f0f1d03cd3961995</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>AirportsDataImprovement</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_ac761b6edb0f0650f0f1d03cd3961995</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-30 17:49:38</sys_updated_on>
+    </sys_script_include>
+</record_update>
