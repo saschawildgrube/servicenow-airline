@@ -15,9 +15,9 @@
         <sys_id>132c61bcdb6ac510bcced03cd39619a8</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_snc_airline_flight</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>ua_table_licensing_config_132c61bcdb6ac510bcced03cd39619a8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-03-27 18:08:07</sys_updated_on>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_airline.OpenAipApiSearchAirports</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Searches for airports via the OpenAIP API based on a given search string.</description>
+        <name>OpenAipApiSearchAirports</name>
+        <script><![CDATA[function OpenAipApiSearchAirports(vSearch,nPage,nLimit)
+{
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var GetIntegerValue = x_snc_devtools.GetIntegerValue;
+	
+	nLimit = GetIntegerValue(nLimit);
+	if (nLimit == 0)
+	{
+		nLimit = 10;
+	}
+
+	var params = {};
+	params.search = GetStringValue(vSearch);
+	params.page = GetIntegerValue(nPage);
+	params.limit = nLimit;
+	return OpenAipApiRequest('airports',params);
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-30 13:03:08</sys_created_on>
+        <sys_id>95971e6adb0b0650f0f1d03cd39619fd</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>OpenAipApiSearchAirports</sys_name>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_95971e6adb0b0650f0f1d03cd39619fd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-30 17:09:41</sys_updated_on>
+    </sys_script_include>
+</record_update>

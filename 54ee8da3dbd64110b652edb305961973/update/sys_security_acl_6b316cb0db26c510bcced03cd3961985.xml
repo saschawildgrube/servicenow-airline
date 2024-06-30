@@ -5,18 +5,20 @@
         <advanced>false</advanced>
         <condition/>
         <description>Default access control on x_snc_airline_aircraft</description>
+        <local_or_existing/>
         <name>x_snc_airline_aircraft</name>
         <operation display_value="read">read</operation>
         <script/>
+        <security_attribute/>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-27 12:40:44</sys_created_on>
         <sys_id>6b316cb0db26c510bcced03cd3961985</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_snc_airline_aircraft</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_security_acl_6b316cb0db26c510bcced03cd3961985</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-03-27 12:40:44</sys_updated_on>

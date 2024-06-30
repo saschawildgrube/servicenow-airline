@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_airline.OpenAipApiGetAirportByICAO</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Retrieves airport information from the OpenAIP API based on a given ICAO code.</description>
+        <name>OpenAipApiGetAirportByICAO</name>
+        <script><![CDATA[function OpenAipApiGetAirportByICAO(strCode)
+{
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var GetArrayValue = x_snc_devtools.GetArrayValue;
+	var GetValue = x_snc_devtools.GetValue;
+
+	var strCode = GetStringValue(strCode);
+	if (IsValidICAO(strCode) == false)
+	{
+		return false;
+	}
+	
+	var result = OpenAipApiSearchAirports(strCode,0,2);
+	if (result == false)
+	{
+		return false;
+	}
+	var aResults = GetArrayValue(GetValue(result,'items'));
+	if (aResults.length != 1)
+	{
+		return false;
+	}
+	return GetValue(aResults,0);
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-30 13:45:47</sys_created_on>
+        <sys_id>06516ea2db4b0650f0f1d03cd39619e6</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>OpenAipApiGetAirportByICAO</sys_name>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_06516ea2db4b0650f0f1d03cd39619e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-30 17:09:19</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="0c5854ea1b02a1506c17fdd49b4bcb7f" label="Flight" max_length="40" name="x_snc_airline_flight" type="collection">
+    <element db_object_id="8f5431b79731e550a6a07767f053af7e" label="Flight" max_length="40" name="x_snc_airline_flight" type="collection">
         <element label="Aircraft" max_length="32" name="aircraft" reference="x_snc_airline_aircraft" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
         <element label="Airline" mandatory="true" max_length="32" name="airline" reference="x_snc_airline_airline" type="reference"/>
         <element label="Arrival" max_length="32" name="arrival_airport" reference="x_snc_airline_airport" type="reference"/>
@@ -31,13 +31,13 @@
             <element name="airline"/>
         </index>
         <index name="index3">
-            <element name="co_pilot"/>
+            <element name="arrival_airport"/>
         </index>
         <index name="index4">
-            <element name="departure_airport"/>
+            <element name="co_pilot"/>
         </index>
         <index name="index5">
-            <element name="arrival_airport"/>
+            <element name="departure_airport"/>
         </index>
         <index name="index6">
             <element name="mission"/>
