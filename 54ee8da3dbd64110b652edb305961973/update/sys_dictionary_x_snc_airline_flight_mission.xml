@@ -53,9 +53,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-05-01 09:15:17</sys_created_on>
         <sys_name>Mission</sys_name>
-        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_airline_flight_mission</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-05-01 09:15:17</sys_updated_on>

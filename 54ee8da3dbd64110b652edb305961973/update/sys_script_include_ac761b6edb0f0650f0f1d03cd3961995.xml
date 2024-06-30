@@ -42,9 +42,9 @@
         <sys_id>ac761b6edb0f0650f0f1d03cd3961995</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>AirportsDataImprovement</sys_name>
-        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_ac761b6edb0f0650f0f1d03cd3961995</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-06-30 17:51:03</sys_updated_on>
