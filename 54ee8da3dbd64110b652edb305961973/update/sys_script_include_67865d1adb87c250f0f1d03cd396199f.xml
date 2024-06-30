@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_airline.OpenAipApiRequest</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Sends a request to the Open AIP API using the API key configured with the Open AIP API credential alias. </description>
+        <name>OpenAipApiRequest</name>
+        <script><![CDATA[function OpenAipApiRequest(strEndPoint, vParams)
+{
+	var GetValue = x_snc_devtools.GetValue;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var GetCredentialFromAlias = x_snc_devtools.GetCredentialFromAlias;
+
+	var GetKeys = x_snc_devtools.GetKeys;
+
+
+	function MakeUrlParameters(vParams)
+	{
+		var strUrlParams = '';
+		var aKeys = GetKeys(vParams);
+		for (var nKey = 0; nKey < aKeys.length; nKey++)
+		{
+			var strKey = aKeys[nKey];
+			var strValue = GetStringValue(GetValue(vParams,strKey));
+			if (strUrlParams != '')
+			{
+				strUrlParams += '&';
+			}
+			strUrlParams += strKey + '=' + strValue;
+		}
+		return strUrlParams;
+	}
+
+	var strUrlParams = MakeUrlParameters(vParams);
+
+	var strUrl = 'https://api.core.openaip.net/api/' + strEndPoint + '?' + strUrlParams;
+
+	var credential = GetCredentialFromAlias('x_snc_airline.Open_AIP_API');
+	if (credential == false)
+	{
+		return false;
+	}
+	var strApiKey = GetStringValue(GetValue(credential,'apikey'));
+	if (strApiKey == '')
+	{
+		return false;
+	}
+
+	strUrl += '&apiKey='+strApiKey;
+
+	var requestparams = {};
+	requestparams.url = strUrl;
+	Debug(requestparams);
+	var strResult = x_snc_devtools.HttpRequest(requestparams);
+	if (strResult == false)
+	{
+		return false;
+	}
+	var result = x_snc_devtools.ParseJson(strResult);
+	return result;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-29 13:42:25</sys_created_on>
+        <sys_id>67865d1adb87c250f0f1d03cd396199f</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>OpenAipApiRequest</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_67865d1adb87c250f0f1d03cd396199f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-30 16:54:14</sys_updated_on>
+    </sys_script_include>
+</record_update>

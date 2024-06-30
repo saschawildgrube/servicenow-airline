@@ -26,6 +26,7 @@
 	<p>Aggregate multilpe flights to a mission - to coordinate connection flights and complex transport operations.</p>
 	<p>Mission planning is supported by maintaining a list of potential airports and pilots.</p>
 	<p>Manage freight and passengers.</p>
+	<p>Connect to the Open AIP API to get additonal information on airports automatically.</p>
 
 
 	<h2>Disclaimer</h2>
@@ -71,6 +72,8 @@
 		<li>Configure at least one country for airline operations.</li>
 		<li>Add aircraft models, aircraft, airports and pilots.</li>
 		<li>To enable the airport map, Google Maps API must be setup on the instance. Refer to the&#160;<a href="https://docs.servicenow.com/csh?topicname=set-up-google-maps-api.html&amp;version=latest">ServiceNow documentation</a>.</li>
+		<li>To enable the Open AIP API, add an API key credential and associate it to the&#160;<a href="/nav_to.do?uri=sys_alias.do?sys_id=8925522adb0b0650f0f1d03cd396199d">Open AIP API connection alias</a>.</li>
+
 	</ol>
 
 	<h2>Glossary</h2>
@@ -100,10 +103,15 @@
 	
 	<h2>Release Notes</h2>
 
-	<h3>1.x.0 - 2024-TODO</h3>
+	<h3>1.7.0 - 2024-TODO</h3>
 	<ol>
+		<li>DevTools 1.92.0 is now required.</li>
 		<li>Introduced the Airport Map to show all airports on a map.</li>
 		<li>Added function AppCreateTestData() to create test data for manual testing.</li>
+		<li>Added function GetAirportCoordinatesByICAO().</li>
+		<li>Added function OpenAipApiRequest().</li>
+		<li>Added function OpenAipApiSearchAirports().</li>
+		<li>Added function OpenAipApiGetAirportByICAO().</li>
 	</ol>	
 	
 	<h3>1.6.0 - 2024-02-25</h3>
@@ -194,13 +202,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:17</sys_created_on>
         <sys_id>3063be58db2a4510bcced03cd39619e8</sys_id>
-        <sys_mod_count>79</sys_mod_count>
+        <sys_mod_count>83</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_page_3063be58db2a4510bcced03cd39619e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-04-17 12:13:24</sys_updated_on>
+        <sys_updated_on>2024-06-30 17:06:06</sys_updated_on>
     </sys_ui_page>
 </record_update>
