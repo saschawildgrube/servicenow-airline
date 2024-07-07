@@ -16,9 +16,9 @@
         <sys_id>9d4781e0dbe28510bcced03cd39619b4</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>core_country.x_snc_airline_european_union</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_security_acl_9d4781e0dbe28510bcced03cd39619b4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-03-26 20:48:38</sys_updated_on>
