@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="all_tables.text_index_translations=true" create_roles="user_admin" db_object_id="599bf811b9103110d0adbb64e3a1e9ae" label="Land" max_length="40" name="core_country" text_index="true" type="collection">
+    <element attributes="all_tables.text_index_translations=true" create_roles="user_admin" db_object_id="6155a8038320021000d5ccc0deaad3c0" label="Country" max_length="40" name="core_country" text_index="true" type="collection">
         <element label="Flight Operations" max_length="40" name="x_snc_airline_flight_operations" type="boolean"/>
     </element>
 </database>

@@ -3,6 +3,8 @@
         <cleared>false</cleared>
         <disabled>true</disabled>
         <field>arrival_datetime</field>
+        <field_message/>
+        <field_message_type/>
         <mandatory>ignore</mandatory>
         <sys_class_name>sys_ui_policy_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -18,6 +20,9 @@
         <sys_updated_on>2022-03-30 07:21:39</sys_updated_on>
         <table>x_snc_airline_flight_stop</table>
         <ui_policy display_value="Flight Stop - Set read only after planning">89b43ea9db62c910b652edb30596191f</ui_policy>
+        <value/>
+        <value_action/>
         <visible>ignore</visible>
     </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=59f4bea9db62c910b652edb3059619c6"/>
 </record_update>

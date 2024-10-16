@@ -3,6 +3,8 @@
         <cleared>false</cleared>
         <disabled>true</disabled>
         <field>core_country.x_snc_geodata_schengen</field>
+        <field_message/>
+        <field_message_type/>
         <mandatory>ignore</mandatory>
         <sys_class_name>sys_ui_policy_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -18,6 +20,9 @@
         <sys_updated_on>2023-04-16 14:14:54</sys_updated_on>
         <table>x_snc_airline_airport</table>
         <ui_policy display_value="Airport - Set fields read only">30e22f2c1b926d10cd6153d16b4bcb59</ui_policy>
+        <value/>
+        <value_action/>
         <visible>ignore</visible>
     </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=7ce22f2c1b926d10cd6153d16b4bcb5c"/>
 </record_update>

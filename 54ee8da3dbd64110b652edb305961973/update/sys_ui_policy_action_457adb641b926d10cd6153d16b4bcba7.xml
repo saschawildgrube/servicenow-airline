@@ -3,6 +3,8 @@
         <cleared>false</cleared>
         <disabled>true</disabled>
         <field>airport.core_country.x_snc_geodata_schengen</field>
+        <field_message/>
+        <field_message_type/>
         <mandatory>ignore</mandatory>
         <sys_class_name>sys_ui_policy_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -18,6 +20,9 @@
         <sys_updated_on>2023-04-16 13:38:03</sys_updated_on>
         <table>x_snc_airline_flight_stop</table>
         <ui_policy display_value="Flight Stop - Set related fields to read only">0194415fdbf64150bcced03cd396190e</ui_policy>
+        <value/>
+        <value_action/>
         <visible>ignore</visible>
     </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=457adb641b926d10cd6153d16b4bcba7"/>
 </record_update>

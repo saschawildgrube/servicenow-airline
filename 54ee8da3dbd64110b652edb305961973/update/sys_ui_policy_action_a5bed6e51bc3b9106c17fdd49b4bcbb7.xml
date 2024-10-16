@@ -3,6 +3,8 @@
         <cleared>false</cleared>
         <disabled>ignore</disabled>
         <field>deicing_methods</field>
+        <field_message/>
+        <field_message_type/>
         <mandatory>true</mandatory>
         <sys_class_name>sys_ui_policy_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -18,6 +20,9 @@
         <sys_updated_on>2023-12-11 14:49:23</sys_updated_on>
         <table>x_snc_airline_aircraft</table>
         <ui_policy display_value="Aircraft - Deicing">de9e56e51bc3b9106c17fdd49b4bcbb1</ui_policy>
+        <value/>
+        <value_action/>
         <visible>true</visible>
     </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=a5bed6e51bc3b9106c17fdd49b4bcbb7"/>
 </record_update>

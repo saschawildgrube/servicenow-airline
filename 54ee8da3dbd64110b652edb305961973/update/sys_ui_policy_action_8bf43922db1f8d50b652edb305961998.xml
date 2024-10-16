@@ -3,6 +3,8 @@
         <cleared>false</cleared>
         <disabled>true</disabled>
         <field>fuel_required</field>
+        <field_message/>
+        <field_message_type/>
         <mandatory>ignore</mandatory>
         <sys_class_name>sys_ui_policy_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -18,6 +20,9 @@
         <sys_updated_on>2022-05-09 12:03:10</sys_updated_on>
         <table>x_snc_airline_flight_stop</table>
         <ui_policy display_value="Flight Stop - Set read only after planning">89b43ea9db62c910b652edb30596191f</ui_policy>
+        <value/>
+        <value_action/>
         <visible>ignore</visible>
     </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=8bf43922db1f8d50b652edb305961998"/>
 </record_update>

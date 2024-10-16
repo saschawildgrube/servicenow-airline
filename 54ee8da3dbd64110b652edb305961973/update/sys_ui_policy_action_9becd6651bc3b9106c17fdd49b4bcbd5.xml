@@ -3,6 +3,8 @@
         <cleared>false</cleared>
         <disabled>true</disabled>
         <field>model.alternative_fuel_types</field>
+        <field_message/>
+        <field_message_type/>
         <mandatory>ignore</mandatory>
         <sys_class_name>sys_ui_policy_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -18,6 +20,9 @@
         <sys_updated_on>2023-12-11 14:41:38</sys_updated_on>
         <table>x_snc_airline_aircraft</table>
         <ui_policy display_value="Aircraft - Fuel Type read only">f15bfadf1b26b1100e0b2f836b4bcb2e</ui_policy>
+        <value/>
+        <value_action/>
         <visible>ignore</visible>
     </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=9becd6651bc3b9106c17fdd49b4bcbd5"/>
 </record_update>
