@@ -15,13 +15,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-29 20:49:36</sys_created_on>
         <sys_id>ea9dc02bdbcb4910b652edb305961920</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>GetPilotRecord</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
-        <sys_policy>read</sys_policy>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_ea9dc02bdbcb4910b652edb305961920</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-22 08:12:21</sys_updated_on>
+        <sys_updated_on>2024-10-16 18:43:51</sys_updated_on>
     </sys_script_include>
 </record_update>
