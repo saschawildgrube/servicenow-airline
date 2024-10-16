@@ -36,7 +36,7 @@
 	<ul>
 		<g2:no_escape>$[
 			docapi.RenderSystemRequirements(
-				'Vancouver,Washington',
+				'Washington,Xanadu',
 				true,
 				AppGetDependencies());
 		]</g2:no_escape>	
@@ -108,6 +108,8 @@
 
 	<h3>1.9.0 - TODO</h3>
 	<ol>
+		<li>Vancouver is no longer actively supported.</li>
+		<li>Airline is fully tested on Xanadu.</li>
 		<li>Improved form layout of the mission form planning section.</li>
 		<li>AirportsDataImprovement() now always updates an airport's longitude and latitude information if it can be retrieved.</li>
 	</ol>
@@ -227,13 +229,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:17</sys_created_on>
         <sys_id>3063be58db2a4510bcced03cd39619e8</sys_id>
-        <sys_mod_count>99</sys_mod_count>
+        <sys_mod_count>100</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_page_3063be58db2a4510bcced03cd39619e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-10-01 16:50:50</sys_updated_on>
+        <sys_updated_on>2024-10-16 18:17:20</sys_updated_on>
     </sys_ui_page>
 </record_update>
