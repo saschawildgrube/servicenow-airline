@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-03 09:18:18</sys_created_on>
+        <sys_id>09e3e832c37656905a37f9070501313d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_snc_airline.viewer</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_security_acl display_value="cmn_map_page">d6d3a832c37656905a37f90705013171</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_09e3e832c37656905a37f9070501313d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-03 09:18:18</sys_updated_on>
+        <sys_user_role display_value="x_snc_airline.viewer" name="x_snc_airline.viewer">1da3f298db2a4510bcced03cd3961928</sys_user_role>
+    </sys_security_acl_role>
+</record_update>
