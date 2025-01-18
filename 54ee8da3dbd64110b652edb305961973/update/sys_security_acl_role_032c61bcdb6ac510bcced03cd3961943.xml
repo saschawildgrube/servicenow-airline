@@ -6,9 +6,9 @@
         <sys_id>032c61bcdb6ac510bcced03cd3961943</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>x_snc_airline_flight.x_snc_airline.viewer</sys_name>
-        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_security_acl display_value="x_snc_airline_flight">432c61bcdb6ac510bcced03cd3961940</sys_security_acl>
         <sys_update_name>sys_security_acl_role_032c61bcdb6ac510bcced03cd3961943</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
