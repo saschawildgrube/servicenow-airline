@@ -31,17 +31,14 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	var grFlight = new GlideRecord('x_snc_airline_flight');
-	grFlight.addQuery('mission','=',current.sys_id);
-	grFlight.addQuery('state','=','planning');
-	grFlight.query();
-	while (grFlight.next())
+	var IsArray = x_snc_devtools.IsArray;
+
+	var aFlights = MissionRequiresDeicing(current);
+	if (IsArray(aFlights) == true)
 	{
-		if (grFlight.deicing == false)
+		for (var nFlight = 0; nFlight < aFlights.length; nFlight++)
 		{
-			grFlight.deicing = true;
-			grFlight.update();
-			gs.addInfoMessage('Deicing is now required for flight '+grFlight.number);
+			gs.addInfoMessage('Deicing is now required for flight '+aFlights[nFlight].number);
 		}
 	}
 
@@ -52,7 +49,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7a58b8121bcf3d106c17fdd49b4bcbeb</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Missing - Deicing</sys_name>
         <sys_overrides/>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
@@ -60,7 +57,7 @@
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_7a58b8121bcf3d106c17fdd49b4bcbeb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-12-13 15:23:34</sys_updated_on>
+        <sys_updated_on>2025-01-18 20:10:57</sys_updated_on>
         <template/>
         <when>before</when>
         <x_snc_datasilos_created>false</x_snc_datasilos_created>
