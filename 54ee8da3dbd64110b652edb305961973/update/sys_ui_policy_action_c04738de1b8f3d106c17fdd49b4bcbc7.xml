@@ -12,9 +12,9 @@
         <sys_id>c04738de1b8f3d106c17fdd49b4bcbc7</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>deicing</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_policy_action_c04738de1b8f3d106c17fdd49b4bcbc7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-12-13 15:12:48</sys_updated_on>

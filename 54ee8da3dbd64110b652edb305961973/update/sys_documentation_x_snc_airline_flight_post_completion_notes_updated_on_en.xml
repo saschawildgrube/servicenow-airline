@@ -13,9 +13,9 @@
             <sys_created_on>2022-08-01 10:33:31</sys_created_on>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Post Completion Notes Updated On</sys_name>
-            <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+            <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
             <sys_policy/>
-            <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+            <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
             <sys_update_name>sys_documentation_x_snc_airline_flight_post_completion_notes_updated_on_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2022-08-01 10:33:31</sys_updated_on>
