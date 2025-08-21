@@ -2,8 +2,10 @@
     <sys_security_acl action="INSERT_OR_UPDATE">
         <active>true</active>
         <admin_overrides>true</admin_overrides>
-        <advanced>true</advanced>
+        <advanced>false</advanced>
+        <applies_to/>
         <condition/>
+        <decision_type>allow</decision_type>
         <description>Allow read for records in cmn_map_page, for users with role x_snc_airline.viewer.</description>
         <local_or_existing>Local</local_or_existing>
         <name>cmn_map_page</name>

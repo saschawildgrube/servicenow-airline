@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Returns an array of objects containing data about the individual parcel parts that are to be transported in the given flight segment.</description>
+        <mobile_callable>false</mobile_callable>
         <name>GetParcelPartsFromSegment</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function GetParcelPartsFromSegment(segment)
 {
 	var GetArrayValue = x_snc_devtools.GetArrayValue;
@@ -74,5 +76,6 @@
         <sys_update_name>sys_script_include_83067401db324110b652edb305961999</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:50</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

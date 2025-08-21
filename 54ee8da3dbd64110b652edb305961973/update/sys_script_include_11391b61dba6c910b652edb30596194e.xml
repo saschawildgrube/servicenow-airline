@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Checks the given flight record for consistency and meaningful choices. Returns an error message string with findings, or an empty string if there are no findings.</description>
+        <mobile_callable>false</mobile_callable>
         <name>CheckFlightBeforeScheduling</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function CheckFlightBeforeScheduling(grFlight)
 {
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
@@ -217,5 +219,6 @@
         <sys_update_name>sys_script_include_11391b61dba6c910b652edb30596194e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:49</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

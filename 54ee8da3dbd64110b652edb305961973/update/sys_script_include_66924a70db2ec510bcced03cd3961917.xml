@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Creates the flight sheet pdf document and attaches it to the flight record.</description>
+        <mobile_callable>false</mobile_callable>
         <name>CreateFlightSheet</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function CreateFlightSheet(strFlightSysId)
 {
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
@@ -59,5 +61,6 @@
         <sys_update_name>sys_script_include_66924a70db2ec510bcced03cd3961917</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:49</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

@@ -38,5 +38,6 @@
         <table>x_snc_airline_flight_stop</table>
         <ui_type>0</ui_type>
         <view/>
+        <x_snc_devtools_table/>
     </sys_ui_policy>
 </record_update>

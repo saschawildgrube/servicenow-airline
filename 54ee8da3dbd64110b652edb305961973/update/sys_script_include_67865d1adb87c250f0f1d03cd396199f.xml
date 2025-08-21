@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Sends a request to the OpenAIP API using the API key configured with the OpenAIP API credential alias. </description>
+        <mobile_callable>false</mobile_callable>
         <name>OpenAipApiRequest</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function OpenAipApiRequest(strEndPoint, vParams)
 {
 	var GetValue = x_snc_devtools.GetValue;
@@ -55,5 +57,6 @@
         <sys_update_name>sys_script_include_67865d1adb87c250f0f1d03cd396199f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:49</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

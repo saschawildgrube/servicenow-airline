@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Returns an array of objects containing segment data based on a given flight (identified by a Sys ID or Flight Record) or an empty array if the flight cannot be found.</description>
+        <mobile_callable>false</mobile_callable>
         <name>GetSegmentsFromFlight</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function GetSegmentsFromFlight(vFlight)
 {
 	var GetStringValue = x_snc_devtools.GetStringValue;
@@ -165,5 +167,6 @@
         <sys_update_name>sys_script_include_a04ec8addb628910b652edb305961973</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:50</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

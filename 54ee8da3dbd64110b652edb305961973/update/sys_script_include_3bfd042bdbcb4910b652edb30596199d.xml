@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Returns an array of objects containing all the airports used in a flight based on a Sys ID, or an empty array if the flight cannot be found.</description>
+        <mobile_callable>false</mobile_callable>
         <name>GetAirportsFromFlight</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function GetAirportsFromFlight(strFlightSysId)
 {
 
@@ -95,5 +97,6 @@
         <sys_update_name>sys_script_include_3bfd042bdbcb4910b652edb30596199d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:49</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

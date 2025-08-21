@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Returns a mission object based on the given parameter.</description>
+        <mobile_callable>false</mobile_callable>
         <name>GetMissionRecord</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function GetMissionRecord(vMission)
 {
 	var GetRecord = x_snc_devtools.GetRecord;
@@ -31,5 +33,6 @@
         <sys_update_name>sys_script_include_aebac83783c7d25000d5ccc0deaad39e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-01-18 21:10:41</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

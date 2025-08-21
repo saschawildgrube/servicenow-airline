@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Returns a GlideRecord object representing a flight based on the given Sys ID, or false if the flight does not exist. </description>
+        <mobile_callable>false</mobile_callable>
         <name>GetFlightRecord</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function GetFlightRecord(strSysId)
 {
 	return x_snc_devtools.GetRecord('x_snc_airline_flight',strSysId);
@@ -23,5 +25,6 @@
         <sys_update_name>sys_script_include_a7d34ab0db2ec510bcced03cd396193e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:50</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>
