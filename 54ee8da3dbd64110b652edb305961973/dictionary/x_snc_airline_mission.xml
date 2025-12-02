@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="d2e1c0b11b763d10063ddc61ab4bcbd3" label="Mission" max_length="40" name="x_snc_airline_mission" type="collection">
-        <element label="Start" max_length="40" name="start_date" type="glide_date"/>
-        <element label="Notes" max_length="4000" name="notes" type="string"/>
-        <element label="Deicing required" max_length="40" name="deicing" type="boolean"/>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
-        <element label="Flight Operator" max_length="32" name="flight_operator" reference="sys_user" type="reference"/>
-        <element label="Potential Airports" max_length="4000" name="potential_airports" reference="x_snc_airline_airport" type="glide_list"/>
+    <element db_object_id="d05854ea1b02a1506c17fdd49b4bcbde" label="Mission" max_length="40" name="x_snc_airline_mission" type="collection">
         <element label="Contacts" max_length="4000" name="contacts" reference="sys_user" type="glide_list"/>
-        <element display="true" label="Name" max_length="40" name="name" type="string"/>
+        <element label="Potential Airports" max_length="4000" name="potential_airports" reference="x_snc_airline_airport" type="glide_list"/>
         <element label="Potential Pilots" max_length="4000" name="potential_pilots" reference="x_snc_airline_pilot" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="glide_list"/>
+        <element label="Notes" max_length="4000" name="notes" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element display="true" label="Name" max_length="40" name="name" type="string"/>
+        <element label="Start" max_length="40" name="start_date" type="glide_date"/>
+        <element label="Deicing required" max_length="40" name="deicing" type="boolean"/>
+        <element label="Flight Operator" max_length="32" name="flight_operator" reference="sys_user" type="reference"/>
         <index name="index">
             <element name="flight_operator"/>
         </index>

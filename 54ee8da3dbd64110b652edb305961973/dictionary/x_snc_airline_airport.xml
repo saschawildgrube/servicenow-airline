@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="6bbd43a81b526d10cd6153d16b4bcb70" label="Airport" max_length="40" name="x_snc_airline_airport" type="collection">
-        <element label="Email" max_length="100" name="email" type="email"/>
-        <element label="Longitude" max_length="40" name="longitude" type="float"/>
-        <element label="Pilot Briefing" max_length="2000" name="pilot_briefing" type="string"/>
-        <element label="Operating Hours Schedule" max_length="32" name="operating_hours_schedule" reference="cmn_schedule" reference_qual="type=Airline^EQ" reference_qual_condition="type=Airline^EQ" type="reference"/>
-        <element label="Offered Fuel Types" max_length="4000" name="fuel_types" reference="x_snc_airline_fuel_type" type="glide_list"/>
-        <element label="Name" max_length="100" name="name" type="string"/>
-        <element label="Street" max_length="255" name="street" type="string"/>
-        <element label="Tower Frequency (Mhz)" max_length="40" name="tower_frequency_mhz" type="float"/>
-        <element label="Contact" max_length="32" name="contact" reference="sys_user" type="reference"/>
-        <element label="IFR" max_length="40" name="ifr" type="boolean"/>
-        <element label="ICAO" mandatory="true" max_length="4" name="icao" type="string"/>
-        <element label="Notes" max_length="2000" name="notes" type="string"/>
-        <element label="Website" max_length="1024" name="website" type="url"/>
-        <element label="Country" max_length="32" name="core_country" reference="core_country" type="reference"/>
-        <element label="Operating Hours Notes" max_length="1000" name="operating_hours_notes" type="string"/>
-        <element display="true" label="Display" max_length="200" name="display" type="string"/>
         <element label="Latitude" max_length="40" name="latitude" type="float"/>
+        <element label="Website" max_length="1024" name="website" type="url"/>
+        <element label="Street" max_length="255" name="street" type="string"/>
+        <element label="Operating Hours Schedule" max_length="32" name="operating_hours_schedule" reference="cmn_schedule" reference_qual="type=Airline^EQ" reference_qual_condition="type=Airline^EQ" type="reference"/>
+        <element label="Notes" max_length="2000" name="notes" type="string"/>
+        <element label="Tower Frequency (Mhz)" max_length="40" name="tower_frequency_mhz" type="float"/>
         <element label="Phone" max_length="40" name="phone" type="string"/>
+        <element label="Offered Fuel Types" max_length="4000" name="fuel_types" reference="x_snc_airline_fuel_type" type="glide_list"/>
+        <element label="Email" max_length="100" name="email" type="email"/>
+        <element label="Contact" max_length="32" name="contact" reference="sys_user" type="reference"/>
         <element label="Zip / Postal Code" max_length="40" name="zip" type="string"/>
+        <element label="Country" max_length="32" name="core_country" reference="core_country" type="reference"/>
         <element label="City" max_length="40" name="city" type="string"/>
+        <element label="IFR" max_length="40" name="ifr" type="boolean"/>
+        <element label="Longitude" max_length="40" name="longitude" type="float"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="Pilot Briefing" max_length="2000" name="pilot_briefing" type="string"/>
+        <element label="ICAO" mandatory="true" max_length="4" name="icao" type="string"/>
+        <element display="true" label="Display" max_length="200" name="display" type="string"/>
+        <element label="Operating Hours Notes" max_length="1000" name="operating_hours_notes" type="string"/>
         <index name="index">
             <element name="contact"/>
         </index>
