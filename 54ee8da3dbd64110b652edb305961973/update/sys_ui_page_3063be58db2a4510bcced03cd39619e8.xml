@@ -133,6 +133,7 @@
 		<li>Added ATF test for HtmlRenderFlightSheetA4().</li>
 		<li>Added ATF test for HtmlRenderPageMissionMailingList().</li>
 		<li>Added ATF test for GetParcelsFromSegments().</li>
+		<li>Added ATF test for GetPassengersFromSegments().</li>
 		<li>Changed business rule execution orders to be unique.</li>
 		<li>Added ACLs for UI Pages.</li>
 	</ol>
@@ -275,14 +276,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:17</sys_created_on>
         <sys_id>3063be58db2a4510bcced03cd39619e8</sys_id>
-        <sys_mod_count>130</sys_mod_count>
+        <sys_mod_count>131</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_page_3063be58db2a4510bcced03cd39619e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-12-23 20:02:06</sys_updated_on>
+        <sys_updated_on>2025-12-23 20:05:02</sys_updated_on>
     </sys_ui_page>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>3063be58db2a4510bcced03cd39619e8</id>
