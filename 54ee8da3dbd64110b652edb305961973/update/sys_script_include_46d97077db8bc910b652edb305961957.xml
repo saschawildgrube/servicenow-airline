@@ -17,6 +17,7 @@
 		return '';
 	}
 
+	var GetParam = x_snc_devtools.GetParam;
 	var GetStringValue = x_snc_devtools.GetStringValue;
 	var HtmlRenderError = x_snc_devtools.HtmlRenderError;
 	var HtmlRenderInfo = x_snc_devtools.HtmlRenderInfo;
@@ -76,7 +77,7 @@
 	
 	
 	var strState = '';
-	var strMission = GetStringValue(RP.getParameterValue('mission'));
+	var strMission = GetStringValue(GetParam('mission'));
 
 	var grMission = GetRecord('x_snc_airline_mission',strMission);
 	if (IsValidRecord(grMission) == true)
@@ -100,14 +101,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-30 18:47:08</sys_created_on>
         <sys_id>46d97077db8bc910b652edb305961957</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name>HtmlRenderPageMissionMailingList</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_include_46d97077db8bc910b652edb305961957</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-10-16 18:43:49</sys_updated_on>
+        <sys_updated_on>2025-12-23 19:42:33</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>
