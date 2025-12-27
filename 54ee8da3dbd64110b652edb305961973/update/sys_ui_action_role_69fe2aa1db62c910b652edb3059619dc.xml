@@ -6,9 +6,9 @@
         <sys_id>69fe2aa1db62c910b652edb3059619dc</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Mission Sheet.x_snc_airline.manager</sys_name>
-        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_ui_action display_value="Update Flight Sheet">6ec94ca5db628910b652edb30596191d</sys_ui_action>
         <sys_update_name>sys_ui_action_role_69fe2aa1db62c910b652edb3059619dc</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>

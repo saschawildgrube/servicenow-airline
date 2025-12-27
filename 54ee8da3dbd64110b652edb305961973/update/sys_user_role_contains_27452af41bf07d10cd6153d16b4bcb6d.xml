@@ -8,9 +8,9 @@
         <sys_id>27452af41bf07d10cd6153d16b4bcb6d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_snc_parcel.manager.x_snc_airline.manager</sys_name>
-        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_user_role_contains_27452af41bf07d10cd6153d16b4bcb6d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-08-19 11:01:19</sys_updated_on>
