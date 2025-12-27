@@ -12,9 +12,9 @@
         <sys_id>a1d8cf5b1b66b1100e0b2f836b4bcb4d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>flight.aircraft.model.alternative_fuel_types</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_policy_action_a1d8cf5b1b66b1100e0b2f836b4bcb4d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-11-22 07:51:32</sys_updated_on>

@@ -6,9 +6,9 @@
         <sys_id>b299c1aa1b9ea150cd6153d16b4bcbe7</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>FlightAware.x_snc_airline.viewer</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_ui_action display_value="FlightAware">826b2d3cdb6ac510bcced03cd3961931</sys_ui_action>
         <sys_update_name>sys_ui_action_role_b299c1aa1b9ea150cd6153d16b4bcbe7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>

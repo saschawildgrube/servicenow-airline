@@ -66,9 +66,9 @@ else
         <sys_mod_count>8</sys_mod_count>
         <sys_name>Save and New</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_action_9c083b10db838950b652edb3059619d6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-12-21 15:08:00</sys_updated_on>

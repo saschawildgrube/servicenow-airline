@@ -19,9 +19,9 @@
         <sys_id>25dd47a81b526d10cd6153d16b4bcb7d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_snc_airline_airport</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_security_acl_25dd47a81b526d10cd6153d16b4bcb7d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-04-16 12:42:56</sys_updated_on>

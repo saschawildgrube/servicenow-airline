@@ -12,9 +12,9 @@
         <sys_id>f0fe58f1db87c190bcced03cd39619e0</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>passenger_boarding</sys_name>
-        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_policy_action_f0fe58f1db87c190bcced03cd39619e0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-04-24 11:36:09</sys_updated_on>
