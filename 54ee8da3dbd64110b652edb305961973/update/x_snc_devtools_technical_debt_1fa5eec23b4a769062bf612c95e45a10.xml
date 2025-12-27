@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_devtools_technical_debt">
+    <x_snc_devtools_technical_debt action="INSERT_OR_UPDATE">
+        <description>The choice to derive pilots from sys_user was not wise. Pilots are not necesserily users that log into the system. And if they were it would not be clear if these users would ONLY act as pilots. A separate table would have been the better choice.</description>
+        <id/>
+        <related_backlog_item_url/>
+        <short_description>Pilot table derived from sys_user</short_description>
+        <switch>false</switch>
+        <sys_class_name>x_snc_devtools_technical_debt</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-27 20:19:52</sys_created_on>
+        <sys_id>1fa5eec23b4a769062bf612c95e45a10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Pilot table derived from sys_user</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>x_snc_devtools_technical_debt_1fa5eec23b4a769062bf612c95e45a10</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-27 20:19:52</sys_updated_on>
+        <type>datamodel_deficiency</type>
+    </x_snc_devtools_technical_debt>
+</record_update>
