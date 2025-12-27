@@ -19,14 +19,19 @@
 	<p>This app was built to help organizing the shipment of medical supplies to the Ukraine during the full-scale invasion that started in February 2022.</p>
 	<p>It is dedicated to the people of Ukraine, their resistance, their bravery and to everyone who invests their time and resources to help.</p> 
 
-	<h2>Features</h2> 
-	<p>Manage pilots, aircraft, aircraft models and airports.</p>
-	<p>Plan and schedule flights - produce PDF flight sheets for pilots and PPRs for airports.</p>
-	<p>Manage safety requirements for flights, like IPR and deicing requirements.</p> 
-	<p>Aggregate multilpe flights to a mission - to coordinate connection flights and complex transport operations.</p>
-	<p>Mission planning is supported by maintaining a list of potential airports and pilots.</p>
-	<p>Manage freight and passengers.</p>
-	<p>Connect to the OpenAIP API to get additonal information on airports automatically.</p>
+	<h2>Table of Contents</h2>
+	<g2:no_escape>$[x_snc_devtools.HtmlRenderTableOfContents()]</g2:no_escape>	
+
+	<h2>Features</h2>
+	<ul>
+		<li>Manage pilots, aircraft, aircraft models and airports.</li>
+		<li>Plan and schedule flights - produce PDF flight sheets for pilots and PPRs for airports.</li>
+		<li>Manage safety requirements for flights, like IPR and deicing requirements.</li> 
+		<li>Aggregate multilpe flights to a mission - to coordinate connection flights and complex transport operations.</li>
+		<li>Mission planning is supported by maintaining a list of potential airports and pilots.</li>
+		<li>Manage freight and passengers.</li>
+		<li>Connect to the OpenAIP API to get additonal information on airports automatically.</li>
+	</ul>
 
 
 	<h2>Disclaimer</h2>
@@ -36,7 +41,7 @@
 	<ul>
 		<g2:no_escape>$[
 			docapi.RenderSystemRequirements(
-				'Washington,Xanadu',
+				'Yokohama,Zurich',
 				true,
 				AppGetDependencies());
 		]</g2:no_escape>	
@@ -103,17 +108,17 @@
 	<h3>Script Includes</h3>
 	<g2:no_escape>$[docapi.RenderScriptIncludes()]</g2:no_escape>
 
-	<h3>Dependencies</h3>
+	<h2>Dependencies</h2>
 	<g2:no_escape>$[docapi.RenderDependencies()]</g2:no_escape>		
 
-	<h3>Technical Debt</h3>
+	<h2>Technical Debt</h2>
 	<g2:no_escape>$[docapi.RenderTechnicalDebt()]</g2:no_escape>		
 	
 	<h2>License</h2>
 	<g2:no_escape>$[docapi.RenderCopyright(2022,'Sascha Wildgrube')]</g2:no_escape>
 	<g2:no_escape>$[docapi.RenderLicense()]</g2:no_escape>
 	
-	<h2>Release Notes</h2>
+	<h2 toc-ignore-children="true">Release Notes</h2>
 
 	<h3>1.10.0 - TODO</h3>
 	<ol>
@@ -280,14 +285,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-26 10:02:17</sys_created_on>
         <sys_id>3063be58db2a4510bcced03cd39619e8</sys_id>
-        <sys_mod_count>134</sys_mod_count>
+        <sys_mod_count>137</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
         <sys_policy/>
         <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_page_3063be58db2a4510bcced03cd39619e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-12-26 22:33:36</sys_updated_on>
+        <sys_updated_on>2025-12-27 20:15:38</sys_updated_on>
     </sys_ui_page>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>3063be58db2a4510bcced03cd39619e8</id>
