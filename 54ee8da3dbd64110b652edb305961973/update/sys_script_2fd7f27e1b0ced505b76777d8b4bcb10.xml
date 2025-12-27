@@ -19,7 +19,7 @@
         <is_rest>false</is_rest>
         <message><![CDATA[<p>Warning: The potential flight capacity has been set above the potential aircraft capacity. The pilot is responsible to decide how much weight (cargo, passengers and fuel) is loaded to the plane. </p>]]></message>
         <name>Flight - Set defaults</name>
-        <order>100</order>
+        <order>50</order>
         <priority>100</priority>
         <rest_method/>
         <rest_method_text/>
@@ -61,7 +61,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2fd7f27e1b0ced505b76777d8b4bcb10</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Flight - Set defaults</sys_name>
         <sys_overrides/>
         <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
@@ -69,7 +69,7 @@
         <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_script_2fd7f27e1b0ced505b76777d8b4bcb10</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-22 10:44:13</sys_updated_on>
+        <sys_updated_on>2025-12-21 16:16:51</sys_updated_on>
         <template/>
         <when>before_display</when>
         <x_snc_datasilos_created>false</x_snc_datasilos_created>

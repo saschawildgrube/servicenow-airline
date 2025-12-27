@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Activities to be performed when the application is being baselined.</description>
+        <mobile_callable>false</mobile_callable>
         <name>AppBaseline</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function AppBaseline()
 {
 }]]></script>
@@ -22,5 +24,6 @@
         <sys_update_name>sys_script_include_c848af7397287d10a6a07767f053af78</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:51</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

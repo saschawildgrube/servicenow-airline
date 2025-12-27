@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Creates test data for the Airline app.</description>
+        <mobile_callable>false</mobile_callable>
         <name>AppCreateTestData</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function AppCreateTestData()
 {
 	var RecordInsertOrUpdate = x_snc_devtools.RecordInsertOrUpdate;
@@ -86,5 +88,6 @@
         <sys_update_name>sys_script_include_e953c9361b290610063ddc61ab4bcba5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:51</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

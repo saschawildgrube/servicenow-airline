@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_airline.FlightAddStop</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Adds a stop to the given flight and returns the new Stop's GlideRecord object.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>FlightAddStop</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function FlightAddStop(vFlight)
+{
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var GetIntegerValue = x_snc_devtools.GetIntegerValue;
+	
+	var grFlight = GetFlightRecord(vFlight);
+	if (IsValidRecord(grFlight) == false)
+	{
+		return false;
+	}
+	var grLastStop = new GlideRecord('x_snc_airline_flight_stop');
+	grLastStop.addQuery('flight','=',grFlight.sys_id);
+	grLastStop.orderByDesc('stop');
+	grLastStop.setLimit(1);
+	grLastStop.query();
+
+	var nLastStop = 0;
+	if (grLastStop.next() == true)
+	{
+		nLastStop = GetIntegerValue(grLastStop.stop); 
+	}
+
+	var grStop = new GlideRecord('x_snc_airline_flight_stop');
+	grStop.initialize();
+	grStop.flight = grFlight.sys_id;
+	grStop.stop = nLastStop + 1;
+	grStop.insert();
+	
+	return grStop;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-21 14:59:20</sys_created_on>
+        <sys_id>e5f2664c2b0a3a509083fe395e91bfbd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>FlightAddStop</sys_name>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>sys_script_include_e5f2664c2b0a3a509083fe395e91bfbd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-27 20:28:13</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>e5f2664c2b0a3a509083fe395e91bfbd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-21 14:59:19</sys_created_on>
+        <sys_id>a613a64c2b0a3a509083fe395e91bf4b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-21 14:59:19</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

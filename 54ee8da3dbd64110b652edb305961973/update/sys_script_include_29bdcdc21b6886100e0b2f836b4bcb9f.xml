@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Returns an airport record if the given record can be found, false if not.</description>
+        <mobile_callable>false</mobile_callable>
         <name>GetAirportRecord</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function GetAirportRecord(vAirport)
 {
 	var GetRecord = x_snc_devtools.GetRecord;
@@ -47,5 +49,6 @@
         <sys_update_name>sys_script_include_29bdcdc21b6886100e0b2f836b4bcb9f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-01-18 20:44:03</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

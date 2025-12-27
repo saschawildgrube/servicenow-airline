@@ -3,7 +3,10 @@
         <active>true</active>
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
+        <applies_to/>
         <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
         <description>Default access control on x_snc_airline_passenger</description>
         <local_or_existing/>
         <name>x_snc_airline_passenger</name>

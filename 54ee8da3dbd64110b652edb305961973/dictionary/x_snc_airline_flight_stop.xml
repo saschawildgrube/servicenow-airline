@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="3f5471b79731e550a6a07767f053af0e" label="Stop" max_length="40" name="x_snc_airline_flight_stop" type="collection">
-        <element label="Fuel (liters)" max_length="40" name="fuel" type="integer"/>
-        <element label="Passengers Boarding" max_length="4000" name="passenger_boarding" reference="x_snc_airline_passenger" type="glide_list"/>
-        <element label="Arrival Date/Time" max_length="40" name="arrival_datetime" type="glide_date_time"/>
-        <element label="Fuel required" max_length="40" name="fuel_required" type="boolean"/>
         <element label="Passengers Offboarding" max_length="4000" name="passenger_offboarding" reference="x_snc_airline_passenger" type="glide_list"/>
-        <element default="1" label="Stop" max_length="40" name="stop" type="integer"/>
-        <element label="Departure Date/Time" max_length="40" name="departure_datetime" type="glide_date_time"/>
-        <element label="Parcel Load" max_length="4000" name="parcel_load" reference="x_snc_parcel_parcel" type="glide_list"/>
         <element label="Parcel Unload" max_length="4000" name="parcel_unload" reference="x_snc_parcel_parcel" type="glide_list"/>
         <element label="Airport" max_length="32" name="airport" reference="x_snc_airline_airport" type="reference"/>
+        <element label="Passengers Boarding" max_length="4000" name="passenger_boarding" reference="x_snc_airline_passenger" type="glide_list"/>
+        <element default="1" label="Stop" max_length="40" name="stop" type="integer"/>
+        <element label="Departure Date/Time" max_length="40" name="departure_datetime" type="glide_date_time"/>
         <element label="Flight" max_length="32" name="flight" read_only="true" reference="x_snc_airline_flight" type="reference"/>
+        <element label="Arrival Date/Time" max_length="40" name="arrival_datetime" type="glide_date_time"/>
+        <element label="Fuel required" max_length="40" name="fuel_required" type="boolean"/>
+        <element label="Parcel Load" max_length="4000" name="parcel_load" reference="x_snc_parcel_parcel" type="glide_list"/>
+        <element label="Fuel (liters)" max_length="40" name="fuel" type="integer"/>
         <index name="index">
             <element name="airport"/>
         </index>

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="ab4814ea1b02a1506c17fdd49b4bcbfc" label="Aircraft" max_length="40" name="x_snc_airline_aircraft" type="collection">
-        <element label="Active" max_length="40" name="active" type="boolean"/>
-        <element label="Potential Aircraft Capacity (kg)" max_length="40" name="cargo_capacity" type="integer"/>
-        <element label="IFR" max_length="40" name="ifr" type="boolean"/>
-        <element label="model" max_length="32" name="model" reference="x_snc_airline_aircraft_model" type="reference"/>
         <element label="Deicing" max_length="40" name="deicing" type="boolean"/>
-        <element label="Deicing Methods" max_length="4000" name="deicing_methods" reference="x_snc_airline_deicing_method" type="glide_list"/>
-        <element label="Seats (excluding pilot)" max_length="40" name="seats" type="integer"/>
-        <element label="Base Airport" max_length="32" name="base_airport" reference="x_snc_airline_airport" type="reference"/>
         <element label="Total Aircraft Capacity (kg)" max_length="40" name="capacity" type="integer"/>
         <element choice="1" label="Fuel" max_length="40" name="fuel" type="choice">
             <choice>
-                <element inactive_on_update="false" label="F43" value="f43"/>
-                <element inactive_on_update="false" label="MOGAS" value="mogas"/>
                 <element inactive_on_update="false" label="AVGAS" value="avgas"/>
                 <element inactive_on_update="false" label="JET-A1" value="jeta1"/>
+                <element inactive_on_update="false" label="F43" value="f43"/>
+                <element inactive_on_update="false" label="MOGAS" value="mogas"/>
             </choice>
         </element>
+        <element label="Potential Aircraft Capacity (kg)" max_length="40" name="cargo_capacity" type="integer"/>
+        <element label="Deicing Methods" max_length="4000" name="deicing_methods" reference="x_snc_airline_deicing_method" type="glide_list"/>
+        <element label="Seats (excluding pilot)" max_length="40" name="seats" type="integer"/>
         <element display="true" label="Tail Number" mandatory="true" max_length="8" name="tail_number" type="string"/>
+        <element label="IFR" max_length="40" name="ifr" type="boolean"/>
+        <element label="model" max_length="32" name="model" reference="x_snc_airline_aircraft_model" type="reference"/>
+        <element label="Base Airport" max_length="32" name="base_airport" reference="x_snc_airline_airport" type="reference"/>
+        <element label="Active" max_length="40" name="active" type="boolean"/>
         <index name="index">
             <element name="base_airport"/>
         </index>

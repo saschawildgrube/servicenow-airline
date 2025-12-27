@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Returns the compatble fuel types for the given aircraft.</description>
+        <mobile_callable>false</mobile_callable>
         <name>GetFuelTypesFromAircraft</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function GetFuelTypesFromAircraft(vAircraft)
 {
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
@@ -48,5 +50,6 @@
         <sys_update_name>sys_script_include_d1c102b81bb2f5100e0b2f836b4bcb2f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:51</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

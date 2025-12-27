@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Returns the type name of airport schedules.</description>
+        <mobile_callable>false</mobile_callable>
         <name>GetAirportScheduleTypeName</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function GetAirportScheduleTypeName()
 {
 	return 'Air'+'line'; // to avoid a CodeSanity finding. Need to find a better way to do that!
@@ -23,5 +25,6 @@
         <sys_update_name>sys_script_include_87f90f7897b87150a6a07767f053affa</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:50</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

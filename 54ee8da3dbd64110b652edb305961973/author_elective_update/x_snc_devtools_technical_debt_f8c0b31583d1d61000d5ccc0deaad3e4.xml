@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_devtools_technical_debt">
+    <x_snc_devtools_technical_debt action="DELETE">
+        <description>A number of Script Includes are not yet covered in ATF tests.</description>
+        <id/>
+        <related_backlog_item_url/>
+        <short_description>Missing ATF tests</short_description>
+        <switch>false</switch>
+        <sys_class_name>x_snc_devtools_technical_debt</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-16 18:42:12</sys_created_on>
+        <sys_id>f8c0b31583d1d61000d5ccc0deaad3e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Missing ATF tests</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>x_snc_devtools_technical_debt_f8c0b31583d1d61000d5ccc0deaad3e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-16 18:42:12</sys_updated_on>
+        <type/>
+    </x_snc_devtools_technical_debt>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Airline">54ee8da3dbd64110b652edb305961973</application>
+        <file_path/>
+        <instance_id>a8cbb5133b6b5e540fd412c5e4e45a1f</instance_id>
+        <instance_name>wildyokohama</instance_name>
+        <name>x_snc_devtools_technical_debt_f8c0b31583d1d61000d5ccc0deaad3e4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_devtools_technical_debt">
+    <x_snc_devtools_technical_debt action="INSERT_OR_UPDATE">
+        <description>A number of Script Includes are not yet covered in ATF tests.</description>
+        <id/>
+        <related_backlog_item_url/>
+        <short_description>Missing ATF tests</short_description>
+        <switch>false</switch>
+        <sys_class_name>x_snc_devtools_technical_debt</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-16 18:42:12</sys_created_on>
+        <sys_id>f8c0b31583d1d61000d5ccc0deaad3e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Missing ATF tests</sys_name>
+        <sys_package display_value="Airline WORK IN PROGRESS" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Airline WORK IN PROGRESS">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_update_name>x_snc_devtools_technical_debt_f8c0b31583d1d61000d5ccc0deaad3e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-16 18:42:12</sys_updated_on>
+        <type/>
+    </x_snc_devtools_technical_debt>
+</record_update>]]></payload>
+        <payload_hash>712911784</payload_hash>
+        <record_name>Missing ATF tests</record_name>
+        <reverted_from/>
+        <source>df2fe1fc2b63ea109083fe395e91bff5</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2025-08-21 12:31:15</sys_created_on>
+        <sys_id>bf3fe5fc2b63ea109083fe395e91bfd1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198cc9ca7140000001</sys_recorded_at>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-08-21 12:31:15</sys_updated_on>
+        <type>Technical Debt</type>
+        <update_guid>f73fe5fcca63ea10d6e8ac686c7c79d1</update_guid>
+        <update_guid_history>f73fe5fcca63ea10d6e8ac686c7c79d1:0,be8a4589ed78ea10898c96f354eceaee:-319635065</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Missing ATF tests">0b6526c23b4a769062bf612c95e45a7d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-27 20:17:18</sys_created_on>
+        <sys_db_object display_value="" name="x_snc_devtools_technical_debt">x_snc_devtools_technical_debt</sys_db_object>
+        <sys_id>228591aef815460095873c7ee9a40000</sys_id>
+        <sys_metadata>f8c0b31583d1d61000d5ccc0deaad3e4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Missing ATF tests</sys_name>
+        <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
+        <sys_scope_delete display_value="">c6f42fe7959e4054a7cc3eae6bd19390</sys_scope_delete>
+        <sys_update_name>x_snc_devtools_technical_debt_f8c0b31583d1d61000d5ccc0deaad3e4</sys_update_name>
+        <sys_update_version display_value="x_snc_devtools_technical_debt_f8c0b31583d1d61000d5ccc0deaad3e4">bf3fe5fc2b63ea109083fe395e91bfd1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-27 20:17:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

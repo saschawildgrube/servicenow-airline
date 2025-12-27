@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>If possible retrieves additional data on all existing airports.</description>
+        <mobile_callable>false</mobile_callable>
         <name>AirportsDataImprovement</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function AirportsDataImprovement()
 {
 	var GetStringValue = x_snc_devtools.GetStringValue;
@@ -53,5 +55,6 @@
         <sys_update_name>sys_script_include_ac761b6edb0f0650f0f1d03cd3961995</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:50</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

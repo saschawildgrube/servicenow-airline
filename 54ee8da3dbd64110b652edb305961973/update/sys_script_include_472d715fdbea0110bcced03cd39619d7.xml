@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Returns true if the given string is a valid ICAO code. It does not check if the ICAO code actually exists, though.</description>
+        <mobile_callable>false</mobile_callable>
         <name>IsValidICAO</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function IsValidICAO(strICAO)
 {
 	strICAO = x_snc_devtools.GetStringValue(strICAO);
@@ -32,5 +34,6 @@
         <sys_update_name>sys_script_include_472d715fdbea0110bcced03cd39619d7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-16 18:43:49</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

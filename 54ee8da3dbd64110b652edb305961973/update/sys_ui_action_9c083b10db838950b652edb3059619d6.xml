@@ -32,6 +32,7 @@
         <order>-9000</order>
         <script><![CDATA[var GetIntegerValue = x_snc_devtools.GetIntegerValue;
 var RedirectToRecord = x_snc_devtools.RedirectToRecord;
+var IsValidRecord = x_snc_devtools.IsValidRecord;
 
 if (current.isNewRecord() == true)
 {
@@ -42,13 +43,16 @@ else
 	current.update();
 }
 
-
-var grStop = new GlideRecord('x_snc_airline_flight_stop');
-grStop.initialize();
-grStop.flight = current.flight;
-grStop.stop = GetIntegerValue(current.stop) + 1;
-grStop.insert();
-RedirectToRecord(grStop);]]></script>
+var grNewStop = FlightAddStop(current.flight);
+if (IsValidRecord(grNewStop) == true)
+{
+	RedirectToRecord(grNewStop);	
+}
+else
+{
+	RedirectToRecord(current);
+}
+]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -59,7 +63,7 @@ RedirectToRecord(grStop);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9c083b10db838950b652edb3059619d6</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Save and New</sys_name>
         <sys_overrides/>
         <sys_package display_value="Airline" source="x_snc_airline">54ee8da3dbd64110b652edb305961973</sys_package>
@@ -67,7 +71,7 @@ RedirectToRecord(grStop);]]></script>
         <sys_scope display_value="Airline">54ee8da3dbd64110b652edb305961973</sys_scope>
         <sys_update_name>sys_ui_action_9c083b10db838950b652edb3059619d6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-08-12 09:21:44</sys_updated_on>
+        <sys_updated_on>2025-12-21 15:08:00</sys_updated_on>
         <table>x_snc_airline_flight_stop</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
