@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>The airline viewer role grants read access to all areas and data. </description>
         <elevated_privilege>false</elevated_privilege>
+        <federated_id>F0fxipEMQpwDPwOSMDtSa/Pis3KFJ0yW9iowuZzANP8=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_airline.viewer</name>

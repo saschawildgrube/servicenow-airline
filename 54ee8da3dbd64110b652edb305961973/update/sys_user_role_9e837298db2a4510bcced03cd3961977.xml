@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>The airline manager role grants all read and write access to all data and all flight planning and operations activities. </description>
         <elevated_privilege>false</elevated_privilege>
+        <federated_id>KU8Rqbmq3XUPrAC6DcWXD5juZk8YnbkKUzCfBC054TQ=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_airline.manager</name>

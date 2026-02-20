@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>The airline admin role grants all access to all areas, including the test suite and application logs. </description>
         <elevated_privilege>false</elevated_privilege>
+        <federated_id>0ElU6BCCLMTjmTDTDv4AZ/z+/BWQGSfp7TBy666BhDQ=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_airline.admin</name>
